@@ -1,98 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VolleyTally - Volleyball Score Keeper</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f7;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .logo {
-            width: 100px;
-            height: 100px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        .tagline {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 30px;
-        }
-        .download-btn {
-            background-color: #0066CC;
-            color: white;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 25px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 30px;
-        }
-        .features {
-            background-color: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        h2 {
-            font-size: 22px;
-            margin-top: 0;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #666;
-            font-size: 14px;
-        }
-        a {
-            color: #0066CC;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HarpElle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/assets/HarpElle-LogoTransparent.png" />
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+  </style>
 </head>
-<body>
-    <header>
-        <img src="VolleyTally-PSD-rounded.png" alt="VolleyTally Logo" class="logo">
-        <h1>VolleyTally</h1>
-        <p class="tagline">The perfect companion for volleyball players, coaches, and fans</p>
-        <a href="https://apps.apple.com/us/app/volleytally/id6743733066" class="download-btn">Download on App Store</a>
-    </header>
-    
-    <div class="features">
-        <h2>Features</h2>
-        <ul>
-            <li>Track scores for multiple sets</li>
-            <li>Customize team names</li>
-            <li>Configure match settings (best of X sets, win by Y points)</li>
-            <li>Optional score cap setting</li>
-            <li>Dark mode UI for easy visibility in any environment</li>
-            <li>Simple, intuitive controls for fast score updates</li>
-            <li>Visual indicators for set and match winners</li>
-            <li>No internet connection required</li>
-        </ul>
-    </div>
-    
-    <footer>
-        <p>&copy; 2025 Jason Paschall. All rights reserved.</p>
-        <p><a href="https://harpelle.github.io/volley-tally-privacy/">Privacy Policy</a></p>
-    </footer>
+<body class="bg-[#ededed] text-gray-800">
+  <header class="text-center p-8">
+    <img src="/assets/HarpElle-LogoTransparent.png" alt="HarpElle Logo" class="mx-auto w-24 mb-4">
+    <h1 class="text-3xl font-bold">HarpElle</h1>
+    <p class="text-lg text-gray-600 italic">Thoughtfully built. Creatively inspired.</p>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6">
+    <section class="mb-10 bg-white rounded-2xl shadow p-6">
+      <h2 class="text-2xl font-semibold mb-2">Our Apps</h2>
+      <div class="flex items-center justify-between flex-wrap">
+        <div class="flex items-center space-x-4">
+          <img src="/assets/VolleyTally-PSD-rounded.png" class="w-16 h-16 rounded-xl" alt="VolleyTally logo"/>
+          <div>
+            <h3 class="text-xl font-bold">VolleyTally</h3>
+            <p class="text-sm text-gray-600">A smarter volleyball scoreboard</p>
+          </div>
+        </div>
+        <a href="/volleytally/" class="text-pink-600 font-semibold hover:underline">Learn more →</a>
+      </div>
+    </section>
+
+    <section class="text-center text-gray-700 text-sm">
+      <p><a href="/privacypolicy.md" class="underline">Privacy Policy</a></p>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 mt-12 mb-6">
+    &copy; 2025 HarpElle LLC
+  </footer>
 </body>
 </html>
