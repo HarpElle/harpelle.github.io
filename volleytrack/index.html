@@ -4,108 +4,591 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VolleyTrack - Advanced Volleyball Stats</title>
+    <title>VolleyTrack — Advanced Volleyball Stats & Live Scoring</title>
+    <meta name="description" content="Professional-grade volleyball statistics, live scoring, AI-powered narratives, and real-time spectator mode. Built for coaches, players, and fans.">
+    <link rel="icon" href="/assets/volleyball-favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --brand-purple: #7e39aa;
+            --brand-pink: #e8539e;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+            --text-primary: #1a1a2e;
+            --text-secondary: #555;
+            --text-muted: #888;
+            --bg-page: #fff;
+            --bg-soft: #f8f9fb;
+            --border-light: #e5e7eb;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
+            --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --max-width: 960px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-page);
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 960px;
+        /* ── Nav ─────────────────────────────── */
+        .site-nav {
+            padding: 16px 20px;
+            max-width: var(--max-width);
             margin: 0 auto;
-            padding: 40px 20px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        h1 {
-            font-size: 3rem;
-            color: #0066cc;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
-            color: #666;
-            margin-bottom: 40px;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            text-align: left;
-        }
-
-        .feature-item {
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 12px;
-        }
-
-        .feature-item h3 {
-            color: #0066cc;
-        }
-
-        .footer {
-            margin-top: 60px;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        a {
-            color: #0066cc;
+        .site-nav .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
             text-decoration: none;
         }
 
-        .download-btn {
+        .site-nav .logo .h { color: var(--brand-pink); }
+        .site-nav .logo .e { color: var(--brand-purple); }
+
+        .site-nav .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .site-nav .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+
+        .site-nav .nav-links a:hover,
+        .site-nav .nav-links a.active { color: var(--accent); }
+
+        /* ── Hero ────────────────────────────── */
+        .hero {
+            background: linear-gradient(160deg, #eff6ff 0%, #e0e7ff 40%, #f0f0ff 100%);
+            padding: 60px 20px 48px;
+            text-align: center;
+        }
+
+        .hero-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .app-icon {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .hero .tagline {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 520px;
+            margin: 0 auto 28px;
+            line-height: 1.65;
+        }
+
+        .store-badges {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        .store-badges a img { height: 48px; }
+
+        .hero-screenshot {
+            max-width: 260px;
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+        }
+
+        /* ── Sections ────────────────────────── */
+        section { padding: 64px 20px; }
+
+        .section-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 48px;
+            line-height: 1.65;
+        }
+
+        /* ── Features ────────────────────────── */
+        .features-section { background: var(--bg-soft); }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            padding: 26px 22px;
+            border: 1px solid var(--border-light);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .feature-card:hover {
+            box-shadow: var(--shadow-card-hover);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .feature-badge {
             display: inline-block;
-            background: #0066cc;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            margin-top: 20px;
+            background: #dbeafe;
+            color: #2563eb;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        /* ── Spectator ───────────────────────── */
+        .spectator-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #1e2a4a 100%);
+            color: #fff;
+        }
+
+        .spectator-section .section-label { color: rgba(255,255,255,0.45); }
+        .spectator-section .section-title { color: #fff; }
+        .spectator-section .section-subtitle { color: rgba(255,255,255,0.6); }
+
+        .spectator-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 28px;
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .step-number {
+            display: inline-flex;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: #93c5fd;
+            font-weight: 800;
+            font-size: 1.1rem;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+
+        .step h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .step p {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.55;
+        }
+
+        /* ── Pricing ─────────────────────────── */
+        .pricing-section { background: var(--bg-page); }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 26px 18px;
+            text-align: center;
+            position: relative;
+            transition: border-color 0.2s;
+        }
+
+        .price-card.popular {
+            border-color: var(--accent);
+        }
+
+        .price-card.popular::before {
+            content: "Best Value";
+            position: absolute;
+            top: -11px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .price-card .plan-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 0.06em;
+            margin-bottom: 6px;
+        }
+
+        .price-card .price {
+            font-size: 1.9rem;
+            font-weight: 800;
+        }
+
+        .price-card .period {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .price-card .savings {
+            font-size: 0.78rem;
+            color: #16a34a;
+            font-weight: 600;
+        }
+
+        .free-note {
+            text-align: center;
+            margin-top: 32px;
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .free-note strong { color: var(--text-primary); }
+
+        /* ── CTA Section ─────────────────────── */
+        .cta-section {
+            background: var(--bg-soft);
+            text-align: center;
+        }
+
+        .cta-section .section-label { color: var(--brand-purple); }
+
+        .cta-card {
+            background: linear-gradient(135deg, #fdf2f8 0%, #f5f0ff 100%);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            max-width: 560px;
+            margin: 0 auto;
+            border: 1px solid #e8d5f5;
+        }
+
+        .cta-card .cta-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            margin-bottom: 16px;
+        }
+
+        .cta-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .cta-card p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .cta-card .cta-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--brand-purple);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: gap 0.15s;
+        }
+
+        .cta-card .cta-link:hover { gap: 10px; }
+
+        /* ── Footer ──────────────────────────── */
+        footer {
+            border-top: 1px solid var(--border-light);
+            padding: 36px 20px;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin: 0 14px;
+            transition: color 0.15s;
+        }
+
+        .footer-links a:hover { color: var(--accent); }
+
+        .footer-copy {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* ── Responsive ──────────────────────── */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2.1rem; }
+            .hero .tagline { font-size: 1rem; }
+            .section-title { font-size: 1.6rem; }
+            .features-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 280px; }
+            .spectator-steps { grid-template-columns: 1fr; }
+            .site-nav .nav-links { gap: 16px; }
+            .site-nav .nav-links a { font-size: 0.82rem; }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>VolleyTrack</h1>
-        <p class="subtitle">Professional-grade volleyball statistics and match tracking.</p>
 
-        <a href="#" class="download-btn">Coming Soon to App Store</a>
+    <!-- Nav -->
+    <nav class="site-nav">
+        <a href="/" class="logo"><span class="h">Harp</span><span class="e">Elle</span></a>
+        <ul class="nav-links">
+            <li><a href="/volleytally/">VolleyTally</a></li>
+            <li><a href="/volleytrack/" class="active">VolleyTrack</a></li>
+            <li><a href="mailto:support@harpelle.com">Support</a></li>
+        </ul>
+    </nav>
 
-        <div class="features">
-            <div class="feature-item">
-                <h3>Live Scoring</h3>
-                <p>Track points, sideouts, and rotations in real-time with an intuitive interface designed for coaches
-                    and parents.</p>
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-inner">
+            <img src="/assets/VolleyTrack-icon.png" alt="VolleyTrack app icon" class="app-icon">
+            <h1>VolleyTrack</h1>
+            <p class="tagline">Professional-grade volleyball statistics, live scoring, and AI-powered match narratives — right from your sideline.</p>
+            <div class="store-badges">
+                <a href="#" id="app-store-link">
+                    <img src="/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store">
+                </a>
             </div>
-            <div class="feature-item">
-                <h3>AI Narratives</h3>
-                <p>Generate professional match recaps and social media posts instantly using advanced AI analysis.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Advanced Analytics</h3>
-                <p>Deep dive into hitting percentages, kill efficiency, and serve ratings to optimize team performance.
-                </p>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>&copy; 2026 HarpElle Development.</p>
-            <p>
-                <a href="privacy.html">Privacy Policy</a> |
-                <a href="mailto:support@harpelle.com">Support</a>
-            </p>
+            <img src="/assets/VolleyTrack-Screenshot.png" alt="VolleyTrack live scoring screenshot" class="hero-screenshot">
         </div>
     </div>
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="section-inner">
+            <p class="section-label">Features</p>
+            <h2 class="section-title">Everything you need courtside</h2>
+            <p class="section-subtitle">Built for coaches who want real data, parents who want to follow along, and players who want to improve.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">&#127952;</span>
+                    <h3>Live Scoring & Rotation</h3>
+                    <p>Track score, server, and rotation with an intuitive interface built for the pace of a real match. Log aces, kills, digs, blocks, and more with a single tap.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">&#127908;</span>
+                    <h3>Voice Input <span class="feature-badge">New</span></h3>
+                    <p>Go hands-free during matches. Speak your stats and let AI convert your voice into play-by-play entries in real time.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">&#128202;</span>
+                    <h3>Advanced Analytics</h3>
+                    <p>Go beyond the box score with Sideout %, Point Scoring %, Hitting Efficiency, momentum charts, and detailed set-by-set breakdowns.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">&#9889;</span>
+                    <h3>AI-Powered Narratives</h3>
+                    <p>Instantly generate match recaps ready for social media, or detailed technical reports for film study — all powered by advanced AI analysis.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">&#128242;</span>
+                    <h3>Live Spectator Mode <span class="feature-badge">New</span></h3>
+                    <p>Share a 6-digit code with parents and fans so they can follow the match live from anywhere. They can send cheers and get personalized Super Fan recaps.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">&#128203;</span>
+                    <h3>Team & Season Management</h3>
+                    <p>Manage rosters, track multiple seasons, and organize tournaments. Assign jersey numbers, positions, and libero pairings with ease.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spectator -->
+    <section class="spectator-section">
+        <div class="section-inner">
+            <p class="section-label">Spectator Mode</p>
+            <h2 class="section-title">Parents & fans stay connected</h2>
+            <p class="section-subtitle">Can't be at the game? Follow along live from anywhere.</p>
+
+            <div class="spectator-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Coach starts a broadcast</h3>
+                    <p>A unique 6-character match code is generated when the coach begins a live match.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Fans join with the code</h3>
+                    <p>Open VolleyTrack, enter the code, and instantly see live scores, stats, and play-by-play.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Cheer and get recaps</h3>
+                    <p>Send cheers in real time and get AI-generated Super Fan recaps focused on your player.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section">
+        <div class="section-inner">
+            <p class="section-label">Pricing</p>
+            <h2 class="section-title">Simple pricing</h2>
+            <p class="section-subtitle">Start free. Upgrade when you're ready to unlock everything.</p>
+
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="plan-name">Monthly</div>
+                    <div class="price">$4.99</div>
+                    <div class="period">/month</div>
+                </div>
+                <div class="price-card popular">
+                    <div class="plan-name">Annual</div>
+                    <div class="price">$34.99</div>
+                    <div class="period">/year</div>
+                    <div class="savings">Save 42%</div>
+                </div>
+                <div class="price-card">
+                    <div class="plan-name">Lifetime</div>
+                    <div class="price">$79.99</div>
+                    <div class="period">one-time purchase</div>
+                </div>
+            </div>
+
+            <p class="free-note"><strong>Free tier includes:</strong> Live scoring, rotation tracking, basic stats, 1 season, and limited AI features — more than enough to get started.</p>
+        </div>
+    </section>
+
+    <!-- VolleyTally CTA -->
+    <section class="cta-section">
+        <div class="section-inner">
+            <p class="section-label">From the Same Team</p>
+            <h2 class="section-title">Just need a quick scoreboard?</h2>
+            <p class="section-subtitle">VolleyTally is our simple, fast scoring app — perfect for pickup games and quick matches.</p>
+
+            <div class="cta-card">
+                <img src="/assets/VolleyTally-PSD-rounded.png" alt="VolleyTally icon" class="cta-icon">
+                <h3>VolleyTally</h3>
+                <p>A fast, intuitive volleyball scoreboard with customizable teams, flexible match rules, and victory celebrations. No account required.</p>
+                <a href="/volleytally/" class="cta-link">
+                    Explore VolleyTally <span>&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="mailto:support@harpelle.com">Support</a>
+                <a href="/">HarpElle Home</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 HarpElle. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>

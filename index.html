@@ -2,67 +2,383 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HarpElle</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="/assets/favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarpElle — Volleyball Apps for Coaches, Players & Fans</title>
+    <meta name="description" content="HarpElle builds thoughtfully designed volleyball apps. Meet VolleyTally for quick scoring and VolleyTrack for advanced stats and AI analysis.">
+    <link rel="icon" href="/assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple: #7e39aa;
+            --brand-pink: #e8539e;
+            --text-primary: #1a1a2e;
+            --text-secondary: #555;
+            --text-muted: #888;
+            --bg-page: #fff;
+            --bg-soft: #f8f9fb;
+            --border-light: #e5e7eb;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
+            --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.1);
+            --max-width: 960px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-page);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Nav ─────────────────────────────── */
+        .site-nav {
+            padding: 16px 20px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .site-nav .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        .site-nav .logo .h { color: var(--brand-pink); }
+        .site-nav .logo .e { color: var(--brand-purple); }
+
+        .site-nav .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .site-nav .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+
+        .site-nav .nav-links a:hover { color: var(--brand-purple); }
+
+        /* ── Hero ────────────────────────────── */
+        .hero {
+            text-align: center;
+            padding: 72px 20px 56px;
+            background: linear-gradient(160deg, #f5f0ff 0%, #fdf2f8 50%, #f0f4ff 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 .h { color: var(--brand-pink); }
+        .hero h1 .e { color: var(--brand-purple); }
+
+        .hero .tagline {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ── App Cards ───────────────────────── */
+        .apps-section {
+            padding: 72px 20px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .apps-section .section-label {
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .apps-section .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 48px;
+            letter-spacing: -0.02em;
+        }
+
+        .app-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .app-card {
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: box-shadow 0.25s, transform 0.25s;
+            background: #fff;
+        }
+
+        .app-card:hover {
+            box-shadow: var(--shadow-card-hover);
+            transform: translateY(-3px);
+        }
+
+        .app-card .card-hero {
+            padding: 36px 28px 28px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .app-card.tally .card-hero {
+            background: linear-gradient(135deg, #fdf2f8 0%, #f5f0ff 100%);
+        }
+
+        .app-card.track .card-hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #f0f0ff 100%);
+        }
+
+        .app-card .card-hero .app-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .app-card .card-hero .app-icon-placeholder {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #3b82f6, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-card .card-hero h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .app-card .card-hero p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .badge-live { background: #dcfce7; color: #166534; }
+        .badge-new { background: #dbeafe; color: #1e40af; }
+
+        .app-card .card-body {
+            padding: 0 28px 28px;
+        }
+
+        .app-card .features-list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .app-card .features-list li {
+            padding: 6px 0;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .app-card .features-list li::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .app-card.tally .features-list li::before { background: var(--brand-purple); }
+        .app-card.track .features-list li::before { background: #3b82f6; }
+
+        .app-card .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: gap 0.15s;
+        }
+
+        .app-card.tally .card-link { color: var(--brand-purple); }
+        .app-card.track .card-link { color: #2563eb; }
+
+        .app-card .card-link:hover { gap: 10px; }
+
+        .app-card .card-link .arrow { transition: transform 0.15s; }
+
+        /* ── Footer ──────────────────────────── */
+        footer {
+            border-top: 1px solid var(--border-light);
+            padding: 36px 20px;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin: 0 14px;
+            transition: color 0.15s;
+        }
+
+        .footer-links a:hover { color: var(--brand-purple); }
+
+        .footer-copy {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* ── Responsive ──────────────────────── */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2.4rem; }
+            .hero .tagline { font-size: 1.05rem; }
+            .apps-section .section-title { font-size: 1.6rem; }
+            .app-cards { grid-template-columns: 1fr; }
+            .site-nav .nav-links { gap: 16px; }
+            .site-nav .nav-links a { font-size: 0.82rem; }
+        }
+    </style>
 </head>
 
-<body class="bg-[#ededed] text-gray-800">
-  <header class="text-center py-10 px-4">
-    <h1 class="text-6xl font-extrabold">
-      <span class="text-[#fd6ba7]">Harp</span><span class="text-[#7e39aa]">Elle</span>
-    </h1>
-    <p class="text-lg italic text-gray-600 mt-2">Thoughtfully built. Creatively inspired.</p>
-  </header>
+<body>
 
-  <main class="max-w-2xl mx-auto px-4">
-    <section class="bg-white rounded-3xl shadow-md p-6 mb-10">
-      <h2 class="text-2xl font-semibold mb-4 text-gray-800">Our Apps</h2>
+    <!-- Nav -->
+    <nav class="site-nav">
+        <a href="/" class="logo"><span class="h">Harp</span><span class="e">Elle</span></a>
+        <ul class="nav-links">
+            <li><a href="/volleytally/">VolleyTally</a></li>
+            <li><a href="/volleytrack/">VolleyTrack</a></li>
+            <li><a href="mailto:support@harpelle.com">Support</a></li>
+        </ul>
+    </nav>
 
-      <div class="flex items-center justify-between mb-8">
-        <div class="flex items-center space-x-4">
-          <img src="/assets/VolleyTally-PSD-rounded.png" class="w-16 h-16 rounded-xl" alt="VolleyTally logo">
-          <div>
-            <h3 class="text-xl font-bold">VolleyTally</h3>
-            <p class="text-sm text-gray-600">A smarter volleyball scoreboard</p>
-          </div>
-        </div>
-        <a href="/volleytally/" class="text-[#7e39aa] font-semibold text-sm hover:underline">Learn more →</a>
-      </div>
-
-      <div class="flex items-center justify-between">
-        <div class="flex items-center space-x-4">
-          <div
-            class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-2xl">
-            VT
-          </div>
-          <div>
-            <h3 class="text-xl font-bold">VolleyTrack <span
-                class="ml-2 text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full uppercase tracking-wide">Coming
-                Soon</span></h3>
-            <p class="text-sm text-gray-600">Advanced professional stats & AI analysis</p>
-          </div>
-        </div>
-        <a href="/volleytrack/" class="text-[#7e39aa] font-semibold text-sm hover:underline">Preview →</a>
-      </div>
+    <!-- Hero -->
+    <section class="hero">
+        <h1><span class="h">Harp</span><span class="e">Elle</span></h1>
+        <p class="tagline">Thoughtfully built volleyball apps for coaches, players, and fans. From quick courtside scoring to professional-grade analytics.</p>
     </section>
 
-    <section class="text-center text-sm text-gray-600">
-      <a href="/privacypolicy.md" class="underline">Privacy Policy</a>
-    </section>
-  </main>
+    <!-- Apps -->
+    <section class="apps-section">
+        <p class="section-label">Our Apps</p>
+        <h2 class="section-title">Two apps. One mission.</h2>
 
-  <footer class="text-center text-sm text-gray-400 mt-10 mb-4">
-    &copy; 2025 HarpElle
-  </footer>
+        <div class="app-cards">
+            <!-- VolleyTally -->
+            <div class="app-card tally">
+                <div class="card-hero">
+                    <img src="/assets/VolleyTally-PSD-rounded.png" alt="VolleyTally icon" class="app-icon">
+                    <div>
+                        <h3>VolleyTally <span class="badge badge-live">Live</span></h3>
+                        <p>A smarter volleyball scoreboard</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="features-list">
+                        <li>Track scores across multiple sets</li>
+                        <li>Customize team names and colors</li>
+                        <li>Flexible match rules and score caps</li>
+                        <li>Dark mode designed for any gym</li>
+                        <li>Works completely offline</li>
+                    </ul>
+                    <a href="/volleytally/" class="card-link">
+                        Learn more <span class="arrow">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- VolleyTrack -->
+            <div class="app-card track">
+                <div class="card-hero">
+                    <img src="/assets/VolleyTrack-icon.png" alt="VolleyTrack icon" class="app-icon">
+                    <div>
+                        <h3>VolleyTrack <span class="badge badge-new">New</span></h3>
+                        <p>Advanced stats &amp; AI analysis</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="features-list">
+                        <li>Live scoring with rotation tracking</li>
+                        <li>Hands-free voice stat input</li>
+                        <li>AI-powered match narratives</li>
+                        <li>Live spectator mode for parents and fans</li>
+                        <li>Team and season management</li>
+                    </ul>
+                    <a href="/volleytrack/" class="card-link">
+                        Learn more <span class="arrow">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="/volleytally/">VolleyTally</a>
+                <a href="/volleytrack/">VolleyTrack</a>
+                <a href="mailto:support@harpelle.com">Support</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 HarpElle. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
