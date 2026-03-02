@@ -4,39 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HarpElle — Volleyball Apps for Coaches, Players & Fans</title>
-    <meta name="description" content="HarpElle builds thoughtfully designed volleyball apps. Meet VolleyTally for quick scoring and VolleyTrack for advanced stats and AI analysis.">
-    <link rel="icon" href="/assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>HarpElle — Thoughtfully Built</title>
+    <meta name="description" content="HarpElle is an independent product studio building thoughtfully designed volleyball apps for coaches, players, and fans.">
+    <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/assets/brand/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
     <style>
         :root {
-            --brand-purple: #7e39aa;
-            --brand-pink: #e8539e;
-            --text-primary: #1a1a2e;
-            --text-secondary: #555;
-            --text-muted: #888;
-            --bg-page: #fff;
-            --bg-soft: #f8f9fb;
-            --border-light: #e5e7eb;
+            --dark-anchor: #35312E;
+            --light-foundation: #F7F5F2;
+            --mid-neutral: #8E8680;
+            --pink-accent: #B89A8F;
+            --purple-accent: #9280A0;
+            --border-light: rgba(142, 134, 128, 0.18);
             --radius-lg: 20px;
             --radius-md: 14px;
-            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
-            --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.1);
+            --shadow-card: 0 2px 16px rgba(53, 49, 46, 0.06);
+            --shadow-card-hover: 0 8px 32px rgba(53, 49, 46, 0.10);
             --max-width: 960px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: var(--text-primary);
-            background: var(--bg-page);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--dark-anchor);
+            background: var(--light-foundation);
             -webkit-font-smoothing: antialiased;
         }
 
         /* ── Nav ─────────────────────────────── */
         .site-nav {
-            padding: 16px 20px;
+            padding: 20px 24px;
             max-width: var(--max-width);
             margin: 0 auto;
             display: flex;
@@ -45,80 +46,108 @@
         }
 
         .site-nav .logo {
-            font-size: 1.4rem;
-            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 12px;
             text-decoration: none;
+            color: var(--dark-anchor);
+        }
+
+        .site-nav .logo svg { flex-shrink: 0; }
+
+        .site-nav .logo-text {
+            font-weight: 700;
+            font-size: 1.25rem;
             letter-spacing: -0.01em;
         }
 
-        .site-nav .logo .h { color: var(--brand-pink); }
-        .site-nav .logo .e { color: var(--brand-purple); }
-
         .site-nav .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 28px;
             list-style: none;
         }
 
         .site-nav .nav-links a {
-            color: var(--text-secondary);
+            color: var(--mid-neutral);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: color 0.15s;
+            transition: color 0.2s;
         }
 
-        .site-nav .nav-links a:hover { color: var(--brand-purple); }
+        .site-nav .nav-links a:hover { color: var(--dark-anchor); }
 
         /* ── Hero ────────────────────────────── */
         .hero {
             text-align: center;
-            padding: 72px 20px 56px;
-            background: linear-gradient(160deg, #f5f0ff 0%, #fdf2f8 50%, #f0f4ff 100%);
+            padding: 80px 24px 72px;
+        }
+
+        .hero-inner {
+            max-width: 640px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
+            font-family: 'Zilla Slab', Georgia, serif;
+            font-size: 3.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
             line-height: 1.1;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
+            color: var(--dark-anchor);
         }
-
-        .hero h1 .h { color: var(--brand-pink); }
-        .hero h1 .e { color: var(--brand-purple); }
 
         .hero .tagline {
             font-size: 1.15rem;
-            color: var(--text-secondary);
+            color: var(--mid-neutral);
             max-width: 480px;
-            margin: 0 auto;
+            margin: 0 auto 12px;
             line-height: 1.7;
         }
 
-        /* ── App Cards ───────────────────────── */
+        .hero .brand-promise {
+            font-family: 'Zilla Slab', Georgia, serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--pink-accent);
+            letter-spacing: 0.01em;
+        }
+
+        /* ── Divider ────────────────────────── */
+        .section-divider {
+            width: 48px;
+            height: 2px;
+            background: var(--border-light);
+            margin: 0 auto;
+        }
+
+        /* ── Apps Section ───────────────────── */
         .apps-section {
-            padding: 72px 20px;
+            padding: 72px 24px 80px;
             max-width: var(--max-width);
             margin: 0 auto;
         }
 
         .apps-section .section-label {
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            color: var(--mid-neutral);
             margin-bottom: 12px;
         }
 
         .apps-section .section-title {
             text-align: center;
+            font-family: 'Zilla Slab', Georgia, serif;
             font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 48px;
-            letter-spacing: -0.02em;
+            font-weight: 500;
+            margin-bottom: 56px;
+            letter-spacing: -0.01em;
+            color: var(--dark-anchor);
         }
 
         .app-cards {
@@ -131,7 +160,7 @@
             border: 1px solid var(--border-light);
             border-radius: var(--radius-lg);
             overflow: hidden;
-            transition: box-shadow 0.25s, transform 0.25s;
+            transition: box-shadow 0.3s, transform 0.3s;
             background: #fff;
         }
 
@@ -145,54 +174,32 @@
             display: flex;
             align-items: center;
             gap: 18px;
-        }
-
-        .app-card.tally .card-hero {
-            background: linear-gradient(135deg, #fdf2f8 0%, #f5f0ff 100%);
-        }
-
-        .app-card.track .card-hero {
-            background: linear-gradient(135deg, #eff6ff 0%, #f0f0ff 100%);
+            background: var(--light-foundation);
         }
 
         .app-card .card-hero .app-icon {
             width: 72px;
             height: 72px;
             border-radius: 16px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 16px rgba(53, 49, 46, 0.08);
             flex-shrink: 0;
-        }
-
-        .app-card .card-hero .app-icon-placeholder {
-            width: 72px;
-            height: 72px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #3b82f6, #7c3aed);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-weight: 800;
-            font-size: 1.4rem;
-            flex-shrink: 0;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
         }
 
         .app-card .card-hero h3 {
-            font-size: 1.5rem;
-            font-weight: 800;
+            font-size: 1.4rem;
+            font-weight: 700;
             margin-bottom: 4px;
         }
 
         .app-card .card-hero p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+            color: var(--mid-neutral);
+            font-size: 0.92rem;
             line-height: 1.5;
         }
 
         .badge {
             display: inline-block;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 700;
             padding: 3px 8px;
             border-radius: 6px;
@@ -202,11 +209,18 @@
             vertical-align: middle;
         }
 
-        .badge-live { background: #dcfce7; color: #166534; }
-        .badge-new { background: #dbeafe; color: #1e40af; }
+        .badge-live {
+            background: rgba(184, 154, 143, 0.15);
+            color: var(--pink-accent);
+        }
+
+        .badge-new {
+            background: rgba(146, 128, 160, 0.15);
+            color: var(--purple-accent);
+        }
 
         .app-card .card-body {
-            padding: 0 28px 28px;
+            padding: 4px 28px 28px;
         }
 
         .app-card .features-list {
@@ -216,8 +230,8 @@
 
         .app-card .features-list li {
             padding: 6px 0;
-            font-size: 0.92rem;
-            color: var(--text-secondary);
+            font-size: 0.9rem;
+            color: var(--mid-neutral);
             display: flex;
             align-items: baseline;
             gap: 10px;
@@ -225,37 +239,68 @@
 
         .app-card .features-list li::before {
             content: "";
-            width: 6px;
-            height: 6px;
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
             flex-shrink: 0;
             margin-top: 2px;
         }
 
-        .app-card.tally .features-list li::before { background: var(--brand-purple); }
-        .app-card.track .features-list li::before { background: #3b82f6; }
+        .app-card.tally .features-list li::before { background: var(--pink-accent); }
+        .app-card.track .features-list li::before { background: var(--purple-accent); }
 
         .app-card .card-link {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 600;
             text-decoration: none;
-            transition: gap 0.15s;
+            color: var(--dark-anchor);
+            transition: gap 0.2s;
         }
-
-        .app-card.tally .card-link { color: var(--brand-purple); }
-        .app-card.track .card-link { color: #2563eb; }
 
         .app-card .card-link:hover { gap: 10px; }
 
-        .app-card .card-link .arrow { transition: transform 0.15s; }
+        .app-card .card-link .arrow {
+            transition: transform 0.2s;
+            color: var(--mid-neutral);
+        }
+
+        /* ── About Strip ────────────────────── */
+        .about-strip {
+            background: var(--dark-anchor);
+            color: var(--light-foundation);
+            text-align: center;
+            padding: 64px 24px;
+        }
+
+        .about-strip-inner {
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .about-strip p {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: rgba(247, 245, 242, 0.7);
+        }
+
+        .about-strip p strong {
+            color: var(--light-foundation);
+            font-weight: 600;
+        }
+
+        .about-strip .attribution {
+            margin-top: 24px;
+            font-size: 0.85rem;
+            color: var(--mid-neutral);
+        }
 
         /* ── Footer ──────────────────────────── */
         footer {
             border-top: 1px solid var(--border-light);
-            padding: 36px 20px;
+            padding: 40px 24px;
             text-align: center;
         }
 
@@ -264,33 +309,50 @@
             margin: 0 auto;
         }
 
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo-text {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--dark-anchor);
+        }
+
         .footer-links {
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .footer-links a {
-            color: var(--text-secondary);
+            color: var(--mid-neutral);
             text-decoration: none;
             font-size: 0.85rem;
-            margin: 0 14px;
-            transition: color 0.15s;
+            margin: 0 16px;
+            transition: color 0.2s;
         }
 
-        .footer-links a:hover { color: var(--brand-purple); }
+        .footer-links a:hover { color: var(--dark-anchor); }
 
         .footer-copy {
             font-size: 0.78rem;
-            color: var(--text-muted);
+            color: var(--mid-neutral);
         }
 
         /* ── Responsive ──────────────────────── */
         @media (max-width: 640px) {
+            .hero { padding: 56px 20px 48px; }
             .hero h1 { font-size: 2.4rem; }
-            .hero .tagline { font-size: 1.05rem; }
+            .hero .tagline { font-size: 1.02rem; }
             .apps-section .section-title { font-size: 1.6rem; }
             .app-cards { grid-template-columns: 1fr; }
-            .site-nav .nav-links { gap: 16px; }
+            .site-nav .nav-links { gap: 18px; }
             .site-nav .nav-links a { font-size: 0.82rem; }
+            .about-strip { padding: 48px 20px; }
+            .about-strip p { font-size: 0.95rem; }
         }
     </style>
 </head>
@@ -299,7 +361,18 @@
 
     <!-- Nav -->
     <nav class="site-nav">
-        <a href="/" class="logo"><span class="h">Harp</span><span class="e">Elle</span></a>
+        <a href="/" class="logo">
+            <svg width="32" height="32" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="300" cy="300" r="150" fill="#35312E"/>
+                <rect x="330" y="345" width="53" height="30" fill="#9280A0"/>
+                <rect x="330" y="285" width="53" height="30" fill="#9280A0"/>
+                <rect x="330" y="225" width="53" height="30" fill="#9280A0"/>
+                <rect x="300" y="225" width="30" height="150" fill="#F7F5F2"/>
+                <rect x="248" y="285" width="52" height="30" fill="#B89A8F"/>
+                <rect x="218" y="225" width="30" height="150" fill="#F7F5F2"/>
+            </svg>
+            <span class="logo-text">HarpElle</span>
+        </a>
         <ul class="nav-links">
             <li><a href="/volleytally/">VolleyTally</a></li>
             <li><a href="/volleytrack/">VolleyTrack</a></li>
@@ -309,14 +382,19 @@
 
     <!-- Hero -->
     <section class="hero">
-        <h1><span class="h">Harp</span><span class="e">Elle</span></h1>
-        <p class="tagline">Thoughtfully built volleyball apps for coaches, players, and fans. From quick courtside scoring to professional-grade analytics.</p>
+        <div class="hero-inner">
+            <h1>Volleyball apps,<br>thoughtfully built.</h1>
+            <p class="tagline">From quick courtside scoring to professional-grade analytics. Crafted with care for coaches, players, and fans.</p>
+            <p class="brand-promise">An independent product studio by Jason Paschall</p>
+        </div>
     </section>
+
+    <div class="section-divider"></div>
 
     <!-- Apps -->
     <section class="apps-section">
         <p class="section-label">Our Apps</p>
-        <h2 class="section-title">Two apps. One mission.</h2>
+        <h2 class="section-title">Two apps. One standard.</h2>
 
         <div class="app-cards">
             <!-- VolleyTally -->
@@ -367,9 +445,29 @@
         </div>
     </section>
 
+    <!-- About Strip -->
+    <section class="about-strip">
+        <div class="about-strip-inner">
+            <p><strong>HarpElle</strong> is an independent product studio. Every product under this name reflects a single commitment: if it's worth building, it's worth building well. The standard doesn't change. The craft doesn't cut corners.</p>
+            <p class="attribution">a HarpElle studio</p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="footer-inner">
+            <div class="footer-logo">
+                <svg width="24" height="24" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="300" cy="300" r="150" fill="#35312E"/>
+                    <rect x="330" y="345" width="53" height="30" fill="#9280A0"/>
+                    <rect x="330" y="285" width="53" height="30" fill="#9280A0"/>
+                    <rect x="330" y="225" width="53" height="30" fill="#9280A0"/>
+                    <rect x="300" y="225" width="30" height="150" fill="#F7F5F2"/>
+                    <rect x="248" y="285" width="52" height="30" fill="#B89A8F"/>
+                    <rect x="218" y="225" width="30" height="150" fill="#F7F5F2"/>
+                </svg>
+                <span class="footer-logo-text">HarpElle</span>
+            </div>
             <div class="footer-links">
                 <a href="/volleytally/">VolleyTally</a>
                 <a href="/volleytrack/">VolleyTrack</a>

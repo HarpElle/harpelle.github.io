@@ -6,39 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolleyTrack — Advanced Volleyball Stats & Live Scoring</title>
     <meta name="description" content="Professional-grade volleyball statistics, live scoring, AI-powered narratives, and real-time spectator mode. Built for coaches, players, and fans.">
-    <link rel="icon" href="/assets/volleyball-favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/assets/brand/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --brand-purple: #7e39aa;
-            --brand-pink: #e8539e;
-            --accent: #2563eb;
-            --accent-light: #eff6ff;
-            --text-primary: #1a1a2e;
-            --text-secondary: #555;
-            --text-muted: #888;
-            --bg-page: #fff;
-            --bg-soft: #f8f9fb;
-            --border-light: #e5e7eb;
+            --dark-anchor: #35312E;
+            --light-foundation: #F7F5F2;
+            --mid-neutral: #8E8680;
+            --pink-accent: #B89A8F;
+            --purple-accent: #9280A0;
+            --accent: var(--purple-accent);
+            --accent-bg: rgba(146, 128, 160, 0.1);
+            --border-light: rgba(142, 134, 128, 0.18);
             --radius-lg: 20px;
             --radius-md: 14px;
-            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
-            --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-card: 0 2px 16px rgba(53, 49, 46, 0.06);
+            --shadow-card-hover: 0 8px 30px rgba(53, 49, 46, 0.10);
             --max-width: 960px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: var(--text-primary);
-            background: var(--bg-page);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--dark-anchor);
+            background: #fff;
             -webkit-font-smoothing: antialiased;
         }
 
         /* ── Nav ─────────────────────────────── */
         .site-nav {
-            padding: 16px 20px;
+            padding: 20px 24px;
             max-width: var(--max-width);
             margin: 0 auto;
             display: flex;
@@ -47,35 +48,42 @@
         }
 
         .site-nav .logo {
-            font-size: 1.4rem;
-            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 12px;
             text-decoration: none;
+            color: var(--dark-anchor);
         }
 
-        .site-nav .logo .h { color: var(--brand-pink); }
-        .site-nav .logo .e { color: var(--brand-purple); }
+        .site-nav .logo svg { flex-shrink: 0; }
+
+        .site-nav .logo-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.01em;
+        }
 
         .site-nav .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 28px;
             list-style: none;
         }
 
         .site-nav .nav-links a {
-            color: var(--text-secondary);
+            color: var(--mid-neutral);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: color 0.15s;
+            transition: color 0.2s;
         }
 
         .site-nav .nav-links a:hover,
-        .site-nav .nav-links a.active { color: var(--accent); }
+        .site-nav .nav-links a.active { color: var(--dark-anchor); }
 
         /* ── Hero ────────────────────────────── */
         .hero {
-            background: linear-gradient(160deg, #eff6ff 0%, #e0e7ff 40%, #f0f0ff 100%);
-            padding: 60px 20px 48px;
+            background: var(--light-foundation);
+            padding: 60px 24px 52px;
             text-align: center;
         }
 
@@ -88,23 +96,23 @@
             width: 96px;
             height: 96px;
             border-radius: 22px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-            margin-bottom: 20px;
+            box-shadow: 0 8px 30px rgba(53, 49, 46, 0.10);
+            margin-bottom: 24px;
         }
 
         .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
+            font-size: 2.6rem;
+            font-weight: 700;
             letter-spacing: -0.02em;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .hero .tagline {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
+            font-size: 1.1rem;
+            color: var(--mid-neutral);
             max-width: 520px;
             margin: 0 auto 28px;
-            line-height: 1.65;
+            line-height: 1.7;
         }
 
         .store-badges {
@@ -121,11 +129,11 @@
             max-width: 260px;
             width: 100%;
             border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 20px 60px rgba(53, 49, 46, 0.15);
         }
 
         /* ── Sections ────────────────────────── */
-        section { padding: 64px 20px; }
+        section { padding: 72px 24px; }
 
         .section-inner {
             max-width: var(--max-width);
@@ -133,18 +141,18 @@
         }
 
         .section-label {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.1em;
             color: var(--accent);
             text-align: center;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .section-title {
-            font-size: 2rem;
-            font-weight: 800;
+            font-size: 1.9rem;
+            font-weight: 700;
             text-align: center;
             margin-bottom: 12px;
             letter-spacing: -0.02em;
@@ -152,15 +160,15 @@
 
         .section-subtitle {
             text-align: center;
-            color: var(--text-secondary);
-            font-size: 1.05rem;
+            color: var(--mid-neutral);
+            font-size: 1.02rem;
             max-width: 600px;
-            margin: 0 auto 48px;
-            line-height: 1.65;
+            margin: 0 auto 52px;
+            line-height: 1.7;
         }
 
         /* ── Features ────────────────────────── */
-        .features-section { background: var(--bg-soft); }
+        .features-section { background: var(--light-foundation); }
 
         .features-grid {
             display: grid;
@@ -171,9 +179,9 @@
         .feature-card {
             background: #fff;
             border-radius: var(--radius-md);
-            padding: 26px 22px;
+            padding: 28px 22px;
             border: 1px solid var(--border-light);
-            transition: box-shadow 0.2s, transform 0.2s;
+            transition: box-shadow 0.25s, transform 0.25s;
         }
 
         .feature-card:hover {
@@ -182,28 +190,28 @@
         }
 
         .feature-icon {
-            font-size: 1.8rem;
-            margin-bottom: 12px;
+            font-size: 1.6rem;
+            margin-bottom: 14px;
             display: block;
         }
 
         .feature-card h3 {
-            font-size: 1.05rem;
+            font-size: 1.02rem;
             font-weight: 700;
             margin-bottom: 6px;
         }
 
         .feature-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.6;
+            color: var(--mid-neutral);
+            font-size: 0.88rem;
+            line-height: 1.65;
         }
 
         .feature-badge {
             display: inline-block;
-            background: #dbeafe;
-            color: #2563eb;
-            font-size: 0.65rem;
+            background: var(--accent-bg);
+            color: var(--accent);
+            font-size: 0.6rem;
             font-weight: 700;
             padding: 2px 7px;
             border-radius: 5px;
@@ -215,18 +223,18 @@
 
         /* ── Spectator ───────────────────────── */
         .spectator-section {
-            background: linear-gradient(135deg, #1a1a2e 0%, #1e2a4a 100%);
-            color: #fff;
+            background: var(--dark-anchor);
+            color: var(--light-foundation);
         }
 
-        .spectator-section .section-label { color: rgba(255,255,255,0.45); }
-        .spectator-section .section-title { color: #fff; }
-        .spectator-section .section-subtitle { color: rgba(255,255,255,0.6); }
+        .spectator-section .section-label { color: var(--mid-neutral); }
+        .spectator-section .section-title { color: var(--light-foundation); }
+        .spectator-section .section-subtitle { color: rgba(247, 245, 242, 0.6); }
 
         .spectator-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 28px;
+            gap: 32px;
             max-width: 720px;
             margin: 0 auto;
             text-align: center;
@@ -237,29 +245,29 @@
             width: 42px;
             height: 42px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            color: #93c5fd;
-            font-weight: 800;
-            font-size: 1.1rem;
+            background: rgba(247, 245, 242, 0.08);
+            color: var(--purple-accent);
+            font-weight: 700;
+            font-size: 1rem;
             align-items: center;
             justify-content: center;
             margin-bottom: 14px;
         }
 
         .step h3 {
-            font-size: 1rem;
+            font-size: 0.98rem;
             font-weight: 700;
             margin-bottom: 6px;
         }
 
         .step p {
             font-size: 0.88rem;
-            color: rgba(255,255,255,0.55);
-            line-height: 1.55;
+            color: rgba(247, 245, 242, 0.5);
+            line-height: 1.6;
         }
 
         /* ── Pricing ─────────────────────────── */
-        .pricing-section { background: var(--bg-page); }
+        .pricing-section { background: #fff; }
 
         .pricing-grid {
             display: grid;
@@ -272,10 +280,10 @@
         .price-card {
             border: 2px solid var(--border-light);
             border-radius: var(--radius-md);
-            padding: 26px 18px;
+            padding: 28px 18px;
             text-align: center;
             position: relative;
-            transition: border-color 0.2s;
+            transition: border-color 0.25s;
         }
 
         .price-card.popular {
@@ -290,7 +298,7 @@
             transform: translateX(-50%);
             background: var(--accent);
             color: #fff;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 700;
             padding: 3px 10px;
             border-radius: 6px;
@@ -299,79 +307,79 @@
         }
 
         .price-card .plan-name {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 600;
             text-transform: uppercase;
-            color: var(--text-muted);
+            color: var(--mid-neutral);
             letter-spacing: 0.06em;
             margin-bottom: 6px;
         }
 
         .price-card .price {
             font-size: 1.9rem;
-            font-weight: 800;
+            font-weight: 700;
         }
 
         .price-card .period {
             font-size: 0.82rem;
-            color: var(--text-muted);
+            color: var(--mid-neutral);
             margin-bottom: 4px;
         }
 
         .price-card .savings {
             font-size: 0.78rem;
-            color: #16a34a;
+            color: #5a8a5a;
             font-weight: 600;
         }
 
         .free-note {
             text-align: center;
-            margin-top: 32px;
-            color: var(--text-secondary);
-            font-size: 0.92rem;
-            line-height: 1.65;
+            margin-top: 36px;
+            color: var(--mid-neutral);
+            font-size: 0.9rem;
+            line-height: 1.7;
             max-width: 560px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .free-note strong { color: var(--text-primary); }
+        .free-note strong { color: var(--dark-anchor); }
 
         /* ── CTA Section ─────────────────────── */
         .cta-section {
-            background: var(--bg-soft);
+            background: var(--light-foundation);
             text-align: center;
         }
 
-        .cta-section .section-label { color: var(--brand-purple); }
+        .cta-section .section-label { color: var(--pink-accent); }
 
         .cta-card {
-            background: linear-gradient(135deg, #fdf2f8 0%, #f5f0ff 100%);
+            background: #fff;
             border-radius: var(--radius-lg);
-            padding: 32px;
+            padding: 36px;
             max-width: 560px;
             margin: 0 auto;
-            border: 1px solid #e8d5f5;
+            border: 1px solid var(--border-light);
         }
 
         .cta-card .cta-icon {
             width: 56px;
             height: 56px;
             border-radius: 14px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 16px rgba(53, 49, 46, 0.08);
             margin-bottom: 16px;
         }
 
         .cta-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 700;
             margin-bottom: 8px;
         }
 
         .cta-card p {
-            color: var(--text-secondary);
-            font-size: 0.92rem;
-            line-height: 1.6;
+            color: var(--mid-neutral);
+            font-size: 0.9rem;
+            line-height: 1.65;
             margin-bottom: 20px;
         }
 
@@ -379,11 +387,11 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            color: var(--brand-purple);
+            color: var(--pink-accent);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
-            transition: gap 0.15s;
+            font-size: 0.92rem;
+            transition: gap 0.2s;
         }
 
         .cta-card .cta-link:hover { gap: 10px; }
@@ -391,7 +399,7 @@
         /* ── Footer ──────────────────────────── */
         footer {
             border-top: 1px solid var(--border-light);
-            padding: 36px 20px;
+            padding: 40px 24px;
             text-align: center;
         }
 
@@ -405,29 +413,29 @@
         }
 
         .footer-links a {
-            color: var(--text-secondary);
+            color: var(--mid-neutral);
             text-decoration: none;
             font-size: 0.85rem;
-            margin: 0 14px;
-            transition: color 0.15s;
+            margin: 0 16px;
+            transition: color 0.2s;
         }
 
-        .footer-links a:hover { color: var(--accent); }
+        .footer-links a:hover { color: var(--dark-anchor); }
 
         .footer-copy {
             font-size: 0.78rem;
-            color: var(--text-muted);
+            color: var(--mid-neutral);
         }
 
         /* ── Responsive ──────────────────────── */
         @media (max-width: 640px) {
-            .hero h1 { font-size: 2.1rem; }
+            .hero h1 { font-size: 2rem; }
             .hero .tagline { font-size: 1rem; }
-            .section-title { font-size: 1.6rem; }
+            .section-title { font-size: 1.5rem; }
             .features-grid { grid-template-columns: 1fr; }
             .pricing-grid { grid-template-columns: 1fr; max-width: 280px; }
             .spectator-steps { grid-template-columns: 1fr; }
-            .site-nav .nav-links { gap: 16px; }
+            .site-nav .nav-links { gap: 18px; }
             .site-nav .nav-links a { font-size: 0.82rem; }
         }
     </style>
@@ -437,7 +445,18 @@
 
     <!-- Nav -->
     <nav class="site-nav">
-        <a href="/" class="logo"><span class="h">Harp</span><span class="e">Elle</span></a>
+        <a href="/" class="logo">
+            <svg width="32" height="32" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="300" cy="300" r="150" fill="#35312E"/>
+                <rect x="330" y="345" width="53" height="30" fill="#9280A0"/>
+                <rect x="330" y="285" width="53" height="30" fill="#9280A0"/>
+                <rect x="330" y="225" width="53" height="30" fill="#9280A0"/>
+                <rect x="300" y="225" width="30" height="150" fill="#F7F5F2"/>
+                <rect x="248" y="285" width="52" height="30" fill="#B89A8F"/>
+                <rect x="218" y="225" width="30" height="150" fill="#F7F5F2"/>
+            </svg>
+            <span class="logo-text">HarpElle</span>
+        </a>
         <ul class="nav-links">
             <li><a href="/volleytally/">VolleyTally</a></li>
             <li><a href="/volleytrack/" class="active">VolleyTrack</a></li>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Wordmark">
+    </g>
+    <g id="Monogram-Circle" serif:id="Monogram Circle">
+    </g>
+    <rect id="Icon-Dark" serif:id="Icon Dark" x="-0" y="0" width="600" height="600" style="fill:#35312e;"/>
+    <g id="Monogram-Circle1" serif:id="Monogram Circle">
+        <g id="Monogram---Full-Color-Dark" serif:id="Monogram - Full Color Dark">
+            <circle id="Circle" cx="300" cy="300" r="150" style="fill:#f7f5f2;"/>
+            <g id="HE">
+                <rect x="330.032" y="345" width="52.532" height="30" style="fill:#9280a0;"/>
+                <rect x="330.032" y="285" width="52.532" height="30" style="fill:#9280a0;"/>
+                <rect x="330.032" y="225" width="52.532" height="30" style="fill:#9280a0;"/>
+                <rect x="300.032" y="225" width="29.976" height="150" style="fill:#35312e;"/>
+                <rect x="247.532" y="285" width="52.5" height="30" style="fill:#b89a8f;"/>
+                <rect x="217.532" y="225" width="29.976" height="150" style="fill:#35312e;"/>
+            </g>
+        </g>
+    </g>
+</svg>

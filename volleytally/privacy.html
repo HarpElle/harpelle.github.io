@@ -5,35 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — VolleyTally</title>
-    <link rel="icon" href="/assets/volleyball-favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/assets/brand/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --brand-purple: #7e39aa;
-            --brand-pink: #e8539e;
-            --accent: #7e39aa;
-            --text-primary: #1a1a2e;
-            --text-secondary: #555;
-            --text-muted: #888;
-            --bg-page: #fff;
-            --bg-soft: #f8f9fb;
-            --border-light: #e5e7eb;
+            --dark-anchor: #35312E;
+            --light-foundation: #F7F5F2;
+            --mid-neutral: #8E8680;
+            --pink-accent: #B89A8F;
+            --purple-accent: #9280A0;
+            --accent: var(--pink-accent);
+            --border-light: rgba(142, 134, 128, 0.18);
             --max-width: 760px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: var(--text-primary);
-            background: var(--bg-page);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--dark-anchor);
+            background: #fff;
             -webkit-font-smoothing: antialiased;
             line-height: 1.7;
         }
 
         /* ── Nav ─────────────────────────────── */
         .site-nav {
-            padding: 16px 20px;
+            padding: 20px 24px;
             max-width: 960px;
             margin: 0 auto;
             display: flex;
@@ -42,35 +43,42 @@
         }
 
         .site-nav .logo {
-            font-size: 1.4rem;
-            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 12px;
             text-decoration: none;
+            color: var(--dark-anchor);
         }
 
-        .site-nav .logo .h { color: var(--brand-pink); }
-        .site-nav .logo .e { color: var(--brand-purple); }
+        .site-nav .logo svg { flex-shrink: 0; }
+
+        .site-nav .logo-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.01em;
+        }
 
         .site-nav .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 28px;
             list-style: none;
         }
 
         .site-nav .nav-links a {
-            color: var(--text-secondary);
+            color: var(--mid-neutral);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: color 0.15s;
+            transition: color 0.2s;
         }
 
-        .site-nav .nav-links a:hover { color: var(--accent); }
+        .site-nav .nav-links a:hover { color: var(--dark-anchor); }
 
         /* ── Content ─────────────────────────── */
         .content {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 24px 20px 60px;
+            padding: 24px 24px 64px;
         }
 
         .back-link {
@@ -82,33 +90,33 @@
             font-size: 0.88rem;
             font-weight: 500;
             margin-bottom: 28px;
-            transition: gap 0.15s;
+            transition: gap 0.2s;
         }
 
         .back-link:hover { gap: 8px; }
 
         h1 {
-            font-size: 2rem;
-            font-weight: 800;
+            font-size: 1.9rem;
+            font-weight: 700;
             letter-spacing: -0.02em;
             margin-bottom: 8px;
         }
 
         .last-updated {
-            color: var(--text-muted);
+            color: var(--mid-neutral);
             font-size: 0.88rem;
             margin-bottom: 32px;
         }
 
         .intro {
-            font-size: 1.02rem;
-            color: var(--text-secondary);
+            font-size: 1rem;
+            color: var(--mid-neutral);
             margin-bottom: 36px;
             line-height: 1.75;
         }
 
         h2 {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 700;
             margin-top: 40px;
             margin-bottom: 12px;
@@ -118,9 +126,9 @@
         }
 
         h3 {
-            font-size: 1.05rem;
+            font-size: 1.02rem;
             font-weight: 600;
-            color: #374151;
+            color: var(--mid-neutral);
             margin-top: 20px;
             margin-bottom: 8px;
         }
@@ -133,16 +141,16 @@
 
         li {
             margin-bottom: 6px;
-            color: var(--text-secondary);
+            color: var(--mid-neutral);
         }
 
-        li strong { color: var(--text-primary); }
+        li strong { color: var(--dark-anchor); }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 16px 0 20px;
-            font-size: 0.92rem;
+            font-size: 0.9rem;
         }
 
         th, td {
@@ -152,12 +160,12 @@
         }
 
         th {
-            background: var(--bg-soft);
+            background: var(--light-foundation);
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             text-transform: uppercase;
             letter-spacing: 0.03em;
-            color: var(--text-secondary);
+            color: var(--mid-neutral);
         }
 
         a { color: var(--accent); }
@@ -165,7 +173,7 @@
         /* ── Footer ──────────────────────────── */
         footer {
             border-top: 1px solid var(--border-light);
-            padding: 36px 20px;
+            padding: 40px 24px;
             text-align: center;
         }
 
@@ -179,24 +187,24 @@
         }
 
         .footer-links a {
-            color: var(--text-secondary);
+            color: var(--mid-neutral);
             text-decoration: none;
             font-size: 0.85rem;
-            margin: 0 14px;
-            transition: color 0.15s;
+            margin: 0 16px;
+            transition: color 0.2s;
         }
 
-        .footer-links a:hover { color: var(--accent); }
+        .footer-links a:hover { color: var(--dark-anchor); }
 
         .footer-copy {
             font-size: 0.78rem;
-            color: var(--text-muted);
+            color: var(--mid-neutral);
         }
 
         @media (max-width: 640px) {
-            h1 { font-size: 1.6rem; }
-            h2 { font-size: 1.15rem; }
-            .site-nav .nav-links { gap: 16px; }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.1rem; }
+            .site-nav .nav-links { gap: 18px; }
             .site-nav .nav-links a { font-size: 0.82rem; }
         }
     </style>
@@ -206,7 +214,18 @@
 
     <!-- Nav -->
     <nav class="site-nav">
-        <a href="/" class="logo"><span class="h">Harp</span><span class="e">Elle</span></a>
+        <a href="/" class="logo">
+            <svg width="32" height="32" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="300" cy="300" r="150" fill="#35312E"/>
+                <rect x="330" y="345" width="53" height="30" fill="#9280A0"/>
+                <rect x="330" y="285" width="53" height="30" fill="#9280A0"/>
+                <rect x="330" y="225" width="53" height="30" fill="#9280A0"/>
+                <rect x="300" y="225" width="30" height="150" fill="#F7F5F2"/>
+                <rect x="248" y="285" width="52" height="30" fill="#B89A8F"/>
+                <rect x="218" y="225" width="30" height="150" fill="#F7F5F2"/>
+            </svg>
+            <span class="logo-text">HarpElle</span>
+        </a>
         <ul class="nav-links">
             <li><a href="/volleytally/">VolleyTally</a></li>
             <li><a href="/volleytrack/">VolleyTrack</a></li>
