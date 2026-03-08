@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — VolleyTrack</title>
+    <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/assets/brand/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-anchor: #35312E;
+            --light-foundation: #F7F5F2;
+            --mid-neutral: #8E8680;
+            --pink-accent: #B89A8F;
+            --purple-accent: #9280A0;
+            --accent: var(--purple-accent);
+            --border-light: rgba(142, 134, 128, 0.18);
+            --max-width: 760px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--dark-anchor);
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.7;
+        }
+
+        /* ── Nav ─────────────────────────────── */
+        .site-nav {
+            padding: 20px 24px;
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .site-nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--dark-anchor);
+        }
+
+        .site-nav .logo svg { flex-shrink: 0; }
+
+        .site-nav .logo-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.01em;
+        }
+
+        .site-nav .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .site-nav .nav-links a {
+            color: var(--mid-neutral);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .site-nav .nav-links a:hover { color: var(--dark-anchor); }
+
+        /* ── Content ─────────────────────────── */
+        .content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 24px 24px 64px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            margin-bottom: 28px;
+            transition: gap 0.2s;
+        }
+
+        .back-link:hover { gap: 8px; }
+
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            color: var(--mid-neutral);
+            font-size: 0.88rem;
+            margin-bottom: 32px;
+        }
+
+        .intro {
+            font-size: 1rem;
+            color: var(--mid-neutral);
+            margin-bottom: 36px;
+            line-height: 1.75;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border-light);
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: var(--mid-neutral);
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        p { margin-bottom: 14px; }
+
+        ul {
+            margin: 10px 0 14px 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            color: var(--mid-neutral);
+        }
+
+        li strong { color: var(--dark-anchor); }
+
+        a { color: var(--accent); }
+
+        /* ── Footer ──────────────────────────── */
+        footer {
+            border-top: 1px solid var(--border-light);
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--mid-neutral);
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin: 0 16px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--dark-anchor); }
+
+        .footer-copy {
+            font-size: 0.78rem;
+            color: var(--mid-neutral);
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.1rem; }
+            .site-nav .nav-links { gap: 18px; }
+            .site-nav .nav-links a { font-size: 0.82rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="site-nav">
+        <a href="/" class="logo">
+            <svg width="32" height="32" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="300" cy="300" r="150" fill="#35312E"/>
+                <rect x="330" y="345" width="53" height="30" fill="#9280A0"/>
+                <rect x="330" y="285" width="53" height="30" fill="#9280A0"/>
+                <rect x="330" y="225" width="53" height="30" fill="#9280A0"/>
+                <rect x="300" y="225" width="30" height="150" fill="#F7F5F2"/>
+                <rect x="248" y="285" width="52" height="30" fill="#B89A8F"/>
+                <rect x="218" y="225" width="30" height="150" fill="#F7F5F2"/>
+            </svg>
+            <span class="logo-text">HarpElle</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/volleytally/">VolleyTally</a></li>
+            <li><a href="/volleytrack/">VolleyTrack</a></li>
+            <li><a href="mailto:support@harpelle.com">Support</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <a href="/volleytrack/" class="back-link">&larr; Back to VolleyTrack</a>
+
+        <h1>Terms of Service for VolleyTrack</h1>
+        <p class="last-updated">Last updated: March 7, 2026</p>
+
+        <p class="intro">These Terms of Service ("Terms") govern your use of the VolleyTrack mobile application (the "App") operated by HarpElle ("we," "our," "us"). By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the App.</p>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using VolleyTrack, you confirm that you are at least 13 years of age and that you have the legal capacity to enter into these Terms. If you are using the App on behalf of an organization (such as a school, club, or league), you represent that you have the authority to bind that organization to these Terms.</p>
+
+        <h2>2. Description of Service</h2>
+        <p>VolleyTrack is a volleyball match tracking application that provides live scoring, statistical tracking, rotation management, AI-powered match narratives, and real-time spectator broadcasting. The App is available in both a free tier and a paid subscription tier ("VolleyTrack Pro").</p>
+
+        <h2>3. User Accounts</h2>
+        <p>Certain features of the App — including cloud sync, live match broadcasting, and AI-powered narratives — require you to create an account. You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account.</p>
+        <p>You agree to provide accurate information when creating your account and to notify us promptly if you believe your account has been compromised. We reserve the right to suspend or terminate accounts that violate these Terms.</p>
+
+        <h2>4. Acceptable Use</h2>
+        <p>You agree to use VolleyTrack in a manner that is lawful, respectful, and consistent with its intended purpose. Specifically, you agree not to:</p>
+        <ul>
+            <li><strong>Misuse the broadcasting feature</strong> by sharing inappropriate, offensive, or misleading content through live match broadcasts</li>
+            <li><strong>Interfere with the App's operation</strong> by attempting to access systems or data you are not authorized to access, or by introducing malicious code</li>
+            <li><strong>Scrape or extract data</strong> from the App or its services through automated means</li>
+            <li><strong>Impersonate others</strong> or misrepresent your affiliation with a team, league, or organization</li>
+            <li><strong>Use the App for commercial purposes</strong> beyond its intended use (for example, reselling access to live match data)</li>
+        </ul>
+
+        <h2>5. Your Content</h2>
+        <p>You retain ownership of any content you create within the App, including team names, player rosters, match data, and any other information you enter. By using the App's cloud sync and broadcasting features, you grant us a limited license to store, transmit, and display your content as necessary to provide those features.</p>
+        <p>When you broadcast a live match, the match data you share (scores, team names, roster information, and play-by-play entries) becomes accessible to anyone with the match code. You are responsible for ensuring you have appropriate consent to share player names and related information in this way.</p>
+
+        <h2>6. Subscriptions and Payments</h2>
+
+        <h3>Free Tier</h3>
+        <p>The free tier of VolleyTrack includes core functionality — live scoring, rotation tracking, basic statistics, and limited access to AI features. Free-tier users may see advertisements delivered through Google AdMob.</p>
+
+        <h3>VolleyTrack Pro</h3>
+        <p>VolleyTrack Pro is available as a monthly subscription, annual subscription, or one-time lifetime purchase. Subscriptions are processed through Apple's App Store (iOS) and managed by RevenueCat.</p>
+        <ul>
+            <li><strong>Billing:</strong> Subscriptions are billed at the start of each billing period (monthly or annually). Prices are displayed in the App and may vary by region.</li>
+            <li><strong>Renewal:</strong> Subscriptions automatically renew unless you cancel at least 24 hours before the end of the current billing period.</li>
+            <li><strong>Cancellation:</strong> You may cancel your subscription at any time through your device's subscription management settings. Cancellation takes effect at the end of the current billing period — you will retain Pro access until then.</li>
+            <li><strong>Refunds:</strong> Refund requests are handled by Apple in accordance with their refund policies.</li>
+        </ul>
+
+        <h2>7. AI-Powered Features</h2>
+        <p>VolleyTrack uses Google's Gemini AI to generate match narratives, recaps, and to process voice input. These features are provided on an "as-is" basis. AI-generated content is based on match data you provide and may not always be perfectly accurate.</p>
+        <p>We do not guarantee the availability of AI features at all times. AI services may experience downtime, and generated content may vary in quality. You should review any AI-generated content before sharing it publicly.</p>
+
+        <h2>8. Third-Party Services</h2>
+        <p>The App integrates with third-party services including Google Firebase, Google AdMob, Google Gemini AI, RevenueCat, and Expo. Your use of these services is subject to their respective terms of service and privacy policies. We are not responsible for the availability, accuracy, or practices of third-party services.</p>
+
+        <h2>9. Intellectual Property</h2>
+        <p>The VolleyTrack name, logo, design, and code are the property of HarpElle. You may not copy, modify, distribute, or create derivative works from the App or its content without our written permission.</p>
+        <p>Nothing in these Terms grants you any rights to our trademarks, branding, or proprietary materials beyond the right to use the App as intended.</p>
+
+        <h2>10. Disclaimer of Warranties</h2>
+        <p>VolleyTrack is provided "as is" and "as available" without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+        <p>We do not warrant that the App will be uninterrupted, error-free, or free of harmful components. While we work to keep VolleyTrack reliable and accurate, match statistics, AI-generated content, and data syncing are provided for informational and personal use — they should not be relied upon as the sole official record for league or tournament purposes.</p>
+
+        <h2>11. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by applicable law, HarpElle shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the App. This includes, but is not limited to, loss of data, loss of revenue, or interruption of service.</p>
+        <p>Our total liability for any claim arising from these Terms or your use of the App shall not exceed the amount you paid to us for the App in the twelve months preceding the claim.</p>
+
+        <h2>12. Indemnification</h2>
+        <p>You agree to indemnify and hold harmless HarpElle, its founder, and its affiliates from any claims, damages, losses, or expenses (including reasonable legal fees) arising from your use of the App, your violation of these Terms, or your violation of any rights of a third party.</p>
+
+        <h2>13. Termination</h2>
+        <p>We may suspend or terminate your access to VolleyTrack at any time if you violate these Terms or if we reasonably believe your use poses a risk to the App, its users, or its services. You may stop using the App at any time by uninstalling it and, if applicable, deleting your account through the Settings screen.</p>
+        <p>Upon termination, your right to use the App ceases immediately. Sections of these Terms that by their nature should survive termination — including intellectual property, disclaimers, limitation of liability, and indemnification — will remain in effect.</p>
+
+        <h2>14. Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. When we do, we will update the "Last updated" date at the top of this page. We encourage you to review these Terms periodically. Continued use of the App after changes are posted constitutes acceptance of the updated Terms.</p>
+        <p>For material changes that significantly affect your rights, we will make reasonable efforts to notify you through the App or via email.</p>
+
+        <h2>15. Governing Law</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of the State of Georgia, United States, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of the App shall be resolved in the courts located in the State of Georgia.</p>
+
+        <h2>16. Contact Us</h2>
+        <p>If you have any questions about these Terms, please contact us at:</p>
+        <p><a href="mailto:support@harpelle.com">support@harpelle.com</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="/volleytally/">VolleyTally</a>
+                <a href="/volleytrack/">VolleyTrack</a>
+                <a href="mailto:support@harpelle.com">Support</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 HarpElle. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
