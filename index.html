@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HarpElle — Thoughtfully Built</title>
-    <meta name="description" content="HarpElle is an independent product studio building thoughtfully designed volleyball apps for coaches, players, and fans.">
+    <meta name="description" content="HarpElle is an independent product studio building thoughtfully designed apps and services — from volleyball tools for coaches and fans to a publishing service for speakers.">
     <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="/assets/brand/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -18,12 +18,13 @@
             --mid-neutral: #8E8680;
             --pink-accent: #B89A8F;
             --purple-accent: #9280A0;
+            --gold-accent: #A8956E;
             --border-light: rgba(142, 134, 128, 0.18);
             --radius-lg: 20px;
             --radius-md: 14px;
             --shadow-card: 0 2px 16px rgba(53, 49, 46, 0.06);
             --shadow-card-hover: 0 8px 32px rgba(53, 49, 46, 0.10);
-            --max-width: 960px;
+            --max-width: 1080px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -153,8 +154,8 @@
 
         .app-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 28px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
         }
 
         .app-card {
@@ -249,6 +250,24 @@
 
         .app-card.tally .features-list li::before { background: var(--pink-accent); }
         .app-card.track .features-list li::before { background: var(--purple-accent); }
+        .app-card.spoken .features-list li::before { background: var(--gold-accent); }
+
+        .badge-service {
+            background: rgba(168, 149, 110, 0.15);
+            color: var(--gold-accent);
+        }
+
+        .app-card .card-hero .service-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(53, 49, 46, 0.08);
+            flex-shrink: 0;
+            background: var(--dark-anchor);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
         .app-card .card-link {
             display: inline-flex;
@@ -378,6 +397,7 @@
         <ul class="nav-links">
             <li><a href="/volleytally/">VolleyTally</a></li>
             <li><a href="/volleytrack/">VolleyTrack</a></li>
+            <li><a href="https://spokentobook.com" target="_blank" rel="noopener noreferrer">Spoken To Book</a></li>
             <li><a href="mailto:support@harpelle.com">Support</a></li>
         </ul>
     </nav>
@@ -385,8 +405,8 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-inner">
-            <h1>Volleyball apps,<br>thoughtfully built.</h1>
-            <p class="tagline">From quick courtside scoring to professional-grade analytics. Crafted with care for coaches, players, and fans.</p>
+            <h1>Thoughtfully built.<br>Every time.</h1>
+            <p class="tagline">Volleyball apps for coaches, players, and fans.<br>A publishing service for speakers with a story.<br>Each one crafted with the same care.</p>
             <p class="brand-promise">An independent product studio by Jason Paschall</p>
         </div>
     </section>
@@ -395,8 +415,8 @@
 
     <!-- Apps -->
     <section class="apps-section">
-        <p class="section-label">Our Apps</p>
-        <h2 class="section-title">Two apps. One standard.</h2>
+        <p class="section-label">Our Products</p>
+        <h2 class="section-title">Three products. One standard.</h2>
 
         <div class="app-cards">
             <!-- VolleyTally -->
@@ -444,13 +464,42 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Spoken To Book -->
+            <div class="app-card spoken">
+                <div class="card-hero">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F7F5F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                            <path d="M8 7h6"/>
+                            <path d="M8 11h8"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Spoken To Book <span class="badge badge-service">Service</span></h3>
+                        <p>Your spoken words, your published book</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="features-list">
+                        <li>Turn sermons, talks, or lectures into a book</li>
+                        <li>Voice-first process that captures your style</li>
+                        <li>Professional editing and manuscript delivery</li>
+                        <li>Iterative review with full approval control</li>
+                        <li>Your voice, your name on the cover</li>
+                    </ul>
+                    <a href="https://spokentobook.com" target="_blank" rel="noopener noreferrer" class="card-link">
+                        Visit site <span class="arrow">&rarr;</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Strip -->
     <section class="about-strip">
         <div class="about-strip-inner">
-            <p><strong>HarpElle</strong> is an independent product studio. Every product under this name reflects a single commitment: if it's worth building, it's worth building well. The standard doesn't change. The craft doesn't cut corners.</p>
+            <p><strong>HarpElle</strong> is an independent product studio. Whether it's a mobile app or a full-service offering, every product under this name reflects a single commitment: if it's worth building, it's worth building well. The standard doesn't change. The craft doesn't cut corners.</p>
             <p class="attribution">a HarpElle studio</p>
         </div>
     </section>
@@ -473,6 +522,7 @@
             <div class="footer-links">
                 <a href="/volleytally/">VolleyTally</a>
                 <a href="/volleytrack/">VolleyTrack</a>
+                <a href="https://spokentobook.com" target="_blank" rel="noopener noreferrer">Spoken To Book</a>
                 <a href="mailto:support@harpelle.com">Support</a>
             </div>
             <p class="footer-copy">&copy; 2026 HarpElle. All rights reserved.</p>
