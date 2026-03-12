@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HarpElle — Thoughtfully Built</title>
-    <meta name="description" content="HarpElle is an independent product studio building thoughtfully designed apps and services — from volleyball tools for coaches and fans to a publishing service for speakers.">
+    <meta name="description" content="HarpElle is an independent product studio building thoughtfully designed apps and services — from volleyball tools for coaches and fans to publishing and brand & web design services.">
     <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="/assets/brand/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -154,7 +154,7 @@
 
         .app-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
         }
 
@@ -251,6 +251,7 @@
         .app-card.tally .features-list li::before { background: var(--pink-accent); }
         .app-card.track .features-list li::before { background: var(--purple-accent); }
         .app-card.spoken .features-list li::before { background: var(--gold-accent); }
+        .app-card.refined .features-list li::before { background: var(--gold-accent); }
 
         .badge-service {
             background: rgba(168, 149, 110, 0.15);
@@ -369,7 +370,7 @@
             .hero h1 { font-size: 2.4rem; }
             .hero .tagline { font-size: 1.02rem; }
             .apps-section .section-title { font-size: 1.6rem; }
-            .app-cards { grid-template-columns: 1fr; }
+            .app-cards { grid-template-columns: 1fr !important; }
             .site-nav .nav-links { gap: 18px; }
             .site-nav .nav-links a { font-size: 0.82rem; }
             .about-strip { padding: 48px 20px; }
@@ -398,6 +399,7 @@
             <li><a href="/volleytally/">VolleyTally</a></li>
             <li><a href="/volleytrack/">VolleyTrack</a></li>
             <li><a href="https://spokentobook.com" target="_blank" rel="noopener noreferrer">Spoken To Book</a></li>
+            <li><a href="https://refinedmark.com" target="_blank" rel="noopener noreferrer">RefinedMark</a></li>
             <li><a href="mailto:support@harpelle.com">Support</a></li>
         </ul>
     </nav>
@@ -406,7 +408,7 @@
     <section class="hero">
         <div class="hero-inner">
             <h1>Thoughtfully built.<br>Every time.</h1>
-            <p class="tagline">Volleyball apps for coaches, players, and fans.<br>A publishing service for speakers with a story.<br>Each one crafted with the same care.</p>
+            <p class="tagline">Volleyball apps for coaches, players, and fans.<br>Publishing and brand services for people who care about quality.<br>Each one crafted with the same care.</p>
             <p class="brand-promise">An independent product studio by Jason Paschall</p>
         </div>
     </section>
@@ -416,7 +418,7 @@
     <!-- Apps -->
     <section class="apps-section">
         <p class="section-label">Our Products</p>
-        <h2 class="section-title">Three products. One standard.</h2>
+        <h2 class="section-title">Four products. One standard.</h2>
 
         <div class="app-cards">
             <!-- VolleyTally -->
@@ -493,6 +495,35 @@
                     </a>
                 </div>
             </div>
+            <!-- RefinedMark -->
+            <div class="app-card refined">
+                <div class="card-hero">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F7F5F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <path d="M2 2l7.586 7.586"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>RefinedMark <span class="badge badge-service">Service</span></h3>
+                        <p>Your brand, thoughtfully built</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="features-list">
+                        <li>Complete brand identities from strategy to visuals</li>
+                        <li>Custom websites — no templates, no page builders</li>
+                        <li>Combined brand + web packages available</li>
+                        <li>One point of contact from discovery to delivery</li>
+                        <li>Transparent process with full approval control</li>
+                    </ul>
+                    <a href="https://refinedmark.com" target="_blank" rel="noopener noreferrer" class="card-link">
+                        Visit site <span class="arrow">&rarr;</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -523,6 +554,7 @@
                 <a href="/volleytally/">VolleyTally</a>
                 <a href="/volleytrack/">VolleyTrack</a>
                 <a href="https://spokentobook.com" target="_blank" rel="noopener noreferrer">Spoken To Book</a>
+                <a href="https://refinedmark.com" target="_blank" rel="noopener noreferrer">RefinedMark</a>
                 <a href="mailto:support@harpelle.com">Support</a>
             </div>
             <p class="footer-copy">&copy; 2026 HarpElle. All rights reserved.</p>
