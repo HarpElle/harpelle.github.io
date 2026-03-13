@@ -366,13 +366,21 @@
 
         /* ── Responsive ──────────────────────── */
         @media (max-width: 640px) {
+            .site-nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .site-nav .nav-links {
+                gap: 8px 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .site-nav .nav-links a { font-size: 0.82rem; }
             .hero { padding: 56px 20px 48px; }
             .hero h1 { font-size: 2.4rem; }
             .hero .tagline { font-size: 1.02rem; }
             .apps-section .section-title { font-size: 1.6rem; }
             .app-cards { grid-template-columns: 1fr !important; }
-            .site-nav .nav-links { gap: 18px; }
-            .site-nav .nav-links a { font-size: 0.82rem; }
             .about-strip { padding: 48px 20px; }
             .about-strip p { font-size: 0.95rem; }
         }
