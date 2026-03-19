@@ -49,7 +49,7 @@
 
         /* ── Nav ─────────────────────────────── */
         .site-nav {
-            padding: 20px 24px;
+            padding: 24px 24px;
             max-width: var(--max-width);
             margin: 0 auto;
             display: flex;
@@ -63,7 +63,7 @@
             text-decoration: none;
         }
 
-        .site-nav .logo img { height: 40px; width: auto; }
+        .site-nav .logo img { height: 72px; width: auto; margin: -16px -10px; }
 
         .site-nav .nav-links {
             display: flex;
@@ -159,6 +159,12 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
+        }
+
+        .app-cards .app-card:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+            max-width: calc(50% - 12px);
+            justify-self: center;
         }
 
         .app-card {
@@ -347,7 +353,7 @@
             margin-bottom: 20px;
         }
 
-        .footer-logo img { height: 28px; width: auto; }
+        .footer-logo img { height: 52px; width: auto; margin: -8px 0; }
 
         .footer-links {
             margin-bottom: 16px;
@@ -374,6 +380,7 @@
                 flex-direction: column;
                 gap: 12px;
             }
+            .site-nav .logo img { height: 56px; margin: -10px -8px; }
             .site-nav .nav-links {
                 gap: 8px 16px;
                 flex-wrap: wrap;
@@ -385,6 +392,7 @@
             .hero .tagline { font-size: 1.02rem; }
             .apps-section .section-title { font-size: 1.6rem; }
             .app-cards { grid-template-columns: 1fr !important; }
+            .app-cards .app-card:last-child:nth-child(odd) { max-width: 100%; }
             .about-strip { padding: 48px 20px; }
             .about-strip p { font-size: 0.95rem; }
         }
