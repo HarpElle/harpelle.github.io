@@ -4,8 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VolleyTally — A Smarter Volleyball Scoreboard</title>
-    <meta name="description" content="VolleyTally is a fast, intuitive volleyball scoreboard app. Track scores, undo mistakes, browse match history, and root for your team — all with a single tap.">
+    <title>VolleyTally — Volleyball Scorekeeping for Every Rally</title>
+    <meta name="description" content="VolleyTally is a clean volleyball scoreboard for iPhone and iPad. Track points, undo mistakes, customize teams, review match history, and share the win. Free to use with an optional Remove Ads upgrade.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harpelle.com/volleytally/">
+    <meta property="og:title" content="VolleyTally — Volleyball Scorekeeping for Every Rally">
+    <meta property="og:description" content="A clean volleyball scoreboard for iPhone and iPad. Free to use with optional Remove Ads.">
+    <meta property="og:image" content="https://harpelle.com/assets/volleytally/volleytally-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VolleyTally — Volleyball Scorekeeping for Every Rally">
+    <meta name="twitter:description" content="A clean volleyball scoreboard for iPhone and iPad. Free to use with optional Remove Ads.">
+    <meta name="twitter:image" content="https://harpelle.com/assets/volleytally/volleytally-og.png">
     <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="/assets/brand/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -102,9 +113,18 @@
         .hero .tagline {
             font-size: 1.1rem;
             color: var(--mid-neutral);
-            max-width: 500px;
-            margin: 0 auto 28px;
+            max-width: 620px;
+            margin: 0 auto 14px;
             line-height: 1.7;
+        }
+
+        .hero .availability-note {
+            color: var(--dark-anchor);
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.6;
+            margin: 0 auto 28px;
+            max-width: 620px;
         }
 
         .store-badges {
@@ -141,6 +161,12 @@
             letter-spacing: 0.04em;
         }
 
+        .store-note {
+            color: var(--mid-neutral);
+            font-size: 0.82rem;
+            margin-top: 14px;
+        }
+
         /* ── Sections ────────────────────────── */
         section { padding: 72px 24px; }
 
@@ -174,6 +200,52 @@
             max-width: 560px;
             margin: 0 auto 52px;
             line-height: 1.7;
+        }
+
+        /* ── Release Note ───────────────────── */
+        .release-note {
+            background: #fff;
+            padding: 56px 24px 44px;
+        }
+
+        .release-note .section-subtitle {
+            margin-bottom: 0;
+        }
+
+        /* ── Screenshots ────────────────────── */
+        .screenshots-section {
+            background: #fff;
+            padding: 0 24px 72px;
+        }
+
+        .screenshot-strip {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 1100px;
+            overflow-x: auto;
+            padding: 4px 2px 14px;
+            scrollbar-color: var(--border-light) transparent;
+        }
+
+        .screenshot-strip img {
+            background: var(--light-foundation);
+            border: 1px solid var(--border-light);
+            border-radius: 14px;
+            box-shadow: var(--shadow-card);
+            display: block;
+            flex: 0 0 180px;
+            height: auto;
+            max-width: 100%;
+            min-width: 0;
+            width: 180px;
+        }
+
+        .screenshot-strip img.screenshot-wide {
+            align-self: center;
+            flex-basis: 340px;
+            width: 340px;
         }
 
         /* ── Features ────────────────────────── */
@@ -346,13 +418,33 @@
         }
 
         @media (max-width: 640px) {
+            .site-nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .site-nav .logo img { height: 56px; margin: -10px -8px; }
+            .site-nav .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
             .hero h1 { font-size: 2rem; }
             .hero .tagline { font-size: 1rem; }
+            .hero .availability-note { font-size: 0.9rem; }
             .section-title { font-size: 1.5rem; }
             .features-grid { grid-template-columns: 1fr; }
             .steps { grid-template-columns: 1fr; gap: 24px; }
             .site-nav .nav-links { gap: 18px; }
             .site-nav .nav-links a { font-size: 0.82rem; }
+            .screenshots-section { padding-bottom: 48px; }
+            .screenshot-strip { justify-content: flex-start; }
+            .screenshot-strip img {
+                flex-basis: 150px;
+                width: 150px;
+            }
+            .screenshot-strip img.screenshot-wide {
+                flex-basis: 280px;
+                width: 280px;
+            }
         }
     </style>
 </head>
@@ -376,7 +468,8 @@
         <div class="hero-inner">
             <img src="/assets/VolleyTally-PSD-rounded.png" alt="VolleyTally app icon" class="app-icon">
             <h1>VolleyTally</h1>
-            <p class="tagline">A fast, intuitive volleyball scoreboard. Track every point, undo mistakes, browse match history, and root for your team — all with a single tap.</p>
+            <p class="tagline">A clean courtside scoreboard for volleyball. Track every point, undo a stray tap, customize teams, review match history, and share the win.</p>
+            <p class="availability-note">Free to use on iPhone and iPad. Remove Ads is available as a one-time upgrade. Google Play is coming soon.</p>
             <div class="store-badges">
                 <a href="https://apps.apple.com/us/app/volleytally/id6743733066" target="_blank" rel="noopener noreferrer">
                     <img src="/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store">
@@ -386,15 +479,36 @@
                     <span class="label">Soon</span>
                 </div>
             </div>
+            <p class="store-note">Google Play release is in progress.</p>
         </div>
     </div>
+
+    <!-- Fresh in 3.2 -->
+    <section class="release-note">
+        <div class="section-inner">
+            <p class="section-label">Fresh in 3.2</p>
+            <h2 class="section-title">More useful courtside, still simple.</h2>
+            <p class="section-subtitle">Undo, match history, My Team mode, better iPad support, and free team customization. Remove Ads stays optional.</p>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots-section" aria-label="VolleyTally screenshots">
+        <div class="screenshot-strip">
+            <img src="/assets/volleytally/iphone-track-every-point.jpg" alt="VolleyTally scoreboard tracking a close match">
+            <img src="/assets/volleytally/iphone-undo-in-a-tap.jpg" alt="VolleyTally undoing a stray scoring tap">
+            <img src="/assets/volleytally/iphone-root-for-your-team.jpg" alt="VolleyTally team setup with My Team mode">
+            <img src="/assets/volleytally/iphone-match-history.jpg" alt="VolleyTally match history with set-by-set results">
+            <img src="/assets/volleytally/ipad-big-screen.jpg" alt="VolleyTally landscape scoreboard on iPad" class="screenshot-wide">
+        </div>
+    </section>
 
     <!-- Features -->
     <section class="features-section">
         <div class="section-inner">
             <p class="section-label">Features</p>
             <h2 class="section-title">Everything you need courtside</h2>
-            <p class="section-subtitle">Simple enough for pickup games. Flexible enough for tournaments. Smart enough to remember every match.</p>
+            <p class="section-subtitle">Simple enough for pickup games. Flexible enough for tournament tables. Free to use, with Remove Ads available as an optional upgrade.</p>
 
             <div class="features-grid">
                 <div class="feature-card">
@@ -420,12 +534,12 @@
                 <div class="feature-card">
                     <span class="feature-icon">&#10084;&#65039;</span>
                     <h3>My Team Mode</h3>
-                    <p>Pick the team you're rooting for. Your team gets confetti and a celebration when they win; a consolation message when they don't.</p>
+                    <p>Pick the side you're rooting for. Your team gets confetti and a celebration when they win; a consolation message when they don't.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">&#127912;</span>
                     <h3>Team Customization</h3>
-                    <p>Name your teams and pick from a palette of colors. Every match feels like home court.</p>
+                    <p>Name your teams and pick from a palette of colors. Team customization is free.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">&#128190;</span>

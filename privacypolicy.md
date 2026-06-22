@@ -1,70 +1,54 @@
 # VolleyTally Privacy Policy
 
-Last updated: March 24, 2025
+Last updated: June 22, 2026
 
-## Introduction
+HarpElle LLC operates the VolleyTally mobile application. This policy explains what information VolleyTally uses and how it is handled.
 
-Welcome to VolleyTally. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you use our app and tell you about your privacy rights.
+## Information We Collect
 
-## Data We Collect
+VolleyTally does not require an account and does not ask you to provide personal information. Team names, match settings, scores, and match history are stored locally on your device.
 
-### Data You Provide
+VolleyTally stores purchase status locally on your device and uses RevenueCat and the app store provider to process and restore the optional Remove Ads purchase. Purchase records are used only to manage ad-removal access.
 
-VolleyTally does not require you to create an account or provide any personal information. Any team names or game settings you enter are stored locally on your device and are not transmitted to our servers.
+Free users may see banner advertisements through Google AdMob. AdMob may collect identifiers and usage data for ad serving, measurement, and fraud prevention according to Google's privacy practices.
 
-### Automatically Collected Data
+## How We Use Information
 
-- **App Usage Data**: Basic analytics about how you use the app (screens viewed, features used) may be collected to help us improve the app.
-- **Device Information**: We collect information about your device, including device model, operating system version, and unique device identifiers.
+VolleyTally uses the limited information described above to:
 
-## How We Use Your Data
-
-We use the data we collect to:
-- Improve and optimize the VolleyTally app
-- Provide and maintain the service
-- Monitor the usage of our service
-- Detect and address technical issues
+- Provide scoring, match setup, match history, and sharing features
+- Manage optional Remove Ads purchase status
+- Display advertisements to free users
 
 ## Third-Party Services
 
-### Google AdMob
+VolleyTally uses these third-party services:
 
-VolleyTally uses Google AdMob to display advertisements. AdMob may collect and process data about you, including:
-- Device identifiers
-- Location data
-- Demographic data
-- Interest data
+- Google AdMob for banner advertisements shown to free users
+- Apple App Store and Google Play Billing for in-app purchase processing
+- RevenueCat for purchase entitlement management
+- Expo for app framework and release tooling
 
-For more information about how Google uses data when you use our app, please visit: https://policies.google.com/technologies/partner-sites
-
-### Analytics
-
-We may use third-party Service Providers to monitor and analyze the use of our Service.
+Google's privacy policy is available at <https://policies.google.com/privacy>.
 
 ## Data Storage
 
-Your game data (team names, scores, and settings) is stored locally on your device using AsyncStorage. This data is not transmitted to our servers and remains on your device unless you choose to delete the app or clear its data.
+Match data, team names, scores, and settings are stored locally on your device. No match data is transmitted to HarpElle servers. Purchase status is stored locally and, where available, in secure device storage such as the operating system keychain. RevenueCat and the app store provider may retain purchase records needed to process and restore Remove Ads.
 
 ## Your Choices
 
-### Ad Removal
-You have the option to remove advertisements by making an in-app purchase.
+You may delete local VolleyTally data by clearing the app's data from your device settings or uninstalling the app.
 
-### Data Deletion
-To delete all app data, you can either:
-1. Clear the app's data from your device's settings menu
-2. Uninstall the app
+You can control ad personalization through your device privacy settings. You may also remove banner advertisements by purchasing Remove Ads within the app.
 
 ## Children's Privacy
 
-VolleyTally is not directed at children under the age of 13, and we do not knowingly collect personal information from children under 13.
+VolleyTally is not directed at children under 13. We do not knowingly collect personal information from children under 13.
 
-## Changes to This Privacy Policy
+## Changes To This Policy
 
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+We may update this policy from time to time. When we do, we will update the date at the top of this page.
 
-## Contact Us
+## Contact
 
-If you have any questions about this Privacy Policy, please contact us at:
-- Email: harpelleapps@gmail.com
-- Website: https://www.harpelle.com
+Questions about this policy can be sent to <jason@harpelle.com>.
