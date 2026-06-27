@@ -4,8 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VolleyTrack — Advanced Volleyball Stats & Live Scoring</title>
-    <meta name="description" content="Professional-grade volleyball statistics, live scoring, AI-powered narratives, and real-time spectator mode. Built for coaches, players, and fans.">
+    <title>VolleyTrack — Volleyball Stats, Voice Input & Live Fan Mode</title>
+    <meta name="description" content="VolleyTrack helps volleyball coaches score matches, track rotations and stats, use voice input, create AI recaps, and share a live Fan mode with spectators.">
+    <link rel="canonical" href="https://harpelle.com/volleytrack/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harpelle.com/volleytrack/">
+    <meta property="og:title" content="VolleyTrack — Volleyball Stats, Voice Input & Live Fan Mode">
+    <meta property="og:description" content="Courtside scoring, rotation tracking, voice-powered stat entry, AI recaps, and live spectator mode for volleyball teams.">
+    <meta property="og:image" content="https://harpelle.com/assets/VolleyTrack-Screenshot.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VolleyTrack — Volleyball Stats, Voice Input & Live Fan Mode">
+    <meta name="twitter:description" content="Score, track, speak stats, and share the match live with fans.">
+    <meta name="twitter:image" content="https://harpelle.com/assets/VolleyTrack-Screenshot.png">
     <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="/assets/brand/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -103,8 +113,17 @@
             font-size: 1.1rem;
             color: var(--mid-neutral);
             max-width: 520px;
-            margin: 0 auto 28px;
+            margin: 0 auto 12px;
             line-height: 1.7;
+        }
+
+        .hero .availability-note {
+            color: var(--dark-anchor);
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.6;
+            margin: 0 auto 28px;
+            max-width: 620px;
         }
 
         .store-badges {
@@ -116,6 +135,37 @@
         }
 
         .store-badges a img { height: 48px; }
+
+        .store-badges .coming-soon-badge {
+            display: inline-block;
+            position: relative;
+        }
+
+        .store-badges .coming-soon-badge img {
+            height: 48px;
+            opacity: 0.45;
+        }
+
+        .store-badges .coming-soon-badge .label {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: var(--mid-neutral);
+            border-radius: 4px;
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            padding: 2px 6px;
+            text-transform: uppercase;
+        }
+
+        .store-note {
+            color: var(--mid-neutral);
+            font-size: 0.82rem;
+            margin-bottom: 30px;
+            margin-top: -20px;
+        }
 
         .hero-screenshot {
             max-width: 260px;
@@ -452,12 +502,18 @@
         <div class="hero-inner">
             <img src="/assets/VolleyTrack-icon.png" alt="VolleyTrack app icon" class="app-icon">
             <h1>VolleyTrack</h1>
-            <p class="tagline">Professional-grade volleyball statistics, live scoring, and AI-powered match narratives — right from your sideline.</p>
+            <p class="tagline">Courtside volleyball stats, rotation tracking, voice input, AI recaps, and live Fan mode — built for the speed of a real match.</p>
+            <p class="availability-note">Release-candidate testing is underway for iOS and Android. Public store links will be activated as review finishes.</p>
             <div class="store-badges">
-                <a href="#" id="app-store-link">
+                <a href="https://apps.apple.com/app/id6758875792" id="app-store-link">
                     <img src="/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store">
                 </a>
+                <span class="coming-soon-badge" aria-label="Google Play listing in review">
+                    <img src="/assets/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play">
+                    <span class="label">Review</span>
+                </span>
             </div>
+            <p class="store-note">VolleyTrack is currently in controlled testing while launch security, privacy, and store review gates are finalized.</p>
             <img src="/assets/VolleyTrack-Screenshot.png" alt="VolleyTrack live scoring screenshot" class="hero-screenshot">
         </div>
     </div>
@@ -478,7 +534,7 @@
                 <div class="feature-card">
                     <span class="feature-icon">&#127908;</span>
                     <h3>Voice Input <span class="feature-badge">New</span></h3>
-                    <p>Go hands-free during matches. Speak your stats and let AI convert your voice into play-by-play entries in real time.</p>
+                    <p>Go hands-free during matches. Speak common jersey-number commands for instant parsing, with server-side AI backup using Groq GPT-OSS and Gemini fallback.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">&#128202;</span>
@@ -493,7 +549,7 @@
                 <div class="feature-card">
                     <span class="feature-icon">&#128242;</span>
                     <h3>Live Spectator Mode <span class="feature-badge">New</span></h3>
-                    <p>Share a 6-digit code with parents and fans so they can follow the match live from anywhere. They can send cheers and get personalized Super Fan recaps.</p>
+                    <p>Share a 6-character code with parents and fans so they can follow live scores, activity, and structured cheers. Free spectator viewing may include non-interruptive banner ads.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">&#128203;</span>
@@ -525,7 +581,7 @@
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3>Cheer and get recaps</h3>
-                    <p>Send cheers in real time and get AI-generated Super Fan recaps focused on your player.</p>
+                    <p>Send structured cheers and get AI-generated Super Fan recaps focused on your player. Free spectator mode may show banner ads that do not interrupt live scoring.</p>
                 </div>
             </div>
         </div>
@@ -557,7 +613,7 @@
                 </div>
             </div>
 
-            <p class="free-note"><strong>Free tier includes:</strong> Live scoring, rotation tracking, basic stats, 1 season, and limited AI features — more than enough to get started.</p>
+            <p class="free-note"><strong>Free tier includes:</strong> Live scoring, rotation tracking, basic stats, 1 season, 3 AI narratives, 3 voice-enabled matches, 3 Super Fan recaps, and 5 exports. Pro removes ads and unlocks higher limits.</p>
         </div>
     </section>
 

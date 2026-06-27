@@ -223,7 +223,7 @@
         <a href="/volleytrack/" class="back-link">&larr; Back to VolleyTrack</a>
 
         <h1>Privacy Policy for VolleyTrack</h1>
-        <p class="last-updated">Last updated: February 16, 2026</p>
+        <p class="last-updated">Last updated: June 27, 2026</p>
 
         <p class="intro">HarpElle LLC ("we," "our," "us") operates the VolleyTrack mobile application (the "App"). This Privacy Policy explains what information we collect, how we use it, and your rights regarding your data. We are committed to protecting your privacy and being transparent about our data practices.</p>
 
@@ -254,7 +254,8 @@
         <p>If you use the Voice Input feature for hands-free stat tracking:</p>
         <ul>
             <li>Speech recognition is performed on your device using your operating system's built-in speech recognition service</li>
-            <li>The resulting text transcription (not the audio itself) is sent to Google's Gemini AI service to parse the spoken stat entry into structured data</li>
+            <li>Common jersey-number commands may be parsed locally on your device</li>
+            <li>The resulting text transcription (not the audio itself) may be sent to a HarpElle-operated Firebase Cloud Function for server-side parsing using Groq GPT-OSS as the primary model and Google Gemini as a fallback</li>
             <li>No audio recordings are stored or transmitted to our servers</li>
         </ul>
 
@@ -263,7 +264,8 @@
         <ul>
             <li>Match scores, team names, roster information, and recent play-by-play entries are shared in real time via a 6-character match code</li>
             <li>This data is publicly accessible to anyone who enters the match code — no authentication is required for spectators</li>
-            <li>Spectators provide a display name and device identifier when joining, which are visible to the coach during the broadcast</li>
+            <li>Spectators may provide a display name, device identifier, cheering preferences, structured reactions, and score/emergency alerts during the broadcast</li>
+            <li>Free spectator mode may display non-interruptive banner ads while the match is live</li>
         </ul>
 
         <h2>2. How We Use Your Information</h2>
@@ -308,7 +310,12 @@
                 <tr>
                     <td>Google Gemini AI</td>
                     <td>Google</td>
-                    <td>AI match narratives, recaps, and voice command parsing</td>
+                    <td>AI match narratives, recaps, and fallback voice command parsing</td>
+                </tr>
+                <tr>
+                    <td>Groq</td>
+                    <td>Groq, Inc.</td>
+                    <td>Primary server-side voice command parsing for structured stat entries</td>
                 </tr>
                 <tr>
                     <td>RevenueCat</td>
@@ -330,6 +337,7 @@
         <ul>
             <li>Your personal data (matches, seasons, rosters) is accessible only to your authenticated account</li>
             <li>Live match broadcast data is publicly readable by design (to enable the spectator feature) but can only be created, updated, or deleted by the authenticated coach who started the broadcast</li>
+            <li>Spectator interactions are validated and rate-limited through server-side Firebase Cloud Functions</li>
             <li>All data is transmitted using industry-standard TLS encryption</li>
         </ul>
 
@@ -339,7 +347,7 @@
             <li>Deleting your account through the App's Settings screen, which removes all cloud-stored data associated with your account</li>
             <li>Emailing us at <a href="mailto:jason@harpelle.com">jason@harpelle.com</a> to request manual deletion of your data</li>
         </ul>
-        <p>Local data on your device can be removed by uninstalling the App. Live match broadcast data is automatically deleted when the match broadcast ends or after a period of inactivity.</p>
+        <p>Local data on your device can be removed by uninstalling the App. Account deletion removes cloud-stored VolleyTrack data owned by your account and live broadcasts you created. Purchase records maintained by Apple, Google Play, and RevenueCat may be retained by those services according to their own policies. Live match broadcast data may also be removed after a period of inactivity.</p>
 
         <h2>6. Children's Privacy</h2>
         <p>VolleyTrack is not directed at children under 13. We do not knowingly collect personal information from children under 13. If a coach or parent enters player names into the App for a youth team, those names are associated with match statistics only and are stored under the coach's account.</p>
