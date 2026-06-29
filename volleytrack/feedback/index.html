@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send VolleyTrack Feedback</title>
+    <meta name="description" content="Send VolleyTrack beta feedback, bug reports, match notes, and coach testing observations.">
+    <link rel="canonical" href="https://harpelle.com/volleytrack/feedback/">
+    <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/volleytrack/help/help.css">
+</head>
+<body>
+    <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/" class="logo"><img src="/assets/brand/HarpElle_Primary_Light.svg" alt="HarpElle"></a>
+        <ul class="nav-links">
+            <li><a href="/volleytrack/">VolleyTrack</a></li>
+            <li><a href="/volleytrack/help/">Help</a></li>
+            <li><a href="/volleytrack/demos/">Demos</a></li>
+            <li><a href="/volleytrack/coach-test/">Coach Test</a></li>
+            <li><a href="/volleytrack/feedback/" class="active">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <header class="help-hero">
+        <div class="help-hero-inner">
+            <p class="eyebrow">VolleyTrack Feedback</p>
+            <h1>Tell us what happened.</h1>
+            <p class="hero-copy">Hit a bug or something that felt off? Send the details here. Every note helps get VolleyTrack ready for real match use.</p>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <form id="feedback-form" class="feedback-form" data-endpoint="https://volleytrack-feedback.jpaschall.workers.dev/feedback">
+            <div class="field-grid">
+                <div class="field">
+                    <label for="role">Your role</label>
+                    <select id="role" name="role">
+                        <option value="coach">Coach</option>
+                        <option value="assistant-coach">Assistant coach</option>
+                        <option value="parent-fan">Parent or fan</option>
+                        <option value="player">Player</option>
+                        <option value="club-admin">Club admin</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="workflow">What were you testing?</label>
+                    <select id="workflow" name="workflow">
+                        <option value="first-setup">First setup</option>
+                        <option value="live-scoring">Live scoring</option>
+                        <option value="substitutions-libero">Substitutions or libero</option>
+                        <option value="voice-input">Voice input</option>
+                        <option value="fan-mode">Fan mode</option>
+                        <option value="summary-ai">Stats, summaries, or AI</option>
+                        <option value="premium-ads">Premium, limits, or ads</option>
+                        <option value="general">General feedback</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="name">Name <span class="badge free">Optional</span></label>
+                    <input id="name" name="name" autocomplete="name">
+                    <small>However we should address you.</small>
+                </div>
+                <div class="field">
+                    <label for="email">Email <span class="badge free">Optional</span></label>
+                    <input id="email" name="email" type="email" autocomplete="email">
+                    <small>Add it only if you want a reply. We will not add you to a list.</small>
+                </div>
+                <div class="field">
+                    <label for="team">Team or event <span class="badge free">Optional</span></label>
+                    <input id="team" name="team" autocomplete="organization">
+                </div>
+                <div class="field">
+                    <label for="device">Device and app version <span class="badge free">Optional</span></label>
+                    <input id="device" name="device" placeholder="iPhone model, iOS version, VolleyTrack version">
+                    <small>Found in Settings when available. This helps reproduce issues.</small>
+                </div>
+                <div class="field">
+                    <label for="rating">Overall test rating</label>
+                    <select id="rating" name="rating">
+                        <option value="">No rating</option>
+                        <option value="5">5 - Ready to keep testing</option>
+                        <option value="4">4 - Good with a few notes</option>
+                        <option value="3">3 - Useful but rough</option>
+                        <option value="2">2 - Blocked by issues</option>
+                        <option value="1">1 - Not usable yet</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="appVersion">Build/version <span class="badge free">Optional</span></label>
+                    <input id="appVersion" name="appVersion" placeholder="Example: TestFlight build number">
+                </div>
+                <div class="field full">
+                    <label for="matchContext">Match context <span class="badge free">Optional</span></label>
+                    <textarea id="matchContext" name="matchContext" placeholder="Example: summer league match, best-of-3, scoring solo, one spectator joined Fan mode"></textarea>
+                </div>
+                <div class="field full">
+                    <label for="blockers">What blocked you, if anything?</label>
+                    <textarea id="blockers" name="blockers" placeholder="Anything that would stop you from using VolleyTrack during the season."></textarea>
+                </div>
+                <div class="field full">
+                    <label for="notes">Your feedback</label>
+                    <textarea id="notes" name="notes" required placeholder="What happened, what you expected, and anything that would help track it down."></textarea>
+                </div>
+                <div class="hidden-field" aria-hidden="true">
+                    <label for="website">Website</label>
+                    <input id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+            </div>
+            <input type="hidden" name="startedAt" id="startedAt">
+            <input type="hidden" name="sourceUrl" id="sourceUrl">
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+            <div class="hero-actions">
+                <button class="button primary" type="submit">Send feedback</button>
+                <a class="button secondary" href="mailto:jason@harpelle.com?subject=VolleyTrack%20Feedback">Email instead</a>
+            </div>
+        </form>
+
+        <section class="quick-panel">
+            <strong>Good feedback is specific.</strong>
+            <p>If the match is live, preserve the score first. Send details afterward: device, app version, match state, what you expected, and what actually happened.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="/volleytrack/">VolleyTrack</a>
+        <a href="/volleytrack/help/">Help Center</a>
+        <a href="/volleytrack/demos/">Demos</a>
+        <a href="/volleytrack/coach-test/">Coach Test</a>
+        <a href="mailto:jason@harpelle.com">Support</a>
+        <p>VolleyTrack is thoughtfully built by HarpElle.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('feedback-form');
+        const statusBox = document.getElementById('form-status');
+        document.getElementById('startedAt').value = String(Date.now());
+        document.getElementById('sourceUrl').value = window.location.href;
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            statusBox.className = 'form-status';
+            statusBox.textContent = '';
+
+            const button = form.querySelector('button[type="submit"]');
+            button.disabled = true;
+            button.textContent = 'Sending...';
+
+            const data = Object.fromEntries(new FormData(form).entries());
+
+            try {
+                const response = await fetch(form.dataset.endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                });
+                const result = await response.json().catch(() => ({}));
+                if (!response.ok || result.error) throw new Error(result.error || 'Request failed');
+                statusBox.textContent = 'Got it. Thanks for helping make VolleyTrack better. We read every note.';
+                statusBox.className = 'form-status success show';
+                form.reset();
+                document.getElementById('startedAt').value = String(Date.now());
+                document.getElementById('sourceUrl').value = window.location.href;
+            } catch (error) {
+                statusBox.textContent = 'That did not go through. Try again in a moment, or email jason@harpelle.com.';
+                statusBox.className = 'form-status error show';
+            } finally {
+                button.disabled = false;
+                button.textContent = 'Send feedback';
+            }
+        });
+    </script>
+</body>
+</html>
