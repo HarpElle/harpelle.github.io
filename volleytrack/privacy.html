@@ -240,7 +240,7 @@
         <h3>Match and Team Data</h3>
         <p>Data you enter into the App includes:</p>
         <ul>
-            <li>Team names, player names, jersey numbers, and positions</li>
+            <li>Team names, player names, jersey numbers, lineup roles, and match context</li>
             <li>Season and event information</li>
             <li>Match scores, play-by-play statistics, and rotation history</li>
             <li>AI-generated match narratives and recaps</li>
@@ -254,8 +254,7 @@
         <p>If you use the Voice Input feature for hands-free stat tracking:</p>
         <ul>
             <li>Speech recognition is performed on your device using your operating system's built-in speech recognition service</li>
-            <li>Common jersey-number commands may be parsed locally on your device</li>
-            <li>The resulting text transcription (not the audio itself) may be sent to a HarpElle-operated Firebase Cloud Function for server-side parsing using Groq GPT-OSS as the primary model and Google Gemini as a fallback</li>
+            <li>The resulting text transcription (not the audio itself) may be sent to a HarpElle-operated Firebase Cloud Function for server-side parsing using Groq Llama 4 Scout as the primary model and Google Gemini as a fallback</li>
             <li>No audio recordings are stored or transmitted to our servers</li>
         </ul>
 

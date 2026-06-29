@@ -18,26 +18,37 @@
             <p class="eyebrow">Before Play</p>
             <h1>Match and Lineup Setup</h1>
             <p>A clean lineup setup prevents most scoring and substitution problems later. Take one extra minute before the first serve.</p>
-            <div class="quick-panel"><strong>Quick answer:</strong> Choose match format, enter opponent, set the six rotation slots, mark liberos if known, then confirm the first server when play is about to begin.</div>
+            <div class="quick-panel"><strong>Quick answer:</strong> Choose match format, enter opponent, set the six rotation slots from the lineup the referee checks, then confirm the first server when play is about to begin. If a libero enters after the lineup check, use the substitute/libero flow from the live screen.</div>
             <figure class="article-visual full">
                 <img src="/assets/volleytrack/screens/set-lineup.jpg" alt="VolleyTrack match setup screen showing season, event, opponent, date, match format, and starting lineup controls" loading="lazy">
                 <figcaption>Match setup keeps format, opponent, event, and lineup context together before the first serve.</figcaption>
             </figure>
+            <h2>Choose match details</h2>
+            <p>For season matches, choose the season, optional event, opponent, date, and time. You can schedule the match for later or start it when you are ready to score.</p>
             <h2>Choose the match format</h2>
             <p>Use the preset that matches the event rules. If the event has a cap or nonstandard third set, use Custom so set endings are handled correctly.</p>
             <ul>
                 <li>Best-of-3 or best-of-5 for regular match play.</li>
                 <li>2-set seeding for pool-play formats where both sets are played.</li>
                 <li>Custom for caps, different target scores, or special tournament rules.</li>
+                <li>Advanced rules let you set timeouts, substitutions, target score, win-by, and score cap.</li>
             </ul>
             <h2>Enter the starting rotation</h2>
+            <p>Formal lineup setup is tied to a saved season roster. Quick Match lineup mode starts with empty live court slots so you can assign players as you go.</p>
             <ol class="step-list">
                 <li>Put the starting server in P1 if your team serves first.</li>
                 <li>Continue around the rotation in order through P6.</li>
                 <li>If the opponent serves first, still enter your on-court rotation accurately; confirm the server prompt when asked.</li>
             </ol>
-            <h2>Mark liberos before the first point</h2>
-            <p>If the libero is already known, mark the player as libero during setup. If you discover the mistake after play starts, use the substitution/libero correction flow instead of treating it as a normal sub.</p>
+            <h2>Handle liberos after lineup check</h2>
+            <p>For most matches, enter the actual starting lineup that is checked before the set. Once the lineup is accepted and a libero enters for a back-row player, long-press that back-row live court slot from the live screen and use Mark as Libero or the libero replacement flow.</p>
+            <ul>
+                <li>Only one libero should be on court at a time.</li>
+                <li>Liberos are shown with an alternate color so they stand out from regular players.</li>
+                <li>Libero entries and corrections do not count against the substitution counter.</li>
+                <li>Valid libero correction spots are the back-row positions P1, P5, and P6.</li>
+                <li>If a player was accidentally entered as a normal starter, mark them as libero from a valid back-row context instead of using a counted substitution.</li>
+            </ul>
             <div class="callout warning"><strong>Lineup changes before 0-0 are corrections.</strong> If a player changes before play begins, the app should not create a substitution pair or decrement sub counts.</div>
             <h2>Confirm first server</h2>
             <p>VolleyTrack may suggest the next server, but the coach should confirm the first server for each set. This prevents the app from assuming a service order after lineup changes.</p>

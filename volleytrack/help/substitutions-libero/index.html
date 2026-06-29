@@ -18,25 +18,35 @@
             <p class="eyebrow">Lineup Corrections</p>
             <h1>Substitutions and Libero</h1>
             <p>Substitution logic keeps normal volleyball pairings fast while still allowing the coach to correct real-world lineup surprises.</p>
-            <div class="quick-panel"><strong>Quick answer:</strong> Tap the on-court player to sub normally. Use ineligible overrides only when the real match is different from the app. Mark a player as libero only as a lineup correction, not as a counted substitution.</div>
+            <div class="quick-panel"><strong>Quick answer:</strong> Tap an occupied live court card to select that player for stats. Long-press an occupied card to open the substitute sheet. Regular substitutions count and create pairings after the score is no longer 0-0; libero replacements and corrections do not count against substitutions.</div>
             <figure class="article-visual full">
                 <img src="/assets/volleytrack/screens/set-lineup.jpg" alt="VolleyTrack lineup setup screen for starter and libero context" loading="lazy">
                 <figcaption>Lineup setup and correction tools should match the real court state without turning every correction into a counted substitution.</figcaption>
             </figure>
             <h2>Normal substitutions</h2>
             <ol class="step-list">
-                <li>Open the substitute sheet from the on-court player or lineup slot.</li>
+                <li>Long-press the on-court player or live court slot to open the substitute sheet. Tapping an empty slot also opens the sheet.</li>
                 <li>Choose the eligible player entering the match.</li>
                 <li>Confirm the substitution and continue scoring.</li>
             </ol>
+            <p>After a regular non-libero substitution, VolleyTrack pairs the players so the likely return sub is easy to find later. Regular substitutions after the set is no longer 0-0 reduce the substitution counter for the set.</p>
             <h2>Ineligible players</h2>
-            <p>VolleyTrack keeps likely-ineligible players grouped separately so accidental taps are less likely. If the real match requires it, expand that group and confirm the override.</p>
-            <div class="callout warning"><strong>Use overrides deliberately.</strong> Substituting an ineligible player is available for correcting reality, not for routine lineup flow.</div>
+            <p>VolleyTrack keeps likely-ineligible players grouped separately so accidental taps are less likely. A player may appear there because they are already on court, a libero would be in the front row, another libero is already on court, or the normal sub-pairing logic does not match the real situation.</p>
+            <p>If the real match requires it, expand the ineligible group, choose the player, and confirm the override.</p>
+            <div class="callout warning"><strong>Use overrides deliberately.</strong> Substituting an ineligible player is available for correcting reality, rule differences, injury substitutions, or changed lineups, not for routine lineup flow.</div>
+            <h2>Libero workflow</h2>
+            <p>Liberos use an alternate live card color so they are easy to spot. Known liberos are blocked from front-row entries, and VolleyTrack keeps the active court to one libero at a time.</p>
+            <ul>
+                <li>Libero replacements do not decrement the substitution count.</li>
+                <li>When marking a player as libero, choose the regular-rotation player they replaced so automatic swaps can work later.</li>
+                <li>When a paired libero rotates toward the front row, VolleyTrack can automatically swap the regular player back in without using a substitution.</li>
+            </ul>
             <h2>Libero corrections</h2>
-            <p>Only one libero should be on court at a time. If a libero was accidentally entered as a normal starter, use the libero correction action from the substitute sheet when the player is in an eligible back-row context.</p>
+            <p>If a libero was accidentally entered as a normal starter, use Mark as Libero from the substitute sheet when the player is in a valid back-row context: P1, P5, or P6.</p>
             <ul>
                 <li>Libero correction does not decrement the substitution count.</li>
-                <li>Corrections before the first point should not create sub pairs.</li>
+                <li>Corrections while the set is still 0-0 should not create sub pairs.</li>
+                <li>If a libero is already on court, VolleyTrack should not ask whether another incoming player is also entering as libero.</li>
                 <li>Once a full rotation has passed, verify the current court state before changing libero identity.</li>
             </ul>
             <h2>Undo expectations</h2>

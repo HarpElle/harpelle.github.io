@@ -17,25 +17,43 @@
         <article class="article-card">
             <p class="eyebrow">During The Match</p>
             <h1>Live Scoring</h1>
-            <p>The live screen is designed for fast scoring first, then stat detail. Keep the scoreboard accurate and add detail when the rhythm of the match allows it.</p>
-            <div class="quick-panel"><strong>Quick answer:</strong> Score each rally, log player stats from the stat controls or voice confirmation, use undo immediately for the last mistake, and use score correction for older errors.</div>
+            <p>The live screen is designed for two real courtside jobs: simple scorekeeping when the match is moving fast, and player-level stat tracking when you have time to enter the rally cleanly.</p>
+            <div class="quick-panel"><strong>Quick answer:</strong> Tap the score only when you just need the point. For stats, select the player or players first, choose the action, then choose the result or rating. Undo the last mistake immediately, and use score correction for older errors.</div>
             <figure class="article-visual full">
                 <img src="/assets/volleytrack/screens/live-scoring.jpg" alt="VolleyTrack live scoring screen with Dread Pirates VC leading Florin Falcons 18 to 14" loading="lazy">
                 <figcaption>The live screen keeps score, server, rotation, and common stat actions visible while the match is moving.</figcaption>
             </figure>
-            <h2>Score points</h2>
+            <h2>Score-only rallies</h2>
             <ol class="step-list">
                 <li>Tap the side that won the point.</li>
-                <li>Confirm side-outs and rotation changes as the app advances service state.</li>
-                <li>Use stat controls for aces, kills, attack errors, digs, blocks, receives, drops, and no-play situations.</li>
+                <li>Let VolleyTrack update the score and serving team. When your team wins serve back, the tracked lineup rotates automatically.</li>
+                <li>Use this path when preserving the scoreboard matters more than recording the full stat sequence.</li>
             </ol>
+            <p>If you start a Quick Match in Just Score mode with no roster, VolleyTrack hides the lineup cards, stat grid, substitutions, and voice input. That mode is intentionally focused on score, serve, and timeouts.</p>
+            <h2>Stat-tracked rallies</h2>
+            <p>Do not tap the score first when you want player stats. Start with the player cards, then choose the action and rating so VolleyTrack can update the score from the result.</p>
+            <ul>
+                <li><strong>Serve:</strong> When your team serves, the P1 server is selected for you. Tap Serve, then choose Ace, Good, or Error.</li>
+                <li><strong>Receive:</strong> When the opponent serves, select the passer first. Tap Receive, then choose 3 Perfect, 2 Good, 1 Poor, Error No Point, or Error Point.</li>
+                <li><strong>Attack:</strong> Select the setter first and the attacker second. Tap Attack, then choose Kill, Good, or Error.</li>
+                <li><strong>Block:</strong> Select the blocker, then tap Block. A block immediately awards your team a point.</li>
+                <li><strong>Dig:</strong> Select the defender, then tap Dig. A dig keeps the rally moving and does not change the score.</li>
+                <li><strong>Error:</strong> During a rally, tap Error and choose Drop, Passing Error, or Setting Error. These award the point to the opponent.</li>
+            </ul>
+            <div class="callout"><strong>What changes the score:</strong> Aces, kills, and blocks add a point for your team. Serve errors, attack errors, Error Point receives, drops, passing errors, and setting errors add a point for the opponent. Good serves, receive ratings, Error No Point receives, good attacks, and digs keep the rally moving without changing the score.</div>
+            <h2>Side-outs and rotation</h2>
+            <p>If the rally creates a side-out, VolleyTrack changes the serving team and advances your rotation when your team wins serve back. If a libero would rotate to the front row, the app can automatically swap the libero out according to the saved pairing.</p>
+            <h2>Timeouts</h2>
+            <p>Tap the TO control under the team calling timeout. VolleyTrack tracks remaining timeouts for the set with dots under each team and disables the button at zero. Timeout counts reset for each set from the match rules.</p>
+            <h2>Substitutions</h2>
+            <p>The live Subs row shows your team's remaining substitutions for the set. Long-press an occupied live court card to open the substitute sheet; tapping a player card selects that player for stats.</p>
             <h2>Use undo correctly</h2>
-            <p>Undo is intended for the most recent action. It should restore score, serving team, rally state, rotation, substitutions, timeouts, and libero/sub pairing state for that action.</p>
+            <p>Undo is intended for the most recent current-set action. It should restore score, serving team, rally state, rotation, substitutions, timeouts, libero/sub pairing state, and any immediate side-out rotation or libero auto-swap from that action.</p>
             <div class="callout"><strong>Best practice:</strong> If the last tap was wrong, undo immediately. If the mistake happened several rallies ago, use score correction instead.</div>
             <h2>Correct the score</h2>
-            <p>Use score correction when the scoreboard and real match diverge. This creates a deliberate correction without rewriting every previous event.</p>
+            <p>Long-press the score to correct the number when the scoreboard and real match diverge. Score correction does not recalculate serving team, rally state, rotation, or history, so use it for the score only.</p>
             <h2>End sets deliberately</h2>
-            <p>When a set reaches the target, choose the correct modal action: Keep Playing to close the modal only, Correct Score to fix the set score, Start Next Set to advance, or Finish Match to end the match.</p>
+            <p>When a set reaches the target, choose the correct modal action: Keep Playing to close the modal only, Correct Score to return to the live screen and edit the score, Start Next Set to advance, or Finish Match to end the match.</p>
             <h2>Related guides</h2>
             <div class="related-grid"><a class="related-card" href="/volleytrack/help/voice-input/">Voice input</a><a class="related-card" href="/volleytrack/help/stats-summaries-ai/">Review stats and summaries</a></div>
         </article>
