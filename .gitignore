@@ -1,0 +1,6 @@
+.DS_Store
+firebase-debug.log
+dev-notes/
+push-site-update.sh
+.wrangler/
+workers/**/.wrangler/
