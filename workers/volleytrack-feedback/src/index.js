@@ -86,13 +86,15 @@ export default {
       request.headers.get('User-Agent') || '',
     ).run();
 
-    if (env.EMAIL && env.NOTIFY_TO && env.NOTIFY_FROM) {
+    const notifyTo = parseEmailList(env.NOTIFY_TO);
+    if (env.EMAIL && notifyTo.length && env.NOTIFY_FROM) {
       try {
         await env.EMAIL.send({
-          to: env.NOTIFY_TO,
-          from: env.NOTIFY_FROM,
+          to: notifyTo,
+          from: { email: env.NOTIFY_FROM, name: 'VolleyTrack Feedback' },
           subject: `VolleyTrack feedback: ${labelWorkflow(data.workflow)}`,
           text: buildEmailText({ id, createdAt, ...data }),
+          replyTo: data.email || undefined,
         });
       } catch (error) {
         console.warn('feedback email failed', error);
@@ -105,6 +107,10 @@ export default {
 
 function parseAllowedOrigins(value = '') {
   return new Set(value.split(',').map((item) => item.trim()).filter(Boolean));
+}
+
+function parseEmailList(value = '') {
+  return value.split(',').map((item) => item.trim()).filter(Boolean);
 }
 
 function withCors(response, origin, allowedOrigins) {

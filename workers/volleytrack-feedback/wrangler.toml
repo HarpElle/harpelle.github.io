@@ -10,5 +10,6 @@ database_id = "53ab56cf-902c-4605-bea7-9c353763e9c9"
 
 [vars]
 ALLOWED_ORIGINS = "https://harpelle.com,https://www.harpelle.com,http://127.0.0.1:8088,http://localhost:8088"
-NOTIFY_TO = "jason@harpelle.com"
-NOTIFY_FROM = "feedback@harpelle.com"
+# Enable after Cloudflare Email Service destination addresses are verified.
+NOTIFY_TO = ""
+NOTIFY_FROM = ""

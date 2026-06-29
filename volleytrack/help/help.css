@@ -241,7 +241,7 @@ h1 {
 }
 
 .screen-card img {
-    aspect-ratio: 1320 / 2868;
+    aspect-ratio: 720 / 1468;
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-card);
     display: block;
@@ -270,7 +270,7 @@ h1 {
     margin: 34px 0;
 }
 
-.motion-card {
+.demo-card {
     background: var(--track-card);
     border: 1px solid var(--track-border);
     border-radius: var(--radius-md);
@@ -278,9 +278,8 @@ h1 {
     overflow: hidden;
 }
 
-.motion-card video,
-.motion-card img {
-    aspect-ratio: 720 / 1564;
+.demo-card img {
+    aspect-ratio: 720 / 1468;
     background: var(--track-dark);
     display: block;
     height: auto;
@@ -288,36 +287,36 @@ h1 {
     width: 100%;
 }
 
-.motion-card-body {
+.demo-card-body {
     padding: 18px;
 }
 
-.motion-card h2,
-.motion-card h3 {
+.demo-card h2,
+.demo-card h3 {
     font-size: 1.05rem;
     line-height: 1.35;
     margin-bottom: 6px;
 }
 
-.motion-card p,
-.motion-card li {
+.demo-card p,
+.demo-card li {
     color: var(--track-text-2);
     font-size: 0.9rem;
 }
 
-.motion-card ol,
-.motion-card ul {
+.demo-card ol,
+.demo-card ul {
     margin-top: 10px;
     padding-left: 20px;
 }
 
-.article-card .motion-card {
+.article-card .demo-card {
     margin: 26px 0 30px;
     max-width: 420px;
 }
 
-.article-card .motion-card h2,
-.article-card .motion-card h3 {
+.article-card .demo-card h2,
+.article-card .demo-card h3 {
     border-top: 0;
     font-size: 1.05rem;
     margin-top: 0;
