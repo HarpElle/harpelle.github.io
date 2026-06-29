@@ -174,6 +174,46 @@
             box-shadow: 0 20px 60px rgba(53, 49, 46, 0.15);
         }
 
+        .product-screens {
+            background: #fff;
+        }
+
+        .screen-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 36px;
+        }
+
+        .screen-tile {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .screen-tile img {
+            aspect-ratio: 1320 / 2868;
+            border-radius: 14px;
+            box-shadow: var(--shadow-card);
+            display: block;
+            height: auto;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .screen-tile strong {
+            display: block;
+            font-size: 0.9rem;
+            margin-top: 12px;
+        }
+
+        .screen-tile span {
+            color: var(--mid-neutral);
+            display: block;
+            font-size: 0.78rem;
+            line-height: 1.5;
+            margin-top: 3px;
+        }
+
         /* ── Sections ────────────────────────── */
         section { padding: 72px 24px; }
 
@@ -262,6 +302,17 @@
             margin-left: 6px;
             vertical-align: middle;
         }
+
+        .feature-card .learn-link {
+            color: var(--accent);
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-top: 12px;
+            text-decoration: none;
+        }
+
+        .feature-card .learn-link:hover { text-decoration: underline; }
 
         /* ── Spectator ───────────────────────── */
         .spectator-section {
@@ -471,11 +522,17 @@
 
         /* ── Responsive ──────────────────────── */
         @media (max-width: 640px) {
+            .site-nav {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+            }
             .hero h1 { font-size: 2rem; }
             .hero .tagline { font-size: 1rem; }
             .section-title { font-size: 1.5rem; }
             .features-grid { grid-template-columns: 1fr; }
             .pricing-grid { grid-template-columns: 1fr; max-width: 280px; }
+            .screen-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .spectator-steps { grid-template-columns: 1fr; }
             .site-nav .nav-links { gap: 18px; }
             .site-nav .nav-links a { font-size: 0.82rem; }
@@ -493,6 +550,7 @@
         <ul class="nav-links">
             <li><a href="/volleytally/">VolleyTally</a></li>
             <li><a href="/volleytrack/" class="active">VolleyTrack</a></li>
+            <li><a href="/volleytrack/help/">Help</a></li>
             <li><a href="mailto:jason@harpelle.com">Support</a></li>
         </ul>
     </nav>
@@ -514,9 +572,41 @@
                 </span>
             </div>
             <p class="store-note">VolleyTrack is currently in controlled testing while launch security, privacy, and store review gates are finalized.</p>
-            <img src="/assets/VolleyTrack-Screenshot.png" alt="VolleyTrack live scoring screenshot" class="hero-screenshot">
+            <img src="/assets/volleytrack/screenshots/iphone-17-pro-max/final/02-score-every-rally.png" alt="VolleyTrack live scoring screenshot" class="hero-screenshot">
         </div>
     </div>
+
+    <!-- Product Screens -->
+    <section class="product-screens">
+        <div class="section-inner">
+            <p class="section-label">Product Tour</p>
+            <h2 class="section-title">Built for the whole match workflow</h2>
+            <p class="section-subtitle">These examples use fictional Dread Pirates VC data in the Premium version of VolleyTrack.</p>
+
+            <div class="screen-grid">
+                <a class="screen-tile" href="/volleytrack/help/quick-start/">
+                    <img src="/assets/volleytrack/screenshots/iphone-17-pro-max/final/01-coach-from-the-sideline.png" alt="VolleyTrack dashboard with active match, events, Quick Match, and upcoming matches" loading="lazy">
+                    <strong>Coach from the sideline</strong>
+                    <span>Resume matches, enter events, start Quick Match, or join Fan mode.</span>
+                </a>
+                <a class="screen-tile" href="/volleytrack/help/live-scoring/">
+                    <img src="/assets/volleytrack/screenshots/iphone-17-pro-max/final/02-score-every-rally.png" alt="VolleyTrack live scoring screen with Dread Pirates VC leading Florin Falcons" loading="lazy">
+                    <strong>Score every rally</strong>
+                    <span>Keep score, server, rotation, and stat controls in one view.</span>
+                </a>
+                <a class="screen-tile" href="/volleytrack/help/stats-summaries-ai/">
+                    <img src="/assets/volleytrack/screenshots/iphone-17-pro-max/final/04-save-the-story.png" alt="VolleyTrack match summary with AI analysis and sharing controls" loading="lazy">
+                    <strong>Save the story</strong>
+                    <span>Review the result, player context, AI analysis, and sharing options.</span>
+                </a>
+                <a class="screen-tile" href="/volleytrack/help/fan-mode/">
+                    <img src="/assets/volleytrack/screenshots/iphone-17-pro-max/final/06-invite-the-fans.png" alt="VolleyTrack Fan mode code entry screen" loading="lazy">
+                    <strong>Invite the fans</strong>
+                    <span>Share a live code so spectators can follow from their own phones.</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Features -->
     <section class="features-section">
@@ -530,31 +620,37 @@
                     <span class="feature-icon">&#127952;</span>
                     <h3>Live Scoring & Rotation</h3>
                     <p>Track score, server, and rotation with an intuitive interface built for the pace of a real match. Log aces, kills, digs, blocks, and more with a single tap.</p>
+                    <a class="learn-link" href="/volleytrack/help/live-scoring/">Learn live scoring</a>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">&#127908;</span>
                     <h3>Voice Input <span class="feature-badge">New</span></h3>
-                    <p>Go hands-free during matches. Speak common jersey-number commands for instant parsing, with server-side AI backup using Groq GPT-OSS and Gemini fallback.</p>
+                    <p>Go hands-free during matches. Speak common rally actions and review parsed stats before committing them to the match log.</p>
+                    <a class="learn-link" href="/volleytrack/help/voice-input/">Learn voice input</a>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">&#128202;</span>
                     <h3>Advanced Analytics</h3>
                     <p>Go beyond the box score with Sideout %, Point Scoring %, Hitting Efficiency, momentum charts, and detailed set-by-set breakdowns.</p>
+                    <a class="learn-link" href="/volleytrack/help/stats-summaries-ai/">Learn stats</a>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">&#9889;</span>
                     <h3>AI-Powered Narratives</h3>
                     <p>Instantly generate match recaps ready for social media, or detailed technical reports for film study — all powered by advanced AI analysis.</p>
+                    <a class="learn-link" href="/volleytrack/help/stats-summaries-ai/">Learn AI summaries</a>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">&#128242;</span>
                     <h3>Live Spectator Mode <span class="feature-badge">New</span></h3>
                     <p>Share a 6-character code with parents and fans so they can follow live scores, activity, and structured cheers. Free spectator viewing may include non-interruptive banner ads.</p>
+                    <a class="learn-link" href="/volleytrack/help/fan-mode/">Learn Fan mode</a>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">&#128203;</span>
                     <h3>Team & Season Management</h3>
                     <p>Manage rosters, track multiple seasons, and organize tournaments. Assign jersey numbers, positions, and libero pairings with ease.</p>
+                    <a class="learn-link" href="/volleytrack/help/setup-team-season-event/">Learn setup</a>
                 </div>
             </div>
         </div>
@@ -639,6 +735,7 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-links">
+                <a href="/volleytrack/help/">Help Center</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
                 <a href="mailto:jason@harpelle.com">Support</a>
