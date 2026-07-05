@@ -1,0 +1,45 @@
+<!-- HarpElle client template · tokens: {{CLIENT_NAME}}, {{REST_DATE}} — declined state; rename to index.html when a client says no. See README.md -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{{CLIENT_NAME}} · HarpElle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/harpelle-site.css">
+<link rel="icon" href="../../assets/brand/favicon-32x32.png">
+<style>
+  :root { --font-display: 'Zilla Slab', Georgia, serif; --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  body { margin: 0; background: #F7F5F2; color: #35312E; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; display: flex; flex-direction: column;">
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 48px; max-width: 1040px; width: 100%; margin: 0 auto; box-sizing: border-box;">
+    <img src="../../assets/brand/HarpElle_Primary_Light.svg" alt="HarpElle" style="height: 40px; display: block;">
+    <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Private client preview</span>
+  </header>
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 48px; box-sizing: border-box;">
+    <div style="max-width: 620px; background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 16px; padding: 56px; box-shadow: 0 1px 3px rgba(53,49,46,.08);">
+      <div style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8E8680; margin-bottom: 20px;">Prepared for the {{CLIENT_NAME}} family</div>
+      <h1 style="font-family: var(--font-display); font-size: 34px; line-height: 1.2; font-weight: 600; margin: 0 0 20px;">Thank you for the honest answer.</h1>
+      <p style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; margin: 0 0 16px;">Truly &mdash; thanks for giving these ideas your time and a clear decision. That&rsquo;s all I ever ask, and I mean it when I say there are no hard feelings.</p>
+      <p style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; margin: 0 0 16px;">I&rsquo;ll take the pitch and demo down by <strong style="font-weight: 600;">{{REST_DATE}}</strong> and keep a private copy on my side. If the timing is ever better &mdash; next season, next year &mdash; everything you saw here can be back on the table with a single email.</p>
+      <p style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; margin: 0 0 32px;">Wishing {{CLIENT_NAME}} a great year.</p>
+      <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 32px;">
+        <span style="font-family: var(--font-sans); font-size: 16px; font-weight: 600;">&mdash; Jason Paschall, HarpElle</span>
+        <span style="font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: 16px; color: #8E8680;">Thoughtfully Built.</span>
+      </div>
+      <div style="border-top: 1px solid #E3DFD9; padding-top: 24px; font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #8E8680;">Change of heart, or just want to say hello? <a href="mailto:jason@harpelle.com?subject={{CLIENT_NAME}}%20%E2%80%94%20picking%20the%20conversation%20back%20up&amp;body=Hi%20Jason%2C%0A%0A" style="color: #35312E; font-weight: 600; text-decoration: underline; text-underline-offset: 4px;">jason@harpelle.com</a></div>
+    </div>
+  </main>
+  <footer style="max-width: 1040px; width: 100%; margin: 0 auto; padding: 24px 48px 40px !important; box-sizing: border-box; display: flex; justify-content: center; background: #F7F5F2 !important; border-top: 0 !important; color: #35312E !important;">
+    <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">This page is private &mdash; unlisted and unindexed.</span>
+  </footer>
+</div>
+</body>
+</html>

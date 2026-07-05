@@ -1,0 +1,166 @@
+<!-- HarpElle client template · tokens: {{CLIENT_NAME}}, {{HEADLINE}}, {{REST_DATE}} — see README.md -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{{CLIENT_NAME}} · HarpElle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/harpelle-site.css">
+<link rel="icon" href="../../assets/brand/favicon-32x32.png">
+<style>
+  :root { --font-display: 'Zilla Slab', Georgia, serif; --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  body { margin: 0; background: #F7F5F2; color: #35312E; }
+  a { color: inherit; }
+  .hx-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(53,49,46,.12); }
+  .hx-band:hover { background: #2A2724 !important; }
+  .hx-ul:hover { text-decoration-color: #35312E !important; }
+  .hx-btn { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; min-height: 44px; padding: 14px 28px; border-radius: 8px; border: 1px solid transparent; font-family: var(--font-sans); font-size: 14px; font-weight: 600; line-height: 1; text-decoration: none; transition: background 160ms ease, border-color 160ms ease; }
+  .hx-btn-primary { background: #35312E; color: #F7F5F2; }
+  .hx-btn-primary:hover { background: #2A2724; }
+  .hx-btn-secondary { background: #F7F5F2; color: #35312E; border-color: #E3DFD9; }
+  .hx-btn-secondary:hover { border-color: #35312E; }
+  .hx-btn-ghost { background: transparent; color: #35312E; }
+  .hx-btn-ghost:hover { text-decoration: underline; text-underline-offset: 4px; }
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Header -->
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 48px; max-width: 1040px; width: 100%; margin: 0 auto; box-sizing: border-box;">
+    <img src="../../assets/brand/HarpElle_Primary_Light.svg" alt="HarpElle" style="height: 40px; display: block;">
+    <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Private client preview</span>
+  </header>
+
+  <main style="flex: 1; width: 100%; max-width: 1040px; margin: 0 auto; padding: 48px 48px 0; box-sizing: border-box;">
+
+    <!-- Hero -->
+    <section style="max-width: 680px; padding: 0 0 72px !important;">
+      <div style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8E8680; margin-bottom: 20px;">Prepared for the {{CLIENT_NAME}} family</div>
+      <h1 style="font-family: var(--font-display); font-size: 42px; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 24px;">{{HEADLINE}}</h1>
+      <!-- MODE: after-meeting (active). To switch to proactive mode, delete this paragraph and uncomment the one below. -->
+      <p style="font-family: var(--font-sans); font-size: 18px; line-height: 1.6; margin: 0 0 28px; max-width: 65ch;">Thank you for taking the time to meet. What follows is a working exploration of what {{CLIENT_NAME}}&rsquo;s online home could be &mdash; built around the story only your family can tell. Everything here is a draft meant to start a conversation, not a finished product. Look around, click everything, and tell me what feels right.</p>
+      <!-- MODE: proactive — swap in for the after-meeting paragraph above when the client has NOT met Jason yet.
+      <p style="font-family: var(--font-sans); font-size: 18px; line-height: 1.6; margin: 0 0 28px; max-width: 65ch;">We haven&rsquo;t met yet &mdash; this page is my introduction. I design and build websites and brands for family businesses near home, and I built what follows on my own time because I think {{CLIENT_NAME}} deserves an online home as good as the real thing. Looking costs you nothing and commits you to nothing. Click everything, and if any of it rings true, I&rsquo;d love a conversation.</p>
+      -->
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <span style="font-family: var(--font-sans); font-size: 16px; font-weight: 600;">&mdash; Jason Paschall, HarpElle</span>
+        <span style="font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: 16px; color: #8E8680;">Thoughtfully Built.</span>
+      </div>
+    </section>
+
+    <!-- Deliverable cards -->
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; padding: 0 0 24px !important;">
+      <a href="pitch/" class="hx-card" style="display: flex; flex-direction: column; gap: 12px; background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 32px; text-decoration: none; box-shadow: 0 1px 3px rgba(53,49,46,.08); transition: transform 160ms ease, box-shadow 160ms ease;">
+        <span style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #B89A8F;">Start here</span>
+        <span style="font-family: var(--font-display); font-size: 28px; line-height: 1.25; font-weight: 500;">Three directions for the {{CLIENT_NAME}} brand</span>
+        <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #8E8680;">Three distinct personalities for the same great business, each shown as a full homepage on desktop and phone. Pan, zoom, and compare.</span>
+        <span style="font-family: var(--font-sans); font-size: 14px; font-weight: 600; margin-top: 8px; display: inline-flex; align-items: center; gap: 8px;">View the pitch <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="demo/" class="hx-card" style="display: flex; flex-direction: column; gap: 12px; background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 32px; text-decoration: none; box-shadow: 0 1px 3px rgba(53,49,46,.08); transition: transform 160ms ease, box-shadow 160ms ease;">
+        <span style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9280A0;">Then explore</span>
+        <span style="font-family: var(--font-display); font-size: 28px; line-height: 1.25; font-weight: 500;">A working demo of your new website</span>
+        <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #8E8680;">Fully navigable pages built on the direction we liked best &mdash; real hours, real prices, and a place for your family&rsquo;s story. The labeled blocks are placeholders waiting for your photos.</span>
+        <span style="font-family: var(--font-sans); font-size: 14px; font-weight: 600; margin-top: 8px; display: inline-flex; align-items: center; gap: 8px;">Walk through the demo <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="thinking.html" class="hx-card" style="display: flex; flex-direction: column; gap: 12px; background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 32px; text-decoration: none; box-shadow: 0 1px 3px rgba(53,49,46,.08); transition: transform 160ms ease, box-shadow 160ms ease;">
+        <span style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8E8680;">The why</span>
+        <span style="font-family: var(--font-display); font-size: 28px; line-height: 1.25; font-weight: 500;">The thinking behind these directions</span>
+        <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #8E8680;">Where {{CLIENT_NAME}} sits in the market, what your customers expect, and an honest before-and-after of your current site. Check my reasoning, not just my taste.</span>
+        <span style="font-family: var(--font-sans); font-size: 14px; font-weight: 600; margin-top: 8px; display: inline-flex; align-items: center; gap: 8px;">See the thinking <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </section>
+
+    <!-- SHOW PROPOSAL: uncomment this band when the engagement reaches proposal stage (showProposal). -->
+    <!--
+    <section style="padding: 0 0 24px !important;">
+      <a href="proposal.html" class="hx-band" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; background: #35312E; color: #F7F5F2; border-radius: 12px; padding: 32px 36px; text-decoration: none; box-shadow: 0 1px 3px rgba(53,49,46,.08); transition: background 160ms ease;">
+        <div style="display: flex; flex-direction: column; gap: 8px; max-width: 620px;">
+          <span style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #B89A8F;">New &middot; the proposal</span>
+          <span style="font-family: var(--font-display); font-size: 28px; line-height: 1.25; font-weight: 500;">Scope, pricing, and a plain-language plan</span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #B0A9A2;">Three ways we could work together, fixed prices, and exactly what happens if you say yes.</span>
+        </div>
+        <span style="font-family: var(--font-sans); font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;">Read the proposal <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </section>
+    -->
+
+    <!-- Secondary materials -->
+    <section style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 0 4px 72px !important;">
+      <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Also in your folder:</span>
+      <a href="proposal/" class="hx-ul" style="font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: #35312E; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #E3DFD9; padding: 8px 0;">Scope &amp; proposal (one page)</a>
+      <a href="walkthrough/" class="hx-ul" style="font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: #35312E; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #E3DFD9; padding: 8px 0;">Video walkthrough (6 min)</a>
+    </section>
+
+    <!-- Response section -->
+    <section style="border-top: 1px solid #E3DFD9; padding: 64px 0 72px !important; max-width: 680px;">
+      <h2 style="font-family: var(--font-display); font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0 0 16px;">Tell me where you stand</h2>
+      <p style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; margin: 0 0 28px; color: #8E8680; max-width: 60ch;">One click, no forms. Each button opens an email to me with the subject already filled in &mdash; add as much or as little as you like.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+        <a class="hx-btn hx-btn-primary" href="mailto:jason@harpelle.com?subject={{CLIENT_NAME}}%20%E2%80%94%20let%E2%80%99s%20talk&amp;body=Hi%20Jason%2C%0A%0AWe%20looked%20through%20everything%20and%20we%E2%80%99d%20like%20to%20talk.%20Here%E2%80%99s%20what%20works%20for%20us%3A%0A%0A">Let&rsquo;s talk</a>
+        <a class="hx-btn hx-btn-secondary" href="mailto:jason@harpelle.com?subject={{CLIENT_NAME}}%20%E2%80%94%20a%20few%20questions&amp;body=Hi%20Jason%2C%0A%0ABefore%20we%20decide%2C%20we%E2%80%99d%20like%20to%20ask%3A%0A%0A1.%20%0A2.%20%0A">I have questions</a>
+        <a class="hx-btn hx-btn-ghost" href="mailto:jason@harpelle.com?subject={{CLIENT_NAME}}%20%E2%80%94%20not%20right%20now&amp;body=Hi%20Jason%2C%0A%0AThank%20you%20for%20the%20work%20you%20put%20into%20this%2C%20but%20it%E2%80%99s%20not%20the%20right%20time%20for%20us.%0A%0A">Not right now</a>
+      </div>
+      <p style="font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #8E8680; margin: 20px 0 0;">Or simply reply to the email that brought you here &mdash; whatever&rsquo;s easiest.</p>
+    </section>
+
+    <!-- What happens next -->
+    <section style="border-top: 1px solid #E3DFD9; padding: 64px 0 80px !important;">
+      <h2 style="font-family: var(--font-display); font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0 0 40px;">If you&rsquo;re in, here&rsquo;s the path</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-family: var(--font-display); font-size: 28px; font-weight: 500; color: #B89A8F;">1</span>
+          <span style="font-family: var(--font-sans); font-size: 18px; font-weight: 600;">We talk</span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #8E8680;">A thirty-minute conversation &mdash; phone, video, or over coffee. You tell me what felt right and what didn&rsquo;t. No commitment yet.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-family: var(--font-display); font-size: 28px; font-weight: 500; color: #B89A8F;">2</span>
+          <span style="font-family: var(--font-sans); font-size: 18px; font-weight: 600;">Scope &amp; proposal</span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #8E8680;">I write up exactly what we&rsquo;d build, what it costs, and how long it takes. A fixed, plain-language quote &mdash; you decide from there.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-family: var(--font-display); font-size: 28px; font-weight: 500; color: #B89A8F;">3</span>
+          <span style="font-family: var(--font-sans); font-size: 18px; font-weight: 600;">We build it together</span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #8E8680;">From you I&rsquo;ll need photos, the real version of your story, and a handful of decisions. From me you get steady progress and honest updates.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Honest notes -->
+  <section style="background: #35312E; color: #E8E4DF; padding: 0 !important;">
+    <div style="max-width: 1040px; margin: 0 auto; padding: 72px 48px; box-sizing: border-box;">
+      <h2 style="font-family: var(--font-display); font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0 0 36px; color: #F7F5F2;">A few honest notes</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: #F7F5F2;">The photos are placeholders.</span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7;">Each one is labeled with the shot that belongs there &mdash; your place, your people. Real photography is step one of the real project.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: #F7F5F2;">The story is a draft.</span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7;">It&rsquo;s written from what&rsquo;s publicly known. The names, dates, and details are yours to correct &mdash; that page should be in your words.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: #F7F5F2;">Nothing here is final.</span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7;">Direction, colors, copy, features &mdash; all of it bends to what you want {{CLIENT_NAME}} to be.</span>
+        </div>
+      </div>
+      <p style="font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #E8E4DF; opacity: 0.85; margin: 48px 0 0; max-width: 60ch;">This page rests here until {{REST_DATE}}. If I haven&rsquo;t heard from you by then, I&rsquo;ll quietly take these materials down &mdash; no follow-ups, no hard feelings.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="max-width: 1040px; width: 100%; margin: 0 auto; padding: 40px 48px 48px !important; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; background: #F7F5F2 !important; border-top: 0 !important; color: #35312E !important;">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <img src="../../assets/brand/HarpElle_Wordmark_Light.svg" alt="HarpElle" style="height: 22px; display: block;">
+      <span style="font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: 14px; color: #8E8680;">Thoughtfully Built.</span>
+    </div>
+    <div style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">jason@harpelle.com &middot; This page is private &mdash; unlisted and unindexed.</div>
+  </footer>
+</div>
+</body>
+</html>

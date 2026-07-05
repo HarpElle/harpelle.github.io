@@ -1,0 +1,170 @@
+<!-- HarpElle client template · Jason-private engagement index — no tokens; rows below are sample data. NOT copied into client folders; keep out of the deploy or at an unlisted path. See README.md -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Client engagements · HarpElle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/harpelle-site.css">
+<link rel="icon" href="../../assets/brand/favicon-32x32.png">
+<style>
+  :root { --font-display: 'Zilla Slab', Georgia, serif; --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  body { margin: 0; background: #F7F5F2; color: #35312E; }
+  .hx-ul:hover { text-decoration-color: #35312E !important; }
+  /* Badge tones — the label is always present; color is never the sole signal.
+     pink = in conversation, purple = sent/awaiting, dark = won, neutral = draft, outline = declined/archived. */
+  .hx-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; border-radius: 999px; font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; box-sizing: border-box; }
+  .hx-badge .hx-dot { flex: none; width: 6px; height: 6px; border-radius: 999px; }
+  .hx-badge-pink { background: rgba(184, 154, 143, 0.18); color: #35312E; }
+  .hx-badge-pink .hx-dot { background: #B89A8F; }
+  .hx-badge-purple { background: rgba(146, 128, 160, 0.18); color: #35312E; }
+  .hx-badge-purple .hx-dot { background: #9280A0; }
+  .hx-badge-dark { background: #35312E; color: #F7F5F2; }
+  .hx-badge-dark .hx-dot { background: #B89A8F; }
+  .hx-badge-neutral { background: #EDEAE5; color: #35312E; }
+  .hx-badge-neutral .hx-dot { background: #8E8680; }
+  .hx-badge-outline { background: transparent; color: #8E8680; border: 1px solid #E3DFD9; }
+  .hx-badge-outline .hx-dot { background: #8E8680; }
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Header -->
+  <header style="border-bottom: 1px solid #E3DFD9;">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 24px 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <img src="../../assets/brand/HarpElle_Monogram_FullColor_Dark.svg" alt="HarpElle" style="width: 36px; height: 36px; display: block;">
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-family: var(--font-sans); font-size: 16px; font-weight: 600;">Client engagements</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Private index &mdash; never linked, never indexed</span>
+        </div>
+      </div>
+      <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">3 in play &middot; 5 total</span>
+    </div>
+  </header>
+
+  <main style="flex: 1; width: 100%; max-width: 1120px; margin: 0 auto; padding: 48px; box-sizing: border-box;">
+
+    <!-- Engagement rows -->
+    <!-- EDIT: sample engagement rows below — replace with real engagements and keep the "N in play · N total" count in the header honest. Statuses: Draft → Sent → In conversation → Won / Declined → Archived. Badge tone classes: hx-badge-pink (in conversation), hx-badge-purple (sent/awaiting), hx-badge-dark (won), hx-badge-neutral (draft), hx-badge-outline (declined/archived). Point each row's links at the client's real folder (clients/<slug>/...). -->
+    <section style="display: flex; flex-direction: column; gap: 16px; padding: 0 0 72px !important;">
+      <div style="background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 24px 28px; box-shadow: 0 1px 3px rgba(53,49,46,.08); display: grid; grid-template-columns: minmax(200px, 1.4fr) minmax(150px, 1fr) minmax(210px, 1.4fr) minmax(180px, 1.2fr); gap: 16px 24px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-family: var(--font-display); font-size: 20px; font-weight: 500; line-height: 1.25;">Swing Time Family Fun Centers</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Mini golf &amp; driving range &middot; Germantown + Waukesha, WI</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px;">
+          <span class="hx-badge hx-badge-pink"><span class="hx-dot"></span>In conversation</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Sent Jun 12 &middot; rests Sep 1</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 16px;">
+          <a href="index.html" class="hx-ul" style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #E3DFD9; padding: 4px 0;">Client page</a>
+          <a href="#" class="hx-ul" style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #E3DFD9; padding: 4px 0;">Pitch</a>
+          <a href="#" class="hx-ul" style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #E3DFD9; padding: 4px 0;">Demo</a>
+        </div>
+        <span style="font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #8E8680;">They asked about photography &mdash; bring the shot list to the next call.</span>
+      </div>
+      <div style="background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 24px 28px; box-shadow: 0 1px 3px rgba(53,49,46,.08); display: grid; grid-template-columns: minmax(200px, 1.4fr) minmax(150px, 1fr) minmax(210px, 1.4fr) minmax(180px, 1.2fr); gap: 16px 24px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-family: var(--font-display); font-size: 20px; font-weight: 500; line-height: 1.25;">Birchwood Lanes</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Bowling center &middot; Menomonee Falls, WI</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px;">
+          <span class="hx-badge hx-badge-purple"><span class="hx-dot"></span>Sent</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Sent Jul 2 &middot; rests Oct 1</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 16px;">
+          <a href="index.html" class="hx-ul" style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #E3DFD9; padding: 4px 0;">Client page</a>
+          <a href="#" class="hx-ul" style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #E3DFD9; padding: 4px 0;">Pitch</a>
+          <a href="#" class="hx-ul" style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #E3DFD9; padding: 4px 0;">Demo</a>
+        </div>
+        <span style="font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #8E8680;">Waiting on the family &mdash; no nudge before mid-July.</span>
+      </div>
+      <div style="background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 24px 28px; box-shadow: 0 1px 3px rgba(53,49,46,.08); display: grid; grid-template-columns: minmax(200px, 1.4fr) minmax(150px, 1fr) minmax(210px, 1.4fr) minmax(180px, 1.2fr); gap: 16px 24px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-family: var(--font-display); font-size: 20px; font-weight: 500; line-height: 1.25;">North Point Coffee Roasters</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Caf&eacute; &amp; roastery &middot; Cedarburg, WI</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px;">
+          <span class="hx-badge hx-badge-neutral"><span class="hx-dot"></span>Draft</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Pitch in progress</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 16px;">
+          <a href="#" class="hx-ul" style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #E3DFD9; padding: 4px 0;">Working folder</a>
+        </div>
+        <span style="font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #8E8680;">Two brand directions done; needs the demo homepage before sending.</span>
+      </div>
+      <div style="background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 24px 28px; box-shadow: 0 1px 3px rgba(53,49,46,.08); display: grid; grid-template-columns: minmax(200px, 1.4fr) minmax(150px, 1fr) minmax(210px, 1.4fr) minmax(180px, 1.2fr); gap: 16px 24px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-family: var(--font-display); font-size: 20px; font-weight: 500; line-height: 1.25;">Heritage Hardware</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Family hardware store &middot; West Bend, WI</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px;">
+          <span class="hx-badge hx-badge-neutral"><span class="hx-dot"></span>Draft</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Research phase</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 16px;">
+          <a href="#" class="hx-ul" style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #E3DFD9; padding: 4px 0;">Notes</a>
+        </div>
+        <span style="font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #8E8680;">Visit the store first &mdash; pitch should lead with their 60-year story.</span>
+      </div>
+      <div style="background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 24px 28px; box-shadow: 0 1px 3px rgba(53,49,46,.08); display: grid; grid-template-columns: minmax(200px, 1.4fr) minmax(150px, 1fr) minmax(210px, 1.4fr) minmax(180px, 1.2fr); gap: 16px 24px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-family: var(--font-display); font-size: 20px; font-weight: 500; line-height: 1.25;">Lakeshore Paddle Co.</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Kayak rentals &amp; tours &middot; Port Washington, WI</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px;">
+          <span class="hx-badge hx-badge-outline"><span class="hx-dot"></span>Declined</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Declined Jun 20 &middot; take down Aug 1</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 16px;">
+          <a href="index-declined.html" class="hx-ul" style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #E3DFD9; padding: 4px 0;">Client page (declined)</a>
+        </div>
+        <span style="font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #8E8680;">Archive Aug 1. They liked the work &mdash; timing was the issue. Door open.</span>
+      </div>
+    </section>
+
+    <!-- Retiring a page -->
+    <section style="border-top: 1px solid #E3DFD9; padding: 56px 0 24px !important; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px;">
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 26px; line-height: 1.25; font-weight: 500; margin: 0 0 20px;">Retiring a page</h2>
+        <ol style="font-family: var(--font-sans); font-size: 15px; line-height: 1.7; margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; color: #35312E;">
+          <li>Swap the client&rsquo;s <span style="font-family: ui-monospace, monospace; font-size: 13px; background: #EDEAE5; padding: 1px 6px; border-radius: 4px;">index.html</span> to the <strong style="font-weight: 600;">declined</strong> state the day they say no.</li>
+          <li>On the promised rest date, delete <span style="font-family: ui-monospace, monospace; font-size: 13px; background: #EDEAE5; padding: 1px 6px; border-radius: 4px;">pitch/</span> and <span style="font-family: ui-monospace, monospace; font-size: 13px; background: #EDEAE5; padding: 1px 6px; border-radius: 4px;">demo/</span> from the repo and swap the page to the <strong style="font-weight: 600;">archived</strong> card.</li>
+          <li>Keep a private copy of everything outside the repo (the repo history has it anyway, but keep a clean folder).</li>
+          <li>Update the status and dates in <span style="font-family: ui-monospace, monospace; font-size: 13px; background: #EDEAE5; padding: 1px 6px; border-radius: 4px;">clients/clients.json</span> so this index stays honest.</li>
+          <li>No follow-up emails. The archived page holds the door open by itself.</li>
+        </ol>
+      </div>
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 26px; line-height: 1.25; font-weight: 500; margin: 0 0 20px;">Conventions</h2>
+        <pre style="font-family: ui-monospace, monospace; font-size: 13px; line-height: 1.7; background: #35312E; color: #E8E4DF; border-radius: 12px; padding: 24px; margin: 0 0 16px; overflow-x: auto;">clients/
+  clients.json        &larr; this index&rsquo;s data (private)
+  &lt;name&gt;/
+    index.html        &larr; landing page (noindex, nofollow)
+    pitch/            &larr; pitch canvas
+    demo/             &larr; navigable demo
+    proposal/         &larr; optional one-pager</pre>
+        <p style="font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #8E8680; margin: 0; max-width: 55ch;">Pages are unlisted, not authenticated: no links from the public site, <span style="font-family: ui-monospace, monospace;">noindex, nofollow</span> on every page, and the folder path is the only key. Keep this index out of the deploy &mdash; or at an unlisted path if you want it on the go.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid #E3DFD9 !important; padding: 0 !important; background: #F7F5F2 !important; color: #35312E !important;">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 24px 48px 36px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <img src="../../assets/brand/HarpElle_Wordmark_Light.svg" alt="HarpElle" style="height: 18px; display: block;">
+        <span style="font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: 13px; color: #8E8680;">Thoughtfully Built.</span>
+      </div>
+      <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">For Jason&rsquo;s eyes only.</span>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

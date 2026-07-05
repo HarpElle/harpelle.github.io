@@ -1,0 +1,181 @@
+<!-- HarpElle client template · tokens: {{CLIENT_NAME}}, {{CURRENT_PHASE}}, {{LAST_UPDATED}}, {{NEXT_MILESTONE}}, {{NEXT_MILESTONE_DATE}}, {{STAGING_URL}} — swap in for index.html when a client says yes. See README.md -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{{CLIENT_NAME}} · HarpElle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/harpelle-site.css">
+<link rel="icon" href="../../assets/brand/favicon-32x32.png">
+<style>
+  :root { --font-display: 'Zilla Slab', Georgia, serif; --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  body { margin: 0; background: #F7F5F2; color: #35312E; }
+  .hx-band:hover { background: #2A2724 !important; }
+  .hx-btn { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; min-height: 44px; padding: 14px 28px; border-radius: 8px; border: 1px solid transparent; font-family: var(--font-sans); font-size: 14px; font-weight: 600; line-height: 1; text-decoration: none; transition: background 160ms ease, border-color 160ms ease; }
+  .hx-btn-ondark { background: #F7F5F2; color: #35312E; }
+  .hx-btn-ondark:hover { background: #EDEAE5; }
+  .hx-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; border-radius: 999px; font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+  .hx-badge .hx-dot { flex: none; width: 6px; height: 6px; border-radius: 999px; }
+  .hx-badge-pink { background: rgba(184, 154, 143, 0.18); color: #35312E; }
+  .hx-badge-pink .hx-dot { background: #B89A8F; }
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Header -->
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 48px; max-width: 1040px; width: 100%; margin: 0 auto; box-sizing: border-box;">
+    <img src="../../assets/brand/HarpElle_Primary_Light.svg" alt="HarpElle" style="height: 40px; display: block;">
+    <span class="hx-badge hx-badge-pink"><span class="hx-dot"></span>Project underway</span>
+  </header>
+
+  <main style="flex: 1; width: 100%; max-width: 1040px; margin: 0 auto; padding: 40px 48px 80px; box-sizing: border-box;">
+
+    <!-- Hero -->
+    <section style="max-width: 680px; padding: 0 0 48px !important;">
+      <div style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8E8680; margin-bottom: 20px;">{{CLIENT_NAME}} &times; HarpElle &middot; project home base</div>
+      <h1 style="font-family: var(--font-display); font-size: 42px; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 20px;">Welcome aboard. This page is home base.</h1>
+      <p style="font-family: var(--font-sans); font-size: 18px; line-height: 1.6; margin: 0; max-width: 65ch;">Everything about the project lives here: where we are, what&rsquo;s next, and what I need from you. I update it every Friday &mdash; bookmark it and you&rsquo;ll never have to wonder where things stand.</p>
+    </section>
+
+    <!-- Status strip -->
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; padding: 0 0 64px !important;">
+      <div style="background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 24px 28px; box-shadow: 0 1px 3px rgba(53,49,46,.08); display: flex; flex-direction: column; gap: 6px;">
+        <span style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8E8680;">Where we are</span>
+        <span style="font-family: var(--font-display); font-size: 22px; font-weight: 500;">{{CURRENT_PHASE}}</span>
+        <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">Updated {{LAST_UPDATED}}</span>
+      </div>
+      <div style="background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 24px 28px; box-shadow: 0 1px 3px rgba(53,49,46,.08); display: flex; flex-direction: column; gap: 6px;">
+        <span style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8E8680;">Next milestone</span>
+        <span style="font-family: var(--font-display); font-size: 22px; font-weight: 500;">{{NEXT_MILESTONE}}</span>
+        <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">{{NEXT_MILESTONE_DATE}}</span>
+      </div>
+      <a href="{{STAGING_URL}}" class="hx-band" style="background: #35312E; color: #F7F5F2; border-radius: 12px; padding: 24px 28px; box-shadow: 0 1px 3px rgba(53,49,46,.08); display: flex; flex-direction: column; gap: 6px; text-decoration: none; transition: background 160ms ease;">
+        <span style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #B0A9A2;">The work so far</span>
+        <span style="font-family: var(--font-display); font-size: 22px; font-weight: 500;">View the staging site</span>
+        <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #B0A9A2;">Live as I build &mdash; click anything <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </section>
+
+    <!-- Timeline -->
+    <section style="border-top: 1px solid #E3DFD9; padding: 56px 0 64px !important;">
+      <h2 style="font-family: var(--font-display); font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0 0 36px;">The plan, week by week</h2>
+      <div style="display: flex; flex-direction: column;">
+        <!-- EDIT PER CLIENT: milestones — sample content (Birchwood Lanes example). Dot styles: done = bg #35312E / border #35312E, in progress = bg #B89A8F / border #35312E, upcoming = bg #F7F5F2 / border #8E8680. State label colors: Done #8E8680, In progress #35312E, Upcoming #8E8680. The label always accompanies the dot — color is never the sole signal. -->
+        <div style="display: grid; grid-template-columns: 28px minmax(140px, 0.6fr) minmax(240px, 1.6fr) minmax(120px, 0.5fr); gap: 12px 24px; padding: 18px 0; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+          <span style="width: 14px; height: 14px; border-radius: 999px; align-self: center; background: #35312E; border: 2px solid #35312E; box-sizing: border-box;"></span>
+          <span style="font-family: var(--font-sans); font-size: 16px; font-weight: 600;">Kickoff &amp; brand lock</span>
+          <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: #8E8680;">Final call on direction, colors, and voice. Agreement signed, deposit in, calendar booked.</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #8E8680;">Done</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 28px minmax(140px, 0.6fr) minmax(240px, 1.6fr) minmax(120px, 0.5fr); gap: 12px 24px; padding: 18px 0; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+          <span style="width: 14px; height: 14px; border-radius: 999px; align-self: center; background: #35312E; border: 2px solid #35312E; box-sizing: border-box;"></span>
+          <span style="font-family: var(--font-sans); font-size: 16px; font-weight: 600;">Content gathering</span>
+          <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: #8E8680;">Your story in your words, league schedules, party packages, prices &mdash; collected and edited.</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #8E8680;">Done</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 28px minmax(140px, 0.6fr) minmax(240px, 1.6fr) minmax(120px, 0.5fr); gap: 12px 24px; padding: 18px 0; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+          <span style="width: 14px; height: 14px; border-radius: 999px; align-self: center; background: #B89A8F; border: 2px solid #35312E; box-sizing: border-box;"></span>
+          <span style="font-family: var(--font-sans); font-size: 16px; font-weight: 600;">Build</span>
+          <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: #8E8680;">The real site, page by page, on the staging link above. Look weekly; comment on anything.</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E;">In progress</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 28px minmax(140px, 0.6fr) minmax(240px, 1.6fr) minmax(120px, 0.5fr); gap: 12px 24px; padding: 18px 0; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+          <span style="width: 14px; height: 14px; border-radius: 999px; align-self: center; background: #F7F5F2; border: 2px solid #8E8680; box-sizing: border-box;"></span>
+          <span style="font-family: var(--font-sans); font-size: 16px; font-weight: 600;">Photography</span>
+          <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: #8E8680;">Shot list is ready. I art-direct, you just run the place like normal.</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #8E8680;">Upcoming</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 28px minmax(140px, 0.6fr) minmax(240px, 1.6fr) minmax(120px, 0.5fr); gap: 12px 24px; padding: 18px 0; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+          <span style="width: 14px; height: 14px; border-radius: 999px; align-self: center; background: #F7F5F2; border: 2px solid #8E8680; box-sizing: border-box;"></span>
+          <span style="font-family: var(--font-sans); font-size: 16px; font-weight: 600;">Launch</span>
+          <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: #8E8680;">Domain switch, search setup, and a recorded walkthrough of how to update everything.</span>
+          <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #8E8680;">Upcoming</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two-column: needs + decisions -->
+    <section style="border-top: 1px solid #E3DFD9; padding: 56px 0 64px !important; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px;">
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 26px; line-height: 1.25; font-weight: 500; margin: 0 0 8px;">What I need from you</h2>
+        <p style="font-family: var(--font-sans); font-size: 14px; line-height: 1.6; color: #8E8680; margin: 0 0 24px;">The project only waits when one of these does.</p>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <!-- EDIT PER CLIENT: open needs — sample content. Open item: mark → color #B89A8F, bg #F7F5F2, no strikethrough. Completed item: mark ✓ color #8E8680, bg #EDEAE5, line-through on the title. -->
+          <div style="display: flex; gap: 12px; align-items: flex-start; background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 8px; padding: 14px 16px;">
+            <span style="flex: none; font-family: var(--font-sans); font-size: 14px; font-weight: 700; color: #B89A8F; width: 18px; text-align: center;">&rarr;</span>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; text-decoration: none;">Confirm the photography date</span>
+              <span style="font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #8E8680;">Holding Tue Jul 14 &mdash; a yes/no by Friday keeps us on schedule.</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 8px; padding: 14px 16px;">
+            <span style="flex: none; font-family: var(--font-sans); font-size: 14px; font-weight: 700; color: #B89A8F; width: 18px; text-align: center;">&rarr;</span>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; text-decoration: none;">League pricing for fall</span>
+              <span style="font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #8E8680;">The leagues page is built and waiting on the numbers.</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; background: #EDEAE5; border: 1px solid #E3DFD9; border-radius: 8px; padding: 14px 16px;">
+            <span style="flex: none; font-family: var(--font-sans); font-size: 14px; font-weight: 700; color: #8E8680; width: 18px; text-align: center;">&#10003;</span>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; text-decoration: line-through;">Your story, in your words</span>
+              <span style="font-family: var(--font-sans); font-size: 13px; line-height: 1.5; font-weight: 500; color: #8E8680;">Received &mdash; it&rsquo;s wonderful. Edited draft is on staging.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 26px; line-height: 1.25; font-weight: 500; margin: 0 0 8px;">Decisions we&rsquo;ve made</h2>
+        <p style="font-family: var(--font-sans); font-size: 14px; line-height: 1.6; color: #8E8680; margin: 0 0 24px;">Written down so nobody has to remember.</p>
+        <div style="display: flex; flex-direction: column;">
+          <!-- EDIT PER CLIENT: decision log — sample content (Birchwood Lanes example). -->
+          <div style="display: grid; grid-template-columns: 76px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+            <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #8E8680;">Jun 24</span>
+            <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6;">Direction: &quot;Neighborhood Classic&quot; &mdash; warm wood, hand-painted feel.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 76px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+            <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #8E8680;">Jun 24</span>
+            <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6;">One site for leagues and parties; no separate booking portal this year.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 76px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+            <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #8E8680;">Jun 30</span>
+            <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6;">Bookings by phone + form at launch; revisit a full booking system after season one.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 76px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+            <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #8E8680;">Jul 2</span>
+            <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6;">Care plan: yes &mdash; Jason handles hosting, backups, and monthly updates.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / care -->
+    <section style="background: #35312E; color: #E8E4DF; border-radius: 16px; padding: 44px 48px !important; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <h2 style="font-family: var(--font-display); font-size: 26px; line-height: 1.25; font-weight: 500; margin: 0; color: #F7F5F2;">Need something between Fridays?</h2>
+        <p style="font-family: var(--font-sans); font-size: 15px; line-height: 1.7; margin: 0;">Email me any time &mdash; I answer within one business day, usually much faster. There&rsquo;s no ticket system and no phone tree. Just me.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: flex-end; align-items: center;">
+        <a class="hx-btn hx-btn-ondark" href="mailto:jason@harpelle.com?subject={{CLIENT_NAME}}%20%E2%80%94%20project%20question">Email Jason</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid #E3DFD9 !important; padding: 0 !important; background: #F7F5F2 !important; color: #35312E !important;">
+    <div style="max-width: 1040px; margin: 0 auto; padding: 32px 48px 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <img src="../../assets/brand/HarpElle_Wordmark_Light.svg" alt="HarpElle" style="height: 18px; display: block;">
+        <span style="font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: 13px; color: #8E8680;">Thoughtfully Built.</span>
+      </div>
+      <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: #8E8680;">jason@harpelle.com &middot; This page is private to the {{CLIENT_NAME}} family.</span>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

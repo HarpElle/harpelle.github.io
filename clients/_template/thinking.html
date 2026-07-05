@@ -1,0 +1,151 @@
+<!-- HarpElle client template · tokens: {{CLIENT_NAME}} — before/after slider expects before.png and after.png in this folder. See README.md -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The thinking · {{CLIENT_NAME}} · HarpElle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/harpelle-site.css">
+<link rel="icon" href="../../assets/brand/favicon-32x32.png">
+<style>
+  :root { --font-display: 'Zilla Slab', Georgia, serif; --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  body { margin: 0; background: #F7F5F2; color: #35312E; }
+  .hx-back:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .hx-ul:hover { text-decoration-color: #35312E !important; }
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Header -->
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 48px; max-width: 1040px; width: 100%; margin: 0 auto; box-sizing: border-box;">
+    <img src="../../assets/brand/HarpElle_Primary_Light.svg" alt="HarpElle" style="height: 40px; display: block;">
+    <a href="index.html" class="hx-back" style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E; text-decoration: none; padding: 12px 0;">&larr; Back to your page</a>
+  </header>
+
+  <main style="flex: 1; width: 100%; max-width: 1040px; margin: 0 auto; padding: 48px 48px 80px; box-sizing: border-box;">
+
+    <!-- Hero -->
+    <section style="max-width: 680px; padding: 0 0 64px !important;">
+      <div style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8E8680; margin-bottom: 20px;">Prepared for the {{CLIENT_NAME}} family</div>
+      <h1 style="font-family: var(--font-display); font-size: 42px; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 24px;">The thinking behind the pitch.</h1>
+      <p style="font-family: var(--font-sans); font-size: 18px; line-height: 1.6; margin: 0; max-width: 65ch;">Nothing in the pitch is a guess. This page shows the homework &mdash; where you sit today, what your customers expect, and why the directions look the way they do. It&rsquo;s here so you can check my reasoning, not just my taste.</p>
+    </section>
+
+    <!-- Before / after -->
+    <section style="padding: 0 0 72px !important;">
+      <h2 style="font-family: var(--font-display); font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0 0 12px;">Today and tomorrow, side by side</h2>
+      <p style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #8E8680; margin: 0 0 28px; max-width: 65ch;">Drag the handle to compare your current homepage with the proposed one. Same business, same story &mdash; told with more care.</p>
+
+      <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; border: 1px solid #E3DFD9; box-shadow: 0 1px 3px rgba(53,49,46,.08); background: #EDEAE5;">
+        <img id="before-shot" src="before.png" alt="Screenshot of the client's current homepage — save it as before.png in this folder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top;">
+        <div id="after-wrap" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0);">
+          <img id="after-shot" src="after.png" alt="Screenshot of the proposed homepage — save it as after.png in this folder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; background: #F7F5F2;">
+          <span style="position: absolute; top: 16px; left: 16px; font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: #35312E; color: #F7F5F2; padding: 6px 12px; border-radius: 999px;">Proposed</span>
+        </div>
+        <span style="position: absolute; top: 16px; right: 16px; font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: #F7F5F2; color: #35312E; border: 1px solid #E3DFD9; padding: 6px 12px; border-radius: 999px;">Today</span>
+        <div id="slider-line" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #35312E; transform: translateX(-1px); pointer-events: none;"></div>
+      </div>
+      <input type="range" id="ba-slider" min="0" max="100" value="50" aria-label="Compare before and after" style="width: 100%; margin-top: 16px; accent-color: #35312E; height: 44px; cursor: ew-resize;">
+      <script>
+        (function () {
+          var s = document.getElementById('ba-slider');
+          var w = document.getElementById('after-wrap');
+          var l = document.getElementById('slider-line');
+          s.addEventListener('input', function () {
+            w.style.clipPath = 'inset(0 ' + (100 - s.value) + '% 0 0)';
+            l.style.left = s.value + '%';
+          });
+        })();
+      </script>
+    </section>
+
+    <!-- Market observations -->
+    <section style="border-top: 1px solid #E3DFD9; padding: 56px 0 72px !important;">
+      <h2 style="font-family: var(--font-display); font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0 0 36px;">The market you&rsquo;re in</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+        <!-- EDIT PER CLIENT: market observations — sample copy below is bowling-specific (Birchwood Lanes example). Rewrite per client. -->
+        <div style="background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 28px; box-shadow: 0 1px 3px rgba(53,49,46,.08); display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9280A0;">How people find you</span>
+          <span style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; line-height: 1.4;">Search is local and mobile</span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #8E8680;">Most first visits arrive from a phone via &quot;bowling near me.&quot; Today that search lands on a page that takes eight seconds to load and hides the hours two clicks deep.</span>
+        </div>
+        <div style="background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 28px; box-shadow: 0 1px 3px rgba(53,49,46,.08); display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9280A0;">Who decides</span>
+          <span style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; line-height: 1.4;">Parents plan, kids choose</span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #8E8680;">Birthday parties and league sign-ups are decided by parents comparing two or three options in one sitting. The clearest prices and easiest booking usually win.</span>
+        </div>
+        <div style="background: #F7F5F2; border: 1px solid #E3DFD9; border-radius: 12px; padding: 28px; box-shadow: 0 1px 3px rgba(53,49,46,.08); display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9280A0;">What sets you apart</span>
+          <span style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; line-height: 1.4;">Forty years is the story</span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #8E8680;">The chains can outspend you, but they can&rsquo;t out-story you. Three generations behind the counter is the one thing no competitor can copy.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competitors -->
+    <section style="border-top: 1px solid #E3DFD9; padding: 56px 0 72px !important;">
+      <h2 style="font-family: var(--font-display); font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0 0 12px;">Who you&rsquo;re up against</h2>
+      <p style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7; color: #8E8680; margin: 0 0 32px; max-width: 65ch;">An honest read &mdash; what each one does well, and what we&rsquo;d deliberately do differently.</p>
+      <div style="display: flex; flex-direction: column;">
+        <!-- EDIT PER CLIENT: competitor rows — sample copy below is bowling-specific (Birchwood Lanes example). Rewrite per client. -->
+        <div style="display: grid; grid-template-columns: minmax(160px, 0.8fr) minmax(220px, 1.2fr) minmax(220px, 1.2fr); gap: 16px 32px; padding: 20px 4px; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+          <span style="font-family: var(--font-sans); font-size: 16px; font-weight: 600;">The chain across town</span>
+          <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: #35312E;"><span style="font-weight: 600; color: #8E8680;">Does well: </span>Online booking that works, consistent photos, fast site.</span>
+          <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: #35312E;"><span style="font-weight: 600; color: #8E8680;">We&rsquo;d differ: </span>Their site could belong to any city. Yours should feel like it belongs to your neighborhood.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(160px, 0.8fr) minmax(220px, 1.2fr) minmax(220px, 1.2fr); gap: 16px 32px; padding: 20px 4px; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+          <span style="font-family: var(--font-sans); font-size: 16px; font-weight: 600;">The entertainment megaplex</span>
+          <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: #35312E;"><span style="font-weight: 600; color: #8E8680;">Does well: </span>One roof, many attractions &mdash; strong for big group events.</span>
+          <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: #35312E;"><span style="font-weight: 600; color: #8E8680;">We&rsquo;d differ: </span>They compete on volume; we&rsquo;d compete on warmth, leagues, and regulars who are known by name.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(160px, 0.8fr) minmax(220px, 1.2fr) minmax(220px, 1.2fr); gap: 16px 32px; padding: 20px 4px; border-bottom: 1px solid #E3DFD9; align-items: baseline;">
+          <span style="font-family: var(--font-sans); font-size: 16px; font-weight: 600;">Your current website</span>
+          <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: #35312E;"><span style="font-weight: 600; color: #8E8680;">Does well: </span>The essentials exist: address, phone, a menu PDF.</span>
+          <span style="font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: #35312E;"><span style="font-weight: 600; color: #8E8680;">We&rsquo;d differ: </span>It answers questions reluctantly. The new site should answer them before they&rsquo;re asked.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer expectations -->
+    <section style="border-top: 1px solid #E3DFD9; padding: 56px 0 0 !important;">
+      <h2 style="font-family: var(--font-display); font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0 0 36px;">What your customers expect</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px 40px; max-width: 900px;">
+        <!-- EDIT PER CLIENT: customer expectations — sample copy below is bowling-specific (Birchwood Lanes example). Rewrite per client. -->
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <span style="flex: none; width: 8px; height: 8px; border-radius: 999px; background: #B89A8F; margin-top: 9px;"></span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7;"><strong style="font-weight: 600;">Hours and prices without hunting</strong> &mdash; the #1 reason people bounce to a competitor&rsquo;s site</span>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <span style="flex: none; width: 8px; height: 8px; border-radius: 999px; background: #B89A8F; margin-top: 9px;"></span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7;"><strong style="font-weight: 600;">Book or reserve from a phone</strong> &mdash; a call-only booking path loses the after-9pm planners</span>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <span style="flex: none; width: 8px; height: 8px; border-radius: 999px; background: #B89A8F; margin-top: 9px;"></span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7;"><strong style="font-weight: 600;">Real photos of the real place</strong> &mdash; stock photography reads as hiding something</span>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <span style="flex: none; width: 8px; height: 8px; border-radius: 999px; background: #B89A8F; margin-top: 9px;"></span>
+          <span style="font-family: var(--font-sans); font-size: 16px; line-height: 1.7;"><strong style="font-weight: 600;">Party details in writing</strong> &mdash; parents forward the link to the other parent &mdash; the page is the pitch</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid #E3DFD9 !important; padding: 0 !important; background: #F7F5F2 !important; color: #35312E !important;">
+    <div style="max-width: 1040px; margin: 0 auto; padding: 32px 48px 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <img src="../../assets/brand/HarpElle_Wordmark_Light.svg" alt="HarpElle" style="height: 18px; display: block;">
+        <span style="font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: 13px; color: #8E8680;">Thoughtfully Built.</span>
+      </div>
+      <a href="index.html" class="hx-ul" style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: #35312E !important; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #E3DFD9; padding: 8px 0;">&larr; Back to your page</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
