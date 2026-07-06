@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Yellowtail&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Anton&family=Young+Serif&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f0eee9;font-family:system-ui,sans-serif}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t1">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Swing Time — unified two-location brand, three directions (desktop + mobile each)</span></div>
+
+  <div style="max-width:920px;margin:0 0 26px;font:13px/1.65 system-ui,sans-serif;color:#3a3a35;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;padding:18px 22px">
+    <strong style="font-size:13px">Strategy baked into every concept:</strong> one brand, one domain (swingtimegolf.com), Waukesha redirects in. Live "open now / weather" status replaces the vague "weather depending" copy. A persistent location switcher carries hours, pricing &amp; phone per site. Real content from their current sites (18+19th hole, 3 waterfalls, 70-ft hole, 5 cages, Wisconsin Golf Academy) is elevated, and the second-generation family story becomes the emotional core. Party/group booking and lessons get real CTAs. Striped blocks = photo placeholders labeled with the shot to use.
+    <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(0,0,0,.08)"><a href="../demo/Home.dc.html" style="display:inline-block;background:#D33A2F;color:#fff;font:700 13px/1 system-ui,sans-serif;padding:11px 18px;border-radius:999px;text-decoration:none">▶ Open the fully navigable demo site (built on 1a)</a><span style="margin-left:12px;color:rgba(0,0,0,.5)">7 pages: home, mini golf, range, cages, lessons, parties, our story, visit</span></div>
+  </div>
+
+  <div class="dv-opts">
+
+    <!-- ======================= 1a RETRO ROADSIDE ======================= -->
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Roadside Classic — retro Americana, two generations of summer</div>
+      <div class="dv-card" style="width:1200px">
+        <div style="background:#F6F0E1;color:#241F16;font-family:Archivo,sans-serif">
+
+          <!-- status marquee -->
+          <div style="background:#1F6E5C;color:#F6F0E1;display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 24px;font:600 13px/1 Archivo,sans-serif;letter-spacing:.04em">
+            <span style="width:9px;height:9px;border-radius:50%;background:#8FE3A1;box-shadow:0 0 0 3px rgba(143,227,161,.25)"></span>
+            <span>OPEN NOW · GERMANTOWN TIL 9PM · WAUKESHA TIL 10PM</span>
+            <span style="opacity:.7">☀ 81° — perfect mini golf weather</span>
+          </div>
+
+          <!-- nav -->
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 40px;border-bottom:3px solid #241F16">
+            <div style="display:flex;align-items:baseline;gap:10px">
+              <span style="font:400 30px/1 'Alfa Slab One',serif;color:#D33A2F;letter-spacing:.01em">SWING TIME</span>
+              <span style="font:400 20px/1 Yellowtail,cursive;color:#1F6E5C;transform:rotate(-4deg);display:inline-block">family fun centers</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:26px;font:600 14px/1 Archivo,sans-serif">
+              <span>Mini Golf</span><span>Driving Range</span><span>Batting Cages</span><span>Lessons</span><span>Parties</span>
+              <span style="background:#D33A2F;color:#F6F0E1;padding:11px 20px;border-radius:999px;font-weight:700">Plan Your Visit</span>
+            </div>
+          </div>
+
+          <!-- hero -->
+          <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:0;border-bottom:3px solid #241F16">
+            <div style="padding:64px 48px 56px 40px;display:flex;flex-direction:column;gap:22px">
+              <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#1F6E5C">GERMANTOWN &amp; WAUKESHA, WISCONSIN</div>
+              <div style="font:400 64px/1.02 'Alfa Slab One',serif;color:#241F16">The best summer nights start with a<br><span style="color:#D33A2F">putter in hand.</span></div>
+              <div style="font:400 17px/1.6 Archivo,sans-serif;color:#4a443a;max-width:480px">Mini golf under the waterfalls, buckets at the range, and the crack of the bat — family-owned and family-run for two generations.</div>
+              <div style="display:flex;gap:14px;margin-top:6px">
+                <span style="background:#241F16;color:#F6F0E1;padding:15px 26px;border-radius:999px;font:700 15px/1 Archivo,sans-serif">See Hours &amp; Prices</span>
+                <span style="border:2px solid #241F16;padding:13px 24px;border-radius:999px;font:700 15px/1 Archivo,sans-serif">Book a Party</span>
+              </div>
+              <div style="display:flex;gap:22px;margin-top:10px;font:500 13px/1.4 Archivo,sans-serif;color:#4a443a">
+                <span>⛳ 37 holes across 2 locations</span><span>🏆 One of WI's longest holes — 70 ft</span>
+              </div>
+            </div>
+            <div style="position:relative;background:repeating-linear-gradient(45deg,#EBDFC4,#EBDFC4 12px,#E2D2B0 12px,#E2D2B0 24px);display:flex;align-items:center;justify-content:center;min-height:420px;border-left:3px solid #241F16">
+              <span style="font:500 12px/1.5 'JetBrains Mono',monospace;color:#6b6250;background:rgba(246,240,225,.9);padding:8px 12px;border-radius:6px">[photo: waterfall hole at dusk, string lights]</span>
+              <div style="position:absolute;bottom:24px;left:24px;background:#E8A736;color:#241F16;font:400 16px/1 Yellowtail,cursive;padding:10px 16px;border-radius:8px;transform:rotate(-3deg);box-shadow:3px 3px 0 #241F16">Sink the 19th hole, win a free game!</div>
+            </div>
+          </div>
+
+          <!-- location switcher -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:3px solid #241F16">
+            <div style="padding:28px 40px;background:#1F6E5C;color:#F6F0E1;display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font:400 24px/1 'Alfa Slab One',serif">Germantown</div>
+                <div style="font:400 13px/1.6 Archivo,sans-serif;opacity:.85;margin-top:6px">W197N10340 Appleton Ave · (262) 251-3311<br>18 holes + bonus 19th · range · cages · golf academy</div>
+              </div>
+              <span style="background:#F6F0E1;color:#1F6E5C;font:700 13px/1 Archivo,sans-serif;padding:10px 18px;border-radius:999px">Open til 9pm →</span>
+            </div>
+            <div style="padding:28px 40px;background:#F6F0E1;display:flex;justify-content:space-between;align-items:center;border-left:3px solid #241F16">
+              <div>
+                <div style="font:400 24px/1 'Alfa Slab One',serif;color:#241F16">Waukesha</div>
+                <div style="font:400 13px/1.6 Archivo,sans-serif;color:#4a443a;margin-top:6px">1601 E Main St · (262) 955-5456<br>19-hole pond course · range · 5 batting cages</div>
+              </div>
+              <span style="border:2px solid #241F16;color:#241F16;font:700 13px/1 Archivo,sans-serif;padding:9px 17px;border-radius:999px">Open til 10pm →</span>
+            </div>
+          </div>
+
+          <!-- activities -->
+          <div style="padding:56px 40px 60px">
+            <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:30px">
+              <span style="font:400 38px/1 'Alfa Slab One',serif">Pick your game</span>
+              <span style="font:400 20px/1 Yellowtail,cursive;color:#D33A2F">something for everyone</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+              <div style="border:3px solid #241F16;border-radius:14px;overflow:hidden;background:#fff">
+                <div style="height:150px;background:repeating-linear-gradient(45deg,#CFE5D2,#CFE5D2 10px,#BEDAC3 10px,#BEDAC3 20px);display:flex;align-items:center;justify-content:center"><span style="font:500 11px 'JetBrains Mono',monospace;color:#4a6b4f">[photo: mini golf waterfall]</span></div>
+                <div style="padding:18px 18px 20px">
+                  <div style="font:400 19px/1.1 'Alfa Slab One',serif">Mini Golf</div>
+                  <div style="font:400 13px/1.55 Archivo,sans-serif;color:#4a443a;margin:8px 0 12px">Waterfalls, elevation changes, and a 70-foot monster hole. From $8.</div>
+                  <span style="font:700 13px/1 Archivo,sans-serif;color:#D33A2F">Prices &amp; course →</span>
+                </div>
+              </div>
+              <div style="border:3px solid #241F16;border-radius:14px;overflow:hidden;background:#fff">
+                <div style="height:150px;background:repeating-linear-gradient(45deg,#F3DFC0,#F3DFC0 10px,#EBD3A8 10px,#EBD3A8 20px);display:flex;align-items:center;justify-content:center"><span style="font:500 11px 'JetBrains Mono',monospace;color:#8a7444">[photo: driving range at golden hour]</span></div>
+                <div style="padding:18px 18px 20px">
+                  <div style="font:400 19px/1.1 'Alfa Slab One',serif">Driving Range</div>
+                  <div style="font:400 13px/1.55 Archivo,sans-serif;color:#4a443a;margin:8px 0 12px">Mats, grass tees, and a sand trap. Buckets from $6, clubs on us.</div>
+                  <span style="font:700 13px/1 Archivo,sans-serif;color:#D33A2F">Bucket prices →</span>
+                </div>
+              </div>
+              <div style="border:3px solid #241F16;border-radius:14px;overflow:hidden;background:#fff">
+                <div style="height:150px;background:repeating-linear-gradient(45deg,#E6D5DE,#E6D5DE 10px,#DCC6D2 10px,#DCC6D2 20px);display:flex;align-items:center;justify-content:center"><span style="font:500 11px 'JetBrains Mono',monospace;color:#7d5f70">[photo: kid mid-swing in cage]</span></div>
+                <div style="padding:18px 18px 20px">
+                  <div style="font:400 19px/1.1 'Alfa Slab One',serif">Batting Cages</div>
+                  <div style="font:400 13px/1.55 Archivo,sans-serif;color:#4a443a;margin:8px 0 12px">Baseball &amp; softball, slow to fast. $1 for 15 pitches — bats included.</div>
+                  <span style="font:700 13px/1 Archivo,sans-serif;color:#D33A2F">Cage speeds →</span>
+                </div>
+              </div>
+              <div style="border:3px solid #241F16;border-radius:14px;overflow:hidden;background:#fff">
+                <div style="height:150px;background:repeating-linear-gradient(45deg,#CBDCE8,#CBDCE8 10px,#B9CFDF 10px,#B9CFDF 20px);display:flex;align-items:center;justify-content:center"><span style="font:500 11px 'JetBrains Mono',monospace;color:#4d6b80">[photo: coach + student lesson]</span></div>
+                <div style="padding:18px 18px 20px">
+                  <div style="font:400 19px/1.1 'Alfa Slab One',serif">Golf Lessons</div>
+                  <div style="font:400 13px/1.55 Archivo,sans-serif;color:#4a443a;margin:8px 0 12px">Wisconsin Golf Academy — PGA instruction for all ages, on-site.</div>
+                  <span style="font:700 13px/1 Archivo,sans-serif;color:#D33A2F">Book a lesson →</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- family story -->
+          <div style="background:#241F16;color:#F6F0E1;display:grid;grid-template-columns:1fr 1fr;gap:0">
+            <div style="background:repeating-linear-gradient(45deg,#3a3327,#3a3327 12px,#332c22 12px,#332c22 24px);display:flex;align-items:center;justify-content:center;min-height:340px"><span style="font:500 12px 'JetBrains Mono',monospace;color:#a89a7e;background:rgba(36,31,22,.85);padding:8px 12px;border-radius:6px">[photo: family portrait at the first tee, old + new]</span></div>
+            <div style="padding:56px 48px;display:flex;flex-direction:column;justify-content:center;gap:18px">
+              <span style="font:400 26px/1 Yellowtail,cursive;color:#E8A736">A family thing, since the beginning</span>
+              <span style="font:400 34px/1.15 'Alfa Slab One',serif">Grandpa built it.<br>We keep it swinging.</span>
+              <span style="font:400 15px/1.7 Archivo,sans-serif;color:#cfc5ae;max-width:440px">Two generations in, Swing Time is still run by the same family — and still measured the same way: by the birthday parties, first home runs, and hole-in-one high-fives that happen here every summer.</span>
+              <span style="font:700 14px/1 Archivo,sans-serif;color:#E8A736">Read our story →</span>
+            </div>
+          </div>
+
+          <!-- parties band -->
+          <div style="background:#D33A2F;color:#F6F0E1;display:flex;align-items:center;justify-content:space-between;padding:34px 40px;border-top:3px solid #241F16">
+            <div>
+              <div style="font:400 28px/1.1 'Alfa Slab One',serif">Birthdays, team outings &amp; group nights</div>
+              <div style="font:400 14px/1.5 Archivo,sans-serif;opacity:.9;margin-top:6px">Group mini golf pricing, reserved cages, and zero cleanup for you.</div>
+            </div>
+            <span style="background:#F6F0E1;color:#D33A2F;font:700 15px/1 Archivo,sans-serif;padding:15px 26px;border-radius:999px;white-space:nowrap">Request a date →</span>
+          </div>
+
+          <!-- footer -->
+          <div style="padding:34px 40px;display:flex;justify-content:space-between;align-items:center;font:500 13px/1.5 Archivo,sans-serif;color:#4a443a">
+            <span style="font:400 20px/1 'Alfa Slab One',serif;color:#D33A2F">SWING TIME</span>
+            <span>Germantown (262) 251-3311 · Waukesha (262) 955-5456</span>
+            <span>Facebook · Instagram · swingtimegolf.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1a mobile -->
+    <div class="dv-opt" id="1am">
+      <div class="dv-olabel"><a class="dv-oid" href="#1am">1a·mobile</a>Roadside Classic — phone</div>
+      <div class="dv-card" style="width:390px">
+        <div style="background:#F6F0E1;color:#241F16;font-family:Archivo,sans-serif">
+          <div style="background:#1F6E5C;color:#F6F0E1;display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 12px;font:600 11px/1.3 Archivo,sans-serif;text-align:center">
+            <span style="width:8px;height:8px;border-radius:50%;background:#8FE3A1;flex:none"></span>
+            <span>OPEN NOW · ☀ 81° · Germantown til 9 · Waukesha til 10</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:3px solid #241F16">
+            <span style="font:400 21px/1 'Alfa Slab One',serif;color:#D33A2F">SWING TIME</span>
+            <span style="display:flex;flex-direction:column;gap:4px"><span style="width:24px;height:3px;background:#241F16;border-radius:2px"></span><span style="width:24px;height:3px;background:#241F16;border-radius:2px"></span><span style="width:24px;height:3px;background:#241F16;border-radius:2px"></span></span>
+          </div>
+          <div style="padding:32px 20px 8px;display:flex;flex-direction:column;gap:14px">
+            <span style="font:500 10px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#1F6E5C">GERMANTOWN &amp; WAUKESHA, WI</span>
+            <span style="font:400 36px/1.05 'Alfa Slab One',serif">Summer nights start with a <span style="color:#D33A2F">putter in hand.</span></span>
+            <span style="font:400 14px/1.6 Archivo,sans-serif;color:#4a443a">Mini golf, driving range &amp; batting cages — family-run for two generations.</span>
+            <span style="background:#241F16;color:#F6F0E1;padding:16px 0;border-radius:999px;font:700 15px/1 Archivo,sans-serif;text-align:center">See Hours &amp; Prices</span>
+            <span style="border:2px solid #241F16;padding:14px 0;border-radius:999px;font:700 15px/1 Archivo,sans-serif;text-align:center">Book a Party</span>
+          </div>
+          <div style="margin:18px 20px;height:180px;border:3px solid #241F16;border-radius:14px;background:repeating-linear-gradient(45deg,#EBDFC4,#EBDFC4 12px,#E2D2B0 12px,#E2D2B0 24px);display:flex;align-items:center;justify-content:center"><span style="font:500 10px 'JetBrains Mono',monospace;color:#6b6250;background:rgba(246,240,225,.9);padding:6px 10px;border-radius:6px">[photo: waterfall hole at dusk]</span></div>
+          <div style="display:flex;gap:10px;padding:0 20px 18px">
+            <div style="flex:1;background:#1F6E5C;color:#F6F0E1;border-radius:12px;padding:14px">
+              <div style="font:400 16px/1 'Alfa Slab One',serif">Germantown</div>
+              <div style="font:400 11px/1.5 Archivo,sans-serif;opacity:.85;margin-top:4px">Open til 9pm<br>(262) 251-3311</div>
+            </div>
+            <div style="flex:1;border:2px solid #241F16;border-radius:12px;padding:14px">
+              <div style="font:400 16px/1 'Alfa Slab One',serif">Waukesha</div>
+              <div style="font:400 11px/1.5 Archivo,sans-serif;color:#4a443a;margin-top:4px">Open til 10pm<br>(262) 955-5456</div>
+            </div>
+          </div>
+          <div style="padding:6px 20px 24px;display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:center;gap:12px;border:3px solid #241F16;border-radius:12px;padding:12px 14px;background:#fff"><span style="font-size:20px">⛳</span><span style="font:700 15px Archivo,sans-serif">Mini Golf</span><span style="margin-left:auto;font:600 12px Archivo,sans-serif;color:#D33A2F">from $8 →</span></div>
+            <div style="display:flex;align-items:center;gap:12px;border:3px solid #241F16;border-radius:12px;padding:12px 14px;background:#fff"><span style="font-size:20px">🏌️</span><span style="font:700 15px Archivo,sans-serif">Driving Range</span><span style="margin-left:auto;font:600 12px Archivo,sans-serif;color:#D33A2F">from $6 →</span></div>
+            <div style="display:flex;align-items:center;gap:12px;border:3px solid #241F16;border-radius:12px;padding:12px 14px;background:#fff"><span style="font-size:20px">⚾</span><span style="font:700 15px Archivo,sans-serif">Batting Cages</span><span style="margin-left:auto;font:600 12px Archivo,sans-serif;color:#D33A2F">$1 / 15 →</span></div>
+            <div style="display:flex;align-items:center;gap:12px;border:3px solid #241F16;border-radius:12px;padding:12px 14px;background:#fff"><span style="font-size:20px">🎓</span><span style="font:700 15px Archivo,sans-serif">Golf Lessons</span><span style="margin-left:auto;font:600 12px Archivo,sans-serif;color:#D33A2F">book →</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================= 1b MODERN SPORTY ======================= -->
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Night Range — modern sporty, bold type, Topgolf energy</div>
+      <div class="dv-card" style="width:1200px">
+        <div style="background:#0E1214;color:#F2F5F0;font-family:Archivo,sans-serif">
+
+          <!-- nav -->
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 44px">
+            <div style="display:flex;align-items:center;gap:10px">
+              <span style="width:34px;height:34px;border-radius:50%;background:#C6F42E;display:flex;align-items:center;justify-content:center;color:#0E1214;font:400 18px Anton,sans-serif">S</span>
+              <span style="font:400 22px/1 Anton,sans-serif;letter-spacing:.06em">SWING TIME</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:28px;font:600 13px/1 Archivo,sans-serif;letter-spacing:.06em;color:#B9C2B6">
+              <span>PLAY</span><span>PRACTICE</span><span>LESSONS</span><span>PARTIES</span>
+              <span style="display:flex;align-items:center;gap:8px;border:1px solid #2A3438;padding:10px 16px;border-radius:8px;color:#F2F5F0"><span style="width:7px;height:7px;border-radius:50%;background:#C6F42E"></span>OPEN · 81°</span>
+              <span style="background:#C6F42E;color:#0E1214;padding:12px 20px;border-radius:8px;font-weight:800">PLAN A VISIT</span>
+            </div>
+          </div>
+
+          <!-- hero -->
+          <div style="position:relative;margin:0 24px;border-radius:20px;overflow:hidden;background:repeating-linear-gradient(45deg,#17211C,#17211C 14px,#131B17 14px,#131B17 28px);min-height:520px;display:flex;flex-direction:column;justify-content:flex-end">
+            <span style="position:absolute;top:20px;right:24px;font:500 11px 'JetBrains Mono',monospace;color:#7d8a78;background:rgba(14,18,20,.8);padding:7px 11px;border-radius:6px">[photo: range bays lit at night, tracer arcs]</span>
+            <div style="padding:0 44px 44px">
+              <div style="font:400 120px/0.95 Anton,sans-serif;letter-spacing:.01em;text-transform:uppercase">Play it.<br><span style="color:#C6F42E">Crush it.</span></div>
+              <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-top:22px;gap:30px">
+                <span style="font:400 17px/1.6 Archivo,sans-serif;color:#B9C2B6;max-width:460px">Mini golf, driving range, batting cages &amp; PGA lessons. Two Wisconsin locations. One place your whole crew agrees on.</span>
+                <div style="display:flex;gap:12px;flex:none">
+                  <span style="background:#C6F42E;color:#0E1214;padding:16px 28px;border-radius:10px;font:800 15px/1 Archivo,sans-serif">BOOK A PARTY</span>
+                  <span style="border:1px solid #4a564d;padding:15px 26px;border-radius:10px;font:700 15px/1 Archivo,sans-serif">HOURS &amp; PRICING</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- stat ticker -->
+          <div style="display:flex;justify-content:space-between;padding:26px 44px;border-bottom:1px solid #1E2629;font:400 13px Archivo,sans-serif;color:#7d8a78">
+            <span><span style="color:#C6F42E;font:400 22px Anton,sans-serif;margin-right:8px">37</span>HOLES OF MINI GOLF</span>
+            <span><span style="color:#C6F42E;font:400 22px Anton,sans-serif;margin-right:8px">70FT</span>LONGEST HOLE IN WI</span>
+            <span><span style="color:#C6F42E;font:400 22px Anton,sans-serif;margin-right:8px">5</span>BATTING CAGES</span>
+            <span><span style="color:#C6F42E;font:400 22px Anton,sans-serif;margin-right:8px">$1</span>= 15 PITCHES</span>
+            <span><span style="color:#C6F42E;font:400 22px Anton,sans-serif;margin-right:8px">2</span>LOCATIONS, 1 FAMILY</span>
+          </div>
+
+          <!-- activity rows -->
+          <div style="padding:52px 44px 20px">
+            <div style="font:400 40px/1 Anton,sans-serif;text-transform:uppercase;margin-bottom:28px">Choose your <span style="color:#C6F42E">game</span></div>
+            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px">
+              <div style="position:relative;border-radius:16px;overflow:hidden;background:repeating-linear-gradient(45deg,#1B2A22,#1B2A22 12px,#16241D 12px,#16241D 24px);min-height:240px;display:flex;flex-direction:column;justify-content:flex-end;padding:24px">
+                <span style="position:absolute;top:16px;right:16px;font:500 10px 'JetBrains Mono',monospace;color:#7d8a78">[photo: waterfall hole]</span>
+                <span style="font:400 30px Anton,sans-serif;text-transform:uppercase">Mini Golf</span>
+                <span style="font:400 13px/1.5 Archivo,sans-serif;color:#B9C2B6;margin-top:6px">19 holes, 3 waterfalls, free-game bonus hole. From $8.</span>
+              </div>
+              <div style="position:relative;border-radius:16px;overflow:hidden;background:repeating-linear-gradient(45deg,#232A1B,#232A1B 12px,#1D2416 12px,#1D2416 24px);min-height:240px;display:flex;flex-direction:column;justify-content:flex-end;padding:24px">
+                <span style="position:absolute;top:16px;right:16px;font:500 10px 'JetBrains Mono',monospace;color:#8a9178">[photo: golden-hour range]</span>
+                <span style="font:400 30px Anton,sans-serif;text-transform:uppercase">Driving Range</span>
+                <span style="font:400 13px/1.5 Archivo,sans-serif;color:#B9C2B6;margin-top:6px">Mats + grass tees + sand trap. Buckets from $6.</span>
+              </div>
+              <div style="position:relative;border-radius:16px;overflow:hidden;background:repeating-linear-gradient(45deg,#2A1B1E,#2A1B1E 12px,#241619 12px,#241619 24px);min-height:240px;display:flex;flex-direction:column;justify-content:flex-end;padding:24px">
+                <span style="position:absolute;top:16px;right:16px;font:500 10px 'JetBrains Mono',monospace;color:#917878">[photo: batter mid-swing]</span>
+                <span style="font:400 30px Anton,sans-serif;text-transform:uppercase">Batting Cages</span>
+                <span style="font:400 13px/1.5 Archivo,sans-serif;color:#B9C2B6;margin-top:6px">Slow to fast, baseball &amp; softball. $1 for 15 pitches.</span>
+              </div>
+              <div style="position:relative;border-radius:16px;overflow:hidden;background:repeating-linear-gradient(45deg,#1B222A,#1B222A 12px,#161D24 12px,#161D24 24px);min-height:240px;display:flex;flex-direction:column;justify-content:flex-end;padding:24px">
+                <span style="position:absolute;top:16px;right:16px;font:500 10px 'JetBrains Mono',monospace;color:#788591">[photo: junior lesson]</span>
+                <span style="font:400 30px Anton,sans-serif;text-transform:uppercase">WI Golf Academy</span>
+                <span style="font:400 13px/1.5 Archivo,sans-serif;color:#B9C2B6;margin-top:6px">PGA instruction on-site, juniors to adults.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- locations -->
+          <div style="padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:18px">
+            <div style="border:1px solid #2A3438;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font:400 24px Anton,sans-serif;text-transform:uppercase">Germantown</span>
+                <span style="display:flex;align-items:center;gap:8px;font:600 12px Archivo,sans-serif;color:#C6F42E"><span style="width:7px;height:7px;border-radius:50%;background:#C6F42E"></span>OPEN TIL 9PM</span>
+              </div>
+              <span style="font:400 13px/1.6 Archivo,sans-serif;color:#B9C2B6">W197N10340 Appleton Ave · (262) 251-3311<br>Mini golf · range · cages · golf academy</span>
+              <span style="font:700 13px Archivo,sans-serif;color:#C6F42E;margin-top:6px">DIRECTIONS →</span>
+            </div>
+            <div style="border:1px solid #2A3438;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font:400 24px Anton,sans-serif;text-transform:uppercase">Waukesha</span>
+                <span style="display:flex;align-items:center;gap:8px;font:600 12px Archivo,sans-serif;color:#C6F42E"><span style="width:7px;height:7px;border-radius:50%;background:#C6F42E"></span>OPEN TIL 10PM</span>
+              </div>
+              <span style="font:400 13px/1.6 Archivo,sans-serif;color:#B9C2B6">1601 E Main St · (262) 955-5456<br>Pond mini golf · range · 5 batting cages</span>
+              <span style="font:700 13px Archivo,sans-serif;color:#C6F42E;margin-top:6px">DIRECTIONS →</span>
+            </div>
+          </div>
+
+          <!-- family + CTA -->
+          <div style="margin:0 24px 24px;border-radius:20px;background:#C6F42E;color:#0E1214;display:flex;align-items:center;justify-content:space-between;padding:40px 44px;gap:30px">
+            <div>
+              <div style="font:400 36px/1.05 Anton,sans-serif;text-transform:uppercase">Family-built. Two generations strong.</div>
+              <div style="font:500 14px/1.6 Archivo,sans-serif;margin-top:8px;max-width:560px">Started by Grandpa and Grandma, run by the family ever since — Swing Time is where southeast Wisconsin comes to play.</div>
+            </div>
+            <span style="background:#0E1214;color:#C6F42E;font:800 15px/1 Archivo,sans-serif;padding:17px 28px;border-radius:10px;white-space:nowrap">OUR STORY →</span>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;padding:24px 44px 30px;font:500 12px Archivo,sans-serif;color:#7d8a78;letter-spacing:.05em">
+            <span>SWINGTIMEGOLF.COM</span><span>FACEBOOK / INSTAGRAM / X</span><span>© SWING TIME FAMILY FUN CENTERS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1b mobile -->
+    <div class="dv-opt" id="1bm">
+      <div class="dv-olabel"><a class="dv-oid" href="#1bm">1b·mobile</a>Night Range — phone</div>
+      <div class="dv-card" style="width:390px">
+        <div style="background:#0E1214;color:#F2F5F0;font-family:Archivo,sans-serif">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="width:28px;height:28px;border-radius:50%;background:#C6F42E;display:flex;align-items:center;justify-content:center;color:#0E1214;font:400 15px Anton,sans-serif">S</span>
+              <span style="font:400 17px/1 Anton,sans-serif;letter-spacing:.06em">SWING TIME</span>
+            </div>
+            <span style="display:flex;align-items:center;gap:7px;border:1px solid #2A3438;padding:8px 12px;border-radius:8px;font:600 11px Archivo,sans-serif"><span style="width:6px;height:6px;border-radius:50%;background:#C6F42E"></span>OPEN · 81°</span>
+          </div>
+          <div style="position:relative;margin:6px 12px;border-radius:16px;overflow:hidden;background:repeating-linear-gradient(45deg,#17211C,#17211C 12px,#131B17 12px,#131B17 24px);min-height:400px;display:flex;flex-direction:column;justify-content:flex-end;padding:22px">
+            <span style="position:absolute;top:14px;right:14px;font:500 9px 'JetBrains Mono',monospace;color:#7d8a78">[photo: night range]</span>
+            <span style="font:400 58px/0.95 Anton,sans-serif;text-transform:uppercase">Play it.<br><span style="color:#C6F42E">Crush it.</span></span>
+            <span style="font:400 13px/1.55 Archivo,sans-serif;color:#B9C2B6;margin-top:12px">Mini golf · range · cages · lessons. Two WI locations.</span>
+            <span style="background:#C6F42E;color:#0E1214;padding:16px 0;border-radius:10px;font:800 14px/1 Archivo,sans-serif;text-align:center;margin-top:16px">PLAN A VISIT</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px">
+            <div style="border:1px solid #2A3438;border-radius:12px;padding:16px"><div style="font:400 20px Anton,sans-serif;color:#C6F42E">37</div><div style="font:500 10px Archivo,sans-serif;color:#7d8a78;letter-spacing:.05em">HOLES OF MINI GOLF</div></div>
+            <div style="border:1px solid #2A3438;border-radius:12px;padding:16px"><div style="font:400 20px Anton,sans-serif;color:#C6F42E">$1</div><div style="font:500 10px Archivo,sans-serif;color:#7d8a78;letter-spacing:.05em">= 15 PITCHES</div></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:0 12px 12px">
+            <div style="display:flex;justify-content:space-between;align-items:center;border-radius:12px;padding:16px;background:repeating-linear-gradient(45deg,#1B2A22,#1B2A22 10px,#16241D 10px,#16241D 20px)"><span style="font:400 18px Anton,sans-serif;text-transform:uppercase">Mini Golf</span><span style="font:700 12px Archivo,sans-serif;color:#C6F42E">FROM $8 →</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;border-radius:12px;padding:16px;background:repeating-linear-gradient(45deg,#232A1B,#232A1B 10px,#1D2416 10px,#1D2416 20px)"><span style="font:400 18px Anton,sans-serif;text-transform:uppercase">Driving Range</span><span style="font:700 12px Archivo,sans-serif;color:#C6F42E">FROM $6 →</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;border-radius:12px;padding:16px;background:repeating-linear-gradient(45deg,#2A1B1E,#2A1B1E 10px,#241619 10px,#241619 20px)"><span style="font:400 18px Anton,sans-serif;text-transform:uppercase">Batting Cages</span><span style="font:700 12px Archivo,sans-serif;color:#C6F42E">$1 / 15 →</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;border-radius:12px;padding:16px;background:repeating-linear-gradient(45deg,#1B222A,#1B222A 10px,#161D24 10px,#161D24 20px)"><span style="font:400 18px Anton,sans-serif;text-transform:uppercase">Lessons</span><span style="font:700 12px Archivo,sans-serif;color:#C6F42E">BOOK →</span></div>
+          </div>
+          <div style="margin:4px 12px 16px;border-radius:14px;background:#C6F42E;color:#0E1214;padding:20px">
+            <div style="font:400 20px/1.1 Anton,sans-serif;text-transform:uppercase">Family-built. Two generations strong.</div>
+            <div style="font:600 12px Archivo,sans-serif;margin-top:8px">OUR STORY →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================= 1c SUMMER NIGHTS ======================= -->
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Golden Hour — warm nostalgia, the family story front and center</div>
+      <div class="dv-card" style="width:1200px">
+        <div style="background:#FBF3E4;color:#33261D;font-family:'Work Sans',sans-serif">
+
+          <!-- nav -->
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:22px 44px">
+            <span style="font:400 26px/1 'Young Serif',serif;color:#33261D">Swing Time<span style="color:#DF7A3C">.</span></span>
+            <div style="display:flex;align-items:center;gap:28px;font:500 14px/1 'Work Sans',sans-serif;color:#5f4c3c">
+              <span>Play</span><span>Practice</span><span>Lessons</span><span>Parties</span><span>Our Story</span>
+              <span style="background:#DF7A3C;color:#FBF3E4;padding:12px 22px;border-radius:999px;font-weight:600">Plan your evening</span>
+            </div>
+          </div>
+
+          <!-- status ribbon -->
+          <div style="margin:0 44px;border-top:1px solid #E4D3B4;border-bottom:1px solid #E4D3B4;display:flex;justify-content:center;gap:28px;padding:10px 0;font:500 12.5px/1 'Work Sans',sans-serif;color:#8a6f52">
+            <span style="display:flex;align-items:center;gap:7px"><span style="width:8px;height:8px;border-radius:50%;background:#6FA05E"></span>Both locations open now</span>
+            <span>☀ 81° and sunny</span>
+            <span>Germantown til 9pm · Waukesha til 10pm</span>
+          </div>
+
+          <!-- hero -->
+          <div style="text-align:center;padding:66px 60px 30px">
+            <div style="font:400 15px/1 'Work Sans',sans-serif;color:#DF7A3C;letter-spacing:.12em;text-transform:uppercase;font-weight:600">Germantown &amp; Waukesha, Wisconsin</div>
+            <div style="font:400 66px/1.12 'Young Serif',serif;margin:20px auto 0;max-width:900px">Where Wisconsin summers are <em style="color:#DF7A3C;font-style:italic;font-family:'Work Sans',sans-serif;font-weight:400">measured in</em> mini golf, fly balls &amp; fireflies</div>
+            <div style="font:400 17px/1.65 'Work Sans',sans-serif;color:#6d5844;max-width:560px;margin:22px auto 0">A family-run fun center, two generations deep. Come for a bucket of balls; stay until the lights come on.</div>
+            <div style="display:flex;gap:14px;justify-content:center;margin-top:28px">
+              <span style="background:#33261D;color:#FBF3E4;padding:16px 30px;border-radius:999px;font:600 15px/1 'Work Sans',sans-serif">Hours &amp; prices</span>
+              <span style="border:1.5px solid #33261D;padding:14px 28px;border-radius:999px;font:600 15px/1 'Work Sans',sans-serif">Book a birthday</span>
+            </div>
+          </div>
+
+          <!-- photo strip -->
+          <div style="display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:14px;padding:34px 44px 10px;align-items:end">
+            <div style="height:220px;border-radius:16px 16px 120px 16px;background:repeating-linear-gradient(45deg,#F0DFBE,#F0DFBE 11px,#E9D5AC 11px,#E9D5AC 22px);display:flex;align-items:center;justify-content:center"><span style="font:500 10.5px 'JetBrains Mono',monospace;color:#8a6f52">[photo: kid lining up a putt]</span></div>
+            <div style="height:300px;border-radius:16px;background:repeating-linear-gradient(45deg,#EAD7B5,#EAD7B5 11px,#E3CDA3 11px,#E3CDA3 22px);display:flex;align-items:center;justify-content:center;position:relative">
+              <span style="font:500 10.5px 'JetBrains Mono',monospace;color:#8a6f52">[photo: waterfall + pond at golden hour]</span>
+              <span style="position:absolute;bottom:-14px;right:26px;background:#6FA05E;color:#FBF3E4;font:400 14px 'Young Serif',serif;padding:10px 18px;border-radius:999px;box-shadow:0 4px 14px rgba(51,38,29,.18)">3 waterfalls · 70-ft hole</span>
+            </div>
+            <div style="height:220px;border-radius:16px 16px 16px 120px;background:repeating-linear-gradient(45deg,#F0DFBE,#F0DFBE 11px,#E9D5AC 11px,#E9D5AC 22px);display:flex;align-items:center;justify-content:center"><span style="font:500 10.5px 'JetBrains Mono',monospace;color:#8a6f52">[photo: grandpa + grandkid, cage fence]</span></div>
+          </div>
+
+          <!-- activities -->
+          <div style="padding:64px 44px 24px">
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid #E4D3B4">
+              <div style="padding:28px 24px 32px;border-right:1px solid #E4D3B4">
+                <div style="font:400 13px 'Work Sans',sans-serif;color:#DF7A3C;font-weight:600">01</div>
+                <div style="font:400 24px/1.15 'Young Serif',serif;margin:10px 0 10px">Mini golf</div>
+                <div style="font:400 13.5px/1.6 'Work Sans',sans-serif;color:#6d5844">Waterfalls, hills &amp; a bonus 19th hole that wins you a free game. From $8.</div>
+              </div>
+              <div style="padding:28px 24px 32px;border-right:1px solid #E4D3B4">
+                <div style="font:400 13px 'Work Sans',sans-serif;color:#DF7A3C;font-weight:600">02</div>
+                <div style="font:400 24px/1.15 'Young Serif',serif;margin:10px 0 10px">Driving range</div>
+                <div style="font:400 13.5px/1.6 'Work Sans',sans-serif;color:#6d5844">Grass tees, mats &amp; a practice trap. Buckets from $6, loaner clubs free.</div>
+              </div>
+              <div style="padding:28px 24px 32px;border-right:1px solid #E4D3B4">
+                <div style="font:400 13px 'Work Sans',sans-serif;color:#DF7A3C;font-weight:600">03</div>
+                <div style="font:400 24px/1.15 'Young Serif',serif;margin:10px 0 10px">Batting cages</div>
+                <div style="font:400 13.5px/1.6 'Work Sans',sans-serif;color:#6d5844">Five cages, slow-pitch to fastball. A dollar buys fifteen swings.</div>
+              </div>
+              <div style="padding:28px 24px 32px">
+                <div style="font:400 13px 'Work Sans',sans-serif;color:#DF7A3C;font-weight:600">04</div>
+                <div style="font:400 24px/1.15 'Young Serif',serif;margin:10px 0 10px">Golf lessons</div>
+                <div style="font:400 13.5px/1.6 'Work Sans',sans-serif;color:#6d5844">Wisconsin Golf Academy teaches right here — juniors to grown-ups.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- story -->
+          <div style="margin:30px 44px;background:#33261D;color:#FBF3E4;border-radius:24px;display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden">
+            <div style="padding:54px 48px;display:flex;flex-direction:column;gap:18px;justify-content:center">
+              <span style="font:600 13px/1 'Work Sans',sans-serif;color:#E8A96B;letter-spacing:.12em;text-transform:uppercase">Second generation, same first tee</span>
+              <span style="font:400 38px/1.2 'Young Serif',serif">"Our parents built this place so families had somewhere to be together. That's still the whole idea."</span>
+              <span style="font:400 14px/1.6 'Work Sans',sans-serif;color:#cbb59a">The same family has run Swing Time from the very first summer — and you'll still find them behind the counter, on the range, and fixing waterfall #2.</span>
+              <span style="font:600 14px/1 'Work Sans',sans-serif;color:#E8A96B">Meet the family →</span>
+            </div>
+            <div style="background:repeating-linear-gradient(45deg,#4a382a,#4a382a 12px,#423225 12px,#423225 24px);display:flex;align-items:center;justify-content:center;min-height:340px"><span style="font:500 10.5px 'JetBrains Mono',monospace;color:#b39a7d;background:rgba(51,38,29,.85);padding:7px 11px;border-radius:6px">[photo: mom + son at the counter today]</span></div>
+          </div>
+
+          <!-- locations + parties -->
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;padding:14px 44px 44px">
+            <div style="border:1px solid #E4D3B4;border-radius:18px;padding:26px;background:#fff">
+              <div style="font:400 21px 'Young Serif',serif">Germantown</div>
+              <div style="font:400 13px/1.65 'Work Sans',sans-serif;color:#6d5844;margin-top:8px">W197N10340 Appleton Ave<br>(262) 251-3311 · open til 9pm<br>Golf academy on-site</div>
+              <div style="font:600 13px 'Work Sans',sans-serif;color:#DF7A3C;margin-top:12px">Directions →</div>
+            </div>
+            <div style="border:1px solid #E4D3B4;border-radius:18px;padding:26px;background:#fff">
+              <div style="font:400 21px 'Young Serif',serif">Waukesha</div>
+              <div style="font:400 13px/1.65 'Work Sans',sans-serif;color:#6d5844;margin-top:8px">1601 E Main St<br>(262) 955-5456 · open til 10pm<br>Pond course on two levels</div>
+              <div style="font:600 13px 'Work Sans',sans-serif;color:#DF7A3C;margin-top:12px">Directions →</div>
+            </div>
+            <div style="border-radius:18px;padding:26px;background:#DF7A3C;color:#FBF3E4">
+              <div style="font:400 21px 'Young Serif',serif">Parties &amp; groups</div>
+              <div style="font:400 13px/1.65 'Work Sans',sans-serif;opacity:.92;margin-top:8px">Birthdays, team outings, league nights — group pricing and a date on the calendar in two minutes.</div>
+              <div style="font:600 13px 'Work Sans',sans-serif;margin-top:12px">Request a date →</div>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;padding:26px 44px;border-top:1px solid #E4D3B4;font:500 12.5px 'Work Sans',sans-serif;color:#8a6f52">
+            <span style="font:400 16px 'Young Serif',serif;color:#33261D">Swing Time<span style="color:#DF7A3C">.</span></span>
+            <span>swingtimegolf.com · Facebook · Instagram</span>
+            <span>Family-owned in Wisconsin, two generations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1c mobile -->
+    <div class="dv-opt" id="1cm">
+      <div class="dv-olabel"><a class="dv-oid" href="#1cm">1c·mobile</a>Golden Hour — phone</div>
+      <div class="dv-card" style="width:390px">
+        <div style="background:#FBF3E4;color:#33261D;font-family:'Work Sans',sans-serif">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px">
+            <span style="font:400 20px/1 'Young Serif',serif">Swing Time<span style="color:#DF7A3C">.</span></span>
+            <span style="display:flex;flex-direction:column;gap:4px"><span style="width:22px;height:2px;background:#33261D"></span><span style="width:22px;height:2px;background:#33261D"></span><span style="width:22px;height:2px;background:#33261D"></span></span>
+          </div>
+          <div style="margin:0 18px;border-top:1px solid #E4D3B4;border-bottom:1px solid #E4D3B4;display:flex;justify-content:center;gap:12px;padding:9px 0;font:500 11px/1 'Work Sans',sans-serif;color:#8a6f52">
+            <span style="display:flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:#6FA05E"></span>Open now</span>
+            <span>☀ 81°</span><span>G'town til 9 · Waukesha til 10</span>
+          </div>
+          <div style="text-align:center;padding:36px 24px 8px">
+            <div style="font:600 11px 'Work Sans',sans-serif;color:#DF7A3C;letter-spacing:.12em;text-transform:uppercase">Germantown &amp; Waukesha, WI</div>
+            <div style="font:400 34px/1.15 'Young Serif',serif;margin-top:12px">Summers measured in mini golf, fly balls &amp; fireflies</div>
+            <div style="font:400 13.5px/1.6 'Work Sans',sans-serif;color:#6d5844;margin-top:12px">Family-run, two generations deep. Stay until the lights come on.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;padding:20px 18px 8px">
+            <span style="background:#33261D;color:#FBF3E4;padding:16px 0;border-radius:999px;font:600 14px/1 'Work Sans',sans-serif;text-align:center">Hours &amp; prices</span>
+            <span style="border:1.5px solid #33261D;padding:14px 0;border-radius:999px;font:600 14px/1 'Work Sans',sans-serif;text-align:center">Book a birthday</span>
+          </div>
+          <div style="margin:16px 18px;height:200px;border-radius:16px 16px 90px 16px;background:repeating-linear-gradient(45deg,#EAD7B5,#EAD7B5 11px,#E3CDA3 11px,#E3CDA3 22px);display:flex;align-items:center;justify-content:center"><span style="font:500 10px 'JetBrains Mono',monospace;color:#8a6f52">[photo: waterfall at golden hour]</span></div>
+          <div style="display:flex;flex-direction:column;padding:0 18px 16px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 4px;border-top:1px solid #E4D3B4"><span style="font:400 17px 'Young Serif',serif">Mini golf</span><span style="font:500 12px 'Work Sans',sans-serif;color:#DF7A3C">from $8 →</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 4px;border-top:1px solid #E4D3B4"><span style="font:400 17px 'Young Serif',serif">Driving range</span><span style="font:500 12px 'Work Sans',sans-serif;color:#DF7A3C">from $6 →</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 4px;border-top:1px solid #E4D3B4"><span style="font:400 17px 'Young Serif',serif">Batting cages</span><span style="font:500 12px 'Work Sans',sans-serif;color:#DF7A3C">$1 / 15 →</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 4px;border-top:1px solid #E4D3B4;border-bottom:1px solid #E4D3B4"><span style="font:400 17px 'Young Serif',serif">Golf lessons</span><span style="font:500 12px 'Work Sans',sans-serif;color:#DF7A3C">book →</span></div>
+          </div>
+          <div style="margin:4px 18px 20px;background:#33261D;color:#FBF3E4;border-radius:18px;padding:22px">
+            <div style="font:600 10px 'Work Sans',sans-serif;color:#E8A96B;letter-spacing:.12em;text-transform:uppercase">Second generation, same first tee</div>
+            <div style="font:400 19px/1.35 'Young Serif',serif;margin-top:10px">"Our parents built this place so families had somewhere to be together."</div>
+            <div style="font:600 12px 'Work Sans',sans-serif;color:#E8A96B;margin-top:12px">Meet the family →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "build out inner pages for <a class="dv-oid" href="#1a">1a</a>" · "mix <a class="dv-oid" href="#1c">1c</a>'s story section into <a class="dv-oid" href="#1b">1b</a>" · "turn the winner into a pitch deck with before/after"</p>
+</section>
+
+</x-dc>
+</body>
+</html>
