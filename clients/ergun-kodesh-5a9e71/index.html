@@ -19,12 +19,6 @@
     .link:hover { text-decoration-color: #35312E; }
     .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 18px; border-radius: 7px; background: #35312E; color: #F7F5F2; font: 700 14px var(--font-sans); text-decoration: none; }
     .button:hover { background: #4A4541; }
-    .client-main { display: flex; flex-direction: column; }
-    .client-main .hero { order: 0; }
-    #demos { order: 1; }
-    #care { order: 2; }
-    #system { order: 3; }
-    #directions-section { order: 4; }
     @media (max-width: 680px) { .shell { padding: 24px !important; } .header-inner { padding: 20px 24px !important; } .hero { padding: 56px 0 40px !important; } }
   </style>
 </head>
@@ -89,8 +83,8 @@
         <p style="margin: 0 0 8px; font: 700 11px var(--font-sans); letter-spacing: .13em; text-transform: uppercase; color: #8E8680;">Working demonstrations</p>
         <h2 id="demos" style="margin: 0 0 18px; font: 500 32px/1.2 var(--font-display);">Click through the public and staff experiences.</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
-          <article class="card"><h3 style="margin:0 0 10px;font:500 25px/1.2 var(--font-display);">Anchor Falls Church</h3><p style="color:#625B56;">Public site concept plus a simulated staff content desk.</p><p><a class="button" href="anchor-falls/">Open public demo</a> <a class="link" href="anchor-falls/admin/" style="margin-left:12px;font:600 14px var(--font-sans);">Staff demo</a></p></article>
-          <article class="card"><h3 style="margin:0 0 10px;font:500 25px/1.2 var(--font-display);">Beth Messiah</h3><p style="color:#625B56;">Public congregation concept plus a simulated editorial workspace.</p><p><a class="button" href="beth-messiah/">Open public demo</a> <a class="link" href="beth-messiah/admin/" style="margin-left:12px;font:600 14px var(--font-sans);">Staff demo</a></p></article>
+          <article class="card"><h3 style="margin:0 0 10px;font:500 25px/1.2 var(--font-display);">Anchor Falls Church</h3><p style="color:#625B56;">Public site concept plus a simulated staff content desk.</p><p><a class="button" href="anchor-falls/" target="_blank" rel="noopener">Open public demo</a> <a class="link" href="anchor-falls/admin/" target="_blank" rel="noopener" style="margin-left:12px;font:600 14px var(--font-sans);">Staff demo</a></p></article>
+          <article class="card"><h3 style="margin:0 0 10px;font:500 25px/1.2 var(--font-display);">Beth Messiah</h3><p style="color:#625B56;">Public congregation concept plus a simulated editorial workspace.</p><p><a class="button" href="beth-messiah/" target="_blank" rel="noopener">Open public demo</a> <a class="link" href="beth-messiah/admin/" target="_blank" rel="noopener" style="margin-left:12px;font:600 14px var(--font-sans);">Staff demo</a></p></article>
         </div>
       </section>
 
@@ -111,5 +105,15 @@
       </div>
     </footer>
   </div>
+<script>
+  const clientMain = document.querySelector('.client-main');
+  if (clientMain) {
+    const demos = clientMain.querySelector('section[aria-labelledby="demos"]');
+    const care = clientMain.querySelector('section[aria-labelledby="care"]');
+    const system = clientMain.querySelector('section[aria-labelledby="system"]');
+    const directions = document.getElementById('directions-section');
+    if (demos && care && system && directions) clientMain.append(demos, care, system, directions);
+  }
+</script>
 </body>
 </html>
