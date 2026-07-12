@@ -1,1 +1,129 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Anchor Falls staff demo</title><link rel="stylesheet" href="../../demo.css"></head><body class="admin"><div class="admin-shell"><aside class="side"><h1>Anchor Falls<br>Staff</h1><button class="active" data-view="dashboard">Overview</button><button data-view="events">Events</button><button data-view="pages">Pages</button><button data-view="messages">Messages</button><p style="font-size:12px;color:#aebfb2;margin:35px 12px">Interactive demonstration<br>Nothing is published.</p></aside><main class="admin-main"><section class="admin-view active" id="dashboard"><div class="admin-top"><div><p class="eyebrow">Today</p><h2>Good morning, team.</h2></div><a class="button" href="../">View public demo</a></div><div class="stat-grid"><div class="stat"><b>3</b>Upcoming events</div><div class="stat"><b>4</b>Draft updates</div><div class="stat"><b>12</b>Volunteer replies</div></div><div class="panel"><h3>Next to publish</h3><div class="row"><span>Sunday Worship · service details</span><span class="status">Ready for review</span></div><div class="row"><span>Family Night · volunteer request</span><span class="status">Draft</span></div></div></section><section class="admin-view" id="events"><h2>Edit an event</h2><div class="panel"><div class="field"><label>Event title</label><input value="Family Night"></div><div class="field"><label>Details</label><textarea rows="4">Wednesday at 6:30 PM. A simple evening for children, students, and parents.</textarea></div><button class="button" data-save>Save draft</button><div class="notice">Draft saved in this demonstration. A real CMS would send it to the designated reviewer before publishing.</div></div></section><section class="admin-view" id="pages"><h2>Page updates</h2><div class="panel"><div class="row"><span>Welcome / home page</span><span class="status">Current</span></div><div class="row"><span>Ministries</span><span class="status">Review requested</span></div></div></section><section class="admin-view" id="messages"><h2>Message library</h2><div class="panel"><p>Connect an existing video host (YouTube, Vimeo, or livestream platform) rather than uploading large media into the site.</p></div></section></main></div><script src="../../demo.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Overview · Anchor Falls Staff Demo</title>
+<link rel="stylesheet" href="assets/admin.css">
+<script defer src="assets/admin.js"></script>
+</head>
+<body>
+<div class="admin-banner">Interactive demonstration only — <strong>nothing here sends email, is published, or leaves this browser.</strong> Production staff access will live at <strong>admin.anchorfalls.org</strong>, not be linked from the public site.</div>
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar__brand">
+      <img src="../assets/logos/logo-anchor-falls-icon-white.svg" alt="">
+      <span>Anchor Falls&nbsp;Staff</span>
+    </div>
+    <nav class="admin-nav" aria-label="Staff admin">
+      <a href="index.html" aria-current="page"><span class="material-symbols-outlined" aria-hidden="true">dashboard</span>Overview</a>
+      <a href="calendar.html"><span class="material-symbols-outlined" aria-hidden="true">event</span>Calendar</a>
+      <a href="content.html"><span class="material-symbols-outlined" aria-hidden="true">description</span>Content</a>
+      <a href="publish.html"><span class="material-symbols-outlined" aria-hidden="true">campaign</span>Publish</a>
+    </nav>
+    <div class="admin-sidebar__footer">
+      <a href="../index.html"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>View public site</a>
+      <a href="#" data-reset-demo><span class="material-symbols-outlined" aria-hidden="true">restart_alt</span>Reset demo data</a>
+    </div>
+  </aside>
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <h1>Overview</h1>
+        <span class="admin-notice">Staff demo</span>
+      </div>
+      <div class="admin-role">
+        <label for="role-select">Viewing as</label>
+        <select id="role-select" data-role-switcher>
+          <option value="contributor">Contributor</option>
+          <option value="reviewer">Reviewer</option>
+          <option value="publisher">Publisher</option>
+          <option value="administrator">Administrator</option>
+        </select>
+      </div>
+    </div>
+    <div class="admin-content">
+      <div class="admin-stats">
+        <div class="admin-stat"><div class="admin-stat__value" data-stat="events">–</div><div class="admin-stat__label">Upcoming events</div></div>
+        <div class="admin-stat"><div class="admin-stat__value" data-stat="drafts">–</div><div class="admin-stat__label">Items in draft</div></div>
+        <div class="admin-stat"><div class="admin-stat__value" data-stat="review">–</div><div class="admin-stat__label">Waiting on review</div></div>
+        <div class="admin-stat"><div class="admin-stat__value" data-stat="pages-attention">–</div><div class="admin-stat__label">Pages needing attention</div></div>
+      </div>
+
+      <div class="admin-card">
+        <h2>Next to publish</h2>
+        <p class="admin-card__sub">Messages and events moving through the draft → review → publish pipeline.</p>
+        <table class="admin-table">
+          <thead><tr><th>Item</th><th>Type</th><th>Status</th></tr></thead>
+          <tbody data-queue-body></tbody>
+        </table>
+        <p class="admin-empty" data-queue-empty style="display:none;">Nothing is currently in the pipeline.</p>
+      </div>
+
+      <div class="admin-card">
+        <h2>Role you're viewing as</h2>
+        <p class="admin-card__sub" data-role-explainer>—</p>
+        <p class="admin-role-note">Switch roles above to see how available actions change on the Calendar and Publish pages — contributors can draft and submit for review, reviewers can mark items reviewed, and only publishers and administrators can publish.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var NS = 'af-admin';
+    var events = AdminDemo.loadList(NS, 'events', [
+      { id: 'e1', title: 'Newcomer Lunch', date: '2026-08-08', time: '11:30 AM', location: 'Fellowship Hall', status: 'published', reviewed: true },
+      { id: 'e2', title: 'Night of Worship & Prayer', date: '2026-08-14', time: '6:30 PM', location: 'Sanctuary', status: 'in_review', reviewed: true },
+      { id: 'e3', title: 'Equip Groups Kickoff', date: '2026-08-22', time: '6:30 PM', location: 'Various Homes', status: 'draft', reviewed: false }
+    ]);
+    var messages = AdminDemo.loadList(NS, 'messages', [
+      { id: 'm1', title: 'The Anchor Holds', speaker: 'Pastor Jim Susler', status: 'published', reviewed: true },
+      { id: 'm2', title: 'Connected to the Vine', speaker: 'Pastor Jim Susler', status: 'in_review', reviewed: false },
+      { id: 'm3', title: 'Equipped for Every Good Work', speaker: 'Pastor Mike Fantry', status: 'draft', reviewed: false }
+    ]);
+    var pages = AdminDemo.loadList(NS, 'pages', [
+      { id: 'p1', title: 'Home', status: 'current' },
+      { id: 'p2', title: 'Visit', status: 'current' },
+      { id: 'p3', title: 'Ministries', status: 'needs_update' },
+      { id: 'p4', title: 'Sermons', status: 'in_review' },
+      { id: 'p5', title: 'Events', status: 'current' },
+      { id: 'p6', title: 'Give', status: 'current' },
+      { id: 'p7', title: 'Resources', status: 'needs_update' },
+      { id: 'p8', title: 'Contact', status: 'current' }
+    ]);
+
+    document.querySelector('[data-stat="events"]').textContent = events.filter(function (e) { return e.status !== 'draft'; }).length;
+    document.querySelector('[data-stat="drafts"]').textContent = events.filter(function (e) { return e.status === 'draft'; }).length + messages.filter(function (m) { return m.status === 'draft'; }).length;
+    document.querySelector('[data-stat="review"]').textContent = events.filter(function (e) { return e.status === 'in_review'; }).length + messages.filter(function (m) { return m.status === 'in_review'; }).length;
+    document.querySelector('[data-stat="pages-attention"]').textContent = pages.filter(function (p) { return p.status !== 'current'; }).length;
+
+    var queue = events.filter(function (e) { return e.status !== 'published'; }).map(function (e) { return { title: e.title, type: 'Event', status: e.status, reviewed: e.reviewed }; })
+      .concat(messages.filter(function (m) { return m.status !== 'published'; }).map(function (m) { return { title: m.title, type: 'Message', status: m.status, reviewed: m.reviewed }; }));
+    var body = document.querySelector('[data-queue-body]');
+    if (!queue.length) {
+      document.querySelector('[data-queue-empty]').style.display = 'block';
+    } else {
+      body.innerHTML = queue.map(function (q) {
+        return '<tr><td>' + q.title + '</td><td>' + q.type + '</td><td>' + AdminDemo.statusPillHtml(q.status, q.reviewed) + '</td></tr>';
+      }).join('');
+    }
+
+    var explainers = {
+      contributor: 'Contributors can draft new events and messages and submit them for review, but cannot mark items reviewed or publish them.',
+      reviewer: 'Reviewers can draft content and mark items in review as reviewed, confirming they are ready for a publisher — but cannot publish directly.',
+      publisher: 'Publishers can do everything a reviewer can, plus publish reviewed items so they go live.',
+      administrator: 'Administrators have full access, including reverting published items back to draft and resetting this demo.'
+    };
+    function renderRoleExplainer(role) {
+      document.querySelector('[data-role-explainer]').textContent = AdminDemo.ROLE_LABELS[role] + ' — ' + explainers[role];
+    }
+    AdminDemo.initRoleSwitcher(NS, renderRoleExplainer);
+    renderRoleExplainer(AdminDemo.getRole(NS));
+    AdminDemo.initResetButton(NS, ['events', 'messages', 'pages']);
+  });
+})();
+</script>
+</body>
+</html>
