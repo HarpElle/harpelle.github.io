@@ -19,6 +19,12 @@
     .link:hover { text-decoration-color: #35312E; }
     .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 18px; border-radius: 7px; background: #35312E; color: #F7F5F2; font: 700 14px var(--font-sans); text-decoration: none; }
     .button:hover { background: #4A4541; }
+    .client-main { display: flex; flex-direction: column; }
+    .client-main .hero { order: 0; }
+    #demos { order: 1; }
+    #care { order: 2; }
+    #system { order: 3; }
+    #directions-section { order: 4; }
     @media (max-width: 680px) { .shell { padding: 24px !important; } .header-inner { padding: 20px 24px !important; } .hero { padding: 56px 0 40px !important; } }
   </style>
 </head>
@@ -30,18 +36,17 @@
           <img src="../../assets/brand/HarpElle_Monogram_FullColor_Dark.svg" alt="HarpElle" style="width: 34px; height: 34px;">
           <span style="font: 600 15px var(--font-sans);">Ergun Kodesh</span>
         </div>
-        <a class="link" href="../studio-d4c8b4/" style="font: 600 13px var(--font-sans);">Back to Client engagements</a>
       </div>
     </header>
 
-    <main class="shell" style="width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 48px 72px; box-sizing: border-box;">
+    <main class="shell client-main" style="width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 48px 72px; box-sizing: border-box;">
       <section class="hero" style="padding: 84px 0 56px; max-width: 760px;">
         <p style="margin: 0 0 16px; font: 700 11px var(--font-sans); letter-spacing: .13em; text-transform: uppercase; color: #8E8680;">A working conversation</p>
         <h1 style="margin: 0 0 20px; font: 500 clamp(42px, 7vw, 68px)/1.06 var(--font-display);">A clear home for the work ahead.</h1>
         <p style="margin: 0; font: 400 18px/1.7 var(--font-sans); color: #625B56; max-width: 63ch;">This is a simple place to look at the two congregation directions together, react to what feels right, and decide how the sites should be cared for over time.</p>
       </section>
 
-      <section aria-labelledby="directions" style="padding: 0 0 64px !important;">
+      <section id="directions-section" aria-labelledby="directions" style="padding: 0 0 64px !important;">
         <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
           <div>
             <p style="margin: 0 0 8px; font: 700 11px var(--font-sans); letter-spacing: .13em; text-transform: uppercase; color: #8E8680;">Design directions</p>
