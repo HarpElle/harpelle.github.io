@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HarpElle — Thoughtfully Built Apps And Services</title>
-    <meta name="description" content="HarpElle is an independent product studio building thoughtfully designed apps and services, including PARfectPutt mini-golf scoring, VolleyTally, VolleyTrack, VolunteerCal, SpokenToBook, and RefinedMark.">
+    <title>HarpElle — independent product studio | GetVolleyApps, VolunteerCal, PARfectPutt</title>
+    <meta name="description" content="HarpElle is an independent product studio. We build GetVolleyApps (volleyball tools for gyms and coaches), VolunteerCal scheduling, the PARfectPutt scorecard, and hands-on brand and web work.">
     <meta name="robots" content="index,follow,max-image-preview:large">
-    <meta name="keywords" content="HarpElle, HarpElleApps, PARfectPutt, mini-golf scoring app, VolleyTally, VolleyTrack, VolunteerCal, SpokenToBook, RefinedMark, independent product studio">
     <link rel="canonical" href="https://harpelle.com/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://harpelle.com/">
-    <meta property="og:title" content="HarpElle — Thoughtfully Built Apps And Services">
-    <meta property="og:description" content="An independent product studio building thoughtfully designed apps and services, including PARfectPutt mini-golf scoring, sports tools, scheduling, publishing, and brand work.">
+    <meta property="og:title" content="HarpElle — independent product studio | GetVolleyApps, VolunteerCal, PARfectPutt">
+    <meta property="og:description" content="HarpElle is an independent product studio. We build GetVolleyApps (volleyball tools for gyms and coaches), VolunteerCal scheduling, the PARfectPutt scorecard, and hands-on brand and web work.">
     <meta property="og:image" content="https://harpelle.com/assets/brand/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HarpElle — Thoughtfully Built Apps And Services">
-    <meta name="twitter:description" content="Independent apps and services from HarpElle, including PARfectPutt mini-golf scoring and focused tools for sports, scheduling, publishing, and brand work.">
+    <meta name="twitter:title" content="HarpElle — independent product studio | GetVolleyApps, VolunteerCal, PARfectPutt">
+    <meta name="twitter:description" content="HarpElle is an independent product studio. We build GetVolleyApps (volleyball tools for gyms and coaches), VolunteerCal scheduling, the PARfectPutt scorecard, and hands-on brand and web work.">
     <meta name="twitter:image" content="https://harpelle.com/assets/brand/og-image.png">
     <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="/assets/brand/favicon-16x16.png" type="image/png" sizes="16x16">
     <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+    <link rel="preload" href="/assets/fonts/zilla-slab-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -31,644 +31,809 @@
         {
           "@type": "Organization",
           "@id": "https://harpelle.com/#organization",
-          "name": "HarpElle",
+          "name": "HarpElle LLC",
+          "alternateName": "HarpElle",
+          "description": "HarpElle LLC is an independent product studio building apps and services.",
           "url": "https://harpelle.com/",
-          "description": "An independent product studio building thoughtfully designed apps and services."
+          "logo": "https://harpelle.com/assets/brand/android-chrome-512x512.png",
+          "email": "info@harpelle.com",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@harpelle.com",
+            "contactType": "customer support"
+          },
+          "brand": { "@id": "https://getvolleyapps.com/#brand" },
+          "sameAs": [
+            "https://getvolleyapps.com/",
+            "https://volleyscorer.com/",
+            "https://volunteercal.com/",
+            "https://parfectputtapp.com/",
+            "https://spokentobook.com/",
+            "https://refinedmark.com/"
+          ]
         },
         {
-          "@type": "WebSite",
-          "@id": "https://harpelle.com/#website",
-          "name": "HarpElle",
-          "url": "https://harpelle.com/",
+          "@type": "Brand",
+          "@id": "https://getvolleyapps.com/#brand",
+          "name": "GetVolleyApps",
+          "url": "https://getvolleyapps.com/",
+          "description": "The HarpElle volleyball app family: VolleyTally, VolleyTrack, VolleySignal, and VolleyScorer."
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://harpelle.com/volleytally/#app",
+          "name": "VolleyTally",
+          "url": "https://harpelle.com/volleytally/",
+          "description": "Courtside volleyball scoreboard for phones and tablets.",
+          "applicationCategory": "SportsApplication",
+          "operatingSystem": "iOS, iPadOS, Android",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "publisher": { "@id": "https://harpelle.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://harpelle.com/volleytrack/#app",
+          "name": "VolleyTrack",
+          "url": "https://harpelle.com/volleytrack/",
+          "description": "Match stats and analysis for volleyball coaches, with live spectator mode.",
+          "applicationCategory": "SportsApplication",
+          "operatingSystem": "iOS, iPadOS",
+          "publisher": { "@id": "https://harpelle.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://getvolleyapps.com/#volleysignal",
+          "name": "VolleySignal",
+          "url": "https://getvolleyapps.com/",
+          "description": "Live score overlays for volleyball livestreams.",
+          "applicationCategory": "SportsApplication",
+          "publisher": { "@id": "https://harpelle.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://volleyscorer.com/#app",
+          "name": "VolleyScorer",
+          "url": "https://volleyscorer.com/",
+          "description": "Free volleyball scoreboard for any browser or TV.",
+          "applicationCategory": "SportsApplication",
+          "operatingSystem": "Web",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "publisher": { "@id": "https://harpelle.com/#organization" }
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://volunteercal.com/#app",
+          "name": "VolunteerCal",
+          "url": "https://volunteercal.com/",
+          "description": "Volunteer scheduling for churches and nonprofits.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "publisher": { "@id": "https://harpelle.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://parfectputtapp.com/#app",
+          "name": "PARfectPutt",
+          "url": "https://parfectputtapp.com/",
+          "description": "A free digital scorecard for mini golf.",
+          "applicationCategory": "SportsApplication",
+          "operatingSystem": "iOS",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
           "publisher": { "@id": "https://harpelle.com/#organization" }
         },
         {
           "@type": "ItemList",
-          "@id": "https://harpelle.com/#products",
-          "name": "HarpElle products and services",
+          "@id": "https://harpelle.com/#offerings",
+          "name": "HarpElle studio offerings",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "VolleyTally", "url": "https://harpelle.com/volleytally/" },
-            { "@type": "ListItem", "position": 2, "name": "VolleyTrack", "url": "https://harpelle.com/volleytrack/" },
+            { "@type": "ListItem", "position": 1, "name": "GetVolleyApps", "url": "https://getvolleyapps.com/" },
+            { "@type": "ListItem", "position": 2, "name": "VolunteerCal", "url": "https://volunteercal.com/" },
             { "@type": "ListItem", "position": 3, "name": "PARfectPutt", "url": "https://parfectputtapp.com/" },
             { "@type": "ListItem", "position": 4, "name": "SpokenToBook", "url": "https://spokentobook.com/" },
-            { "@type": "ListItem", "position": 5, "name": "RefinedMark", "url": "https://refinedmark.com/" },
-            { "@type": "ListItem", "position": 6, "name": "VolunteerCal", "url": "https://volunteercal.com/" }
+            { "@type": "ListItem", "position": 5, "name": "RefinedMark", "url": "https://refinedmark.com/" }
           ]
         }
       ]
     }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;1,300&amp;display=swap" rel="stylesheet">
     <style>
-        :root {
-            --dark-anchor: #35312E;
-            --light-foundation: #F7F5F2;
-            --mid-neutral: #8E8680;
-            --pink-accent: #B89A8F;
-            --purple-accent: #9280A0;
-            --gold-accent: #A8956E;
-            --border-light: rgba(142, 134, 128, 0.18);
-            --radius-lg: 20px;
-            --radius-md: 14px;
-            --shadow-card: 0 2px 16px rgba(53, 49, 46, 0.06);
-            --shadow-card-hover: 0 8px 32px rgba(53, 49, 46, 0.10);
-            --max-width: 1080px;
+        /* ---- Fonts (self-hosted, SIL OFL 1.1) ---- */
+        @font-face {
+            font-family: 'Plus Jakarta Sans';
+            font-style: normal;
+            font-weight: 400 700;
+            font-display: swap;
+            src: url('/assets/fonts/plus-jakarta-sans-latin.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Plus Jakarta Sans';
+            font-style: italic;
+            font-weight: 400 700;
+            font-display: swap;
+            src: url('/assets/fonts/plus-jakarta-sans-latin-italic.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Zilla Slab';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url('/assets/fonts/zilla-slab-latin-300.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Zilla Slab';
+            font-style: italic;
+            font-weight: 300;
+            font-display: swap;
+            src: url('/assets/fonts/zilla-slab-latin-300-italic.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Zilla Slab';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url('/assets/fonts/zilla-slab-latin-500.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Zilla Slab';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('/assets/fonts/zilla-slab-latin-600.woff2') format('woff2');
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        /* ---- Tokens (HarpElle "Balanced Craft") ---- */
+        :root {
+            --color-dark-anchor: #35312E;
+            --color-light-foundation: #F7F5F2;
+            --color-mid-neutral: #8E8680;
+            --color-pink-accent: #B89A8F;
+            --color-purple-accent: #9280A0;
+            --color-border-hairline: #E3DFD9;
+            --color-surface-sunken: #EDEAE5;
+            --color-text-on-dark-soft: #E8E4DF;
+            --color-dark-hover: #2A2724;
+            --color-dark-card: #3B3733;
+            --color-light-hover: #ECE9E4;
+            --veil-dark: rgba(53, 49, 46, .06);
+            --font-display: 'Zilla Slab', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --shadow-card: 0 1px 3px rgba(53, 49, 46, .08);
+            --shadow-overlay: 0 12px 32px rgba(53, 49, 46, .10);
+            --max-width: 1120px;
+        }
 
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+        }
         body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: var(--dark-anchor);
-            background: var(--light-foundation);
+            margin: 0;
+            background: var(--color-light-foundation);
+            color: var(--color-dark-anchor);
+            font-family: var(--font-sans);
             -webkit-font-smoothing: antialiased;
         }
+        a {
+            color: var(--color-dark-anchor);
+            text-decoration: none;
+            transition: color 160ms ease, background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+        }
+        a:hover { color: var(--color-dark-hover); }
+        img { display: block; }
+        .container { max-width: var(--max-width); margin: 0 auto; }
 
-        /* ── Nav ─────────────────────────────── */
-        .site-nav {
-            padding: 24px 24px;
-            max-width: var(--max-width);
-            margin: 0 auto;
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: var(--color-dark-anchor);
+            color: var(--color-light-foundation);
+            padding: 10px 16px;
+            border-radius: 0 0 8px 0;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 100;
+        }
+        .skip-link:focus { left: 0; color: var(--color-light-foundation); }
+
+        .overline {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-mid-neutral);
+        }
+        .overline--pink { color: var(--color-pink-accent); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            flex-shrink: 0;
+            height: 46px;
+            padding: 0 26px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .btn--primary {
+            background: var(--color-dark-anchor);
+            color: var(--color-light-foundation);
+        }
+        .btn--primary:hover { background: var(--color-dark-hover); color: var(--color-light-foundation); }
+        .btn--outline { border: 1px solid var(--color-dark-anchor); }
+        .btn--outline:hover { background: var(--veil-dark); color: var(--color-dark-anchor); }
+        .btn--light {
+            background: var(--color-light-foundation);
+            color: var(--color-dark-anchor);
+        }
+        .btn--light:hover { background: var(--color-light-hover); color: var(--color-dark-anchor); }
+
+        /* ---- Header ---- */
+        #site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(247, 245, 242, .92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid transparent;
+            transition: box-shadow 160ms ease, border-color 160ms ease;
+        }
+        #site-header.is-scrolled {
+            border-bottom-color: var(--color-border-hairline);
+            box-shadow: var(--shadow-card);
+        }
+        .header-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding: 16px 32px;
         }
-
-        .site-nav .logo {
+        .header-logo { height: 42px; }
+        .site-nav {
             display: flex;
+            gap: 32px;
             align-items: center;
-            text-decoration: none;
-        }
-
-        .site-nav .logo img { height: 72px; width: auto; margin: -16px -10px; }
-
-        .site-nav .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .site-nav .nav-links a {
-            color: var(--mid-neutral);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .site-nav .nav-links a:hover { color: var(--dark-anchor); }
-
-        /* ── Hero ────────────────────────────── */
-        .hero {
-            text-align: center;
-            padding: 80px 24px 72px;
-        }
-
-        .hero-inner {
-            max-width: 640px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-family: 'Zilla Slab', Georgia, serif;
-            font-size: 3.4rem;
+            font-size: 14px;
             font-weight: 600;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            color: var(--dark-anchor);
         }
-
-        .hero .tagline {
-            font-size: 1.15rem;
-            color: var(--mid-neutral);
-            max-width: 480px;
-            margin: 0 auto 12px;
-            line-height: 1.7;
-            text-wrap: pretty;
-        }
-
-        .hero .brand-promise {
-            font-family: 'Zilla Slab', Georgia, serif;
-            font-size: 1.05rem;
-            font-weight: 400;
-            font-style: italic;
-            color: var(--pink-accent);
-            letter-spacing: 0.01em;
-        }
-
-        /* ── Divider ────────────────────────── */
-        .section-divider {
-            width: 48px;
-            height: 2px;
-            background: var(--border-light);
-            margin: 0 auto;
-        }
-
-        /* ── Apps Section ───────────────────── */
-        .apps-section {
-            padding: 72px 24px 80px;
-            max-width: var(--max-width);
-            margin: 0 auto;
-        }
-
-        .apps-section .section-label {
-            text-align: center;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--mid-neutral);
-            margin-bottom: 12px;
-        }
-
-        .apps-section .section-title {
-            text-align: center;
-            font-family: 'Zilla Slab', Georgia, serif;
-            font-size: 2rem;
-            font-weight: 500;
-            margin-bottom: 56px;
-            letter-spacing: -0.01em;
-            color: var(--dark-anchor);
-        }
-
-        .app-cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .app-cards .app-card:last-child:nth-child(odd) {
-            grid-column: 1 / -1;
-            max-width: calc(50% - 12px);
-            justify-self: center;
-        }
-
-        .app-card {
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            transition: box-shadow 0.3s, transform 0.3s;
-            background: #fff;
-        }
-
-        .app-card:hover {
-            box-shadow: var(--shadow-card-hover);
-            transform: translateY(-3px);
-        }
-
-        .app-card .card-hero {
-            padding: 36px 28px 28px;
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            background: var(--light-foundation);
-        }
-
-        .app-card .card-hero .app-icon {
-            width: 72px;
-            height: 72px;
-            border-radius: 16px;
-            box-shadow: 0 4px 16px rgba(53, 49, 46, 0.08);
-            flex-shrink: 0;
-        }
-
-        .app-card .card-hero h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .app-card .card-hero p {
-            color: var(--mid-neutral);
-            font-size: 0.92rem;
-            line-height: 1.5;
-        }
-
-        .badge {
-            display: inline-block;
-            font-size: 0.6rem;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            margin-left: 8px;
-            vertical-align: middle;
-        }
-
-        .badge-live {
-            background: rgba(184, 154, 143, 0.15);
-            color: var(--pink-accent);
-        }
-
-        .badge-new {
-            background: rgba(146, 128, 160, 0.15);
-            color: var(--purple-accent);
-        }
-
-        .app-card .card-body {
-            padding: 4px 28px 28px;
-        }
-
-        .app-card .features-list {
-            list-style: none;
-            margin-bottom: 24px;
-        }
-
-        .app-card .features-list li {
-            padding: 6px 0;
-            font-size: 0.9rem;
-            color: var(--mid-neutral);
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-        }
-
-        .app-card .features-list li::before {
-            content: "";
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .app-card.tally .features-list li::before { background: var(--pink-accent); }
-        .app-card.track .features-list li::before { background: var(--purple-accent); }
-        .app-card.spoken .features-list li::before { background: var(--gold-accent); }
-        .app-card.refined .features-list li::before { background: var(--gold-accent); }
-        .app-card.volunteercal .features-list li::before { background: #4F46E5; }
-        .app-card.parfectputt .features-list li::before { background: #0E6B3F; }
-
-        .badge-service {
-            background: rgba(168, 149, 110, 0.15);
-            color: var(--gold-accent);
-        }
-
-        .badge-saas {
-            background: rgba(79, 70, 229, 0.12);
-            color: #4F46E5;
-        }
-
-        .badge-beta {
-            background: rgba(14, 107, 63, 0.12);
-            color: #0E6B3F;
-        }
-
-        .app-card .card-hero .service-icon {
-            width: 72px;
-            height: 72px;
-            border-radius: 16px;
-            box-shadow: 0 4px 16px rgba(53, 49, 46, 0.08);
-            flex-shrink: 0;
-            background: var(--dark-anchor);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .app-card .card-link {
+        .site-nav a { color: var(--color-mid-neutral); }
+        .site-nav a:hover { color: var(--color-dark-anchor); }
+        .nav-contact {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            font-size: 0.92rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+            height: 36px;
+            padding: 0 16px;
+            border: 1px solid var(--color-dark-anchor);
+            border-radius: 8px;
+            font-size: 13px;
             font-weight: 600;
-            text-decoration: none;
-            color: var(--dark-anchor);
-            transition: gap 0.2s;
         }
+        .site-nav a.nav-contact { color: var(--color-dark-anchor); }
+        .site-nav a.nav-contact:hover { background: var(--veil-dark); }
 
-        .app-card .card-link:hover { gap: 10px; }
-
-        .app-card .card-link .arrow {
-            transition: transform 0.2s;
-            color: var(--mid-neutral);
+        /* ---- Hero ---- */
+        .hero {
+            padding: 80px 32px 88px;
+            display: flex;
+            gap: 72px;
+            align-items: center;
+            flex-wrap: wrap;
         }
-
-        /* ── About Strip ────────────────────── */
-        .about-strip {
-            background: var(--dark-anchor);
-            color: var(--light-foundation);
-            text-align: center;
-            padding: 64px 24px;
+        .hero-copy {
+            flex: 1.25;
+            min-width: min(400px, 100%);
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            align-items: flex-start;
         }
-
-        .about-strip-inner {
-            max-width: 560px;
-            margin: 0 auto;
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 68px;
+            line-height: 1.06;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 0;
         }
-
-        .about-strip p {
-            font-size: 1.05rem;
-            line-height: 1.75;
-            color: rgba(247, 245, 242, 0.7);
+        .hero h1 .accent-line {
+            font-weight: 300;
+            font-style: italic;
+            color: var(--color-pink-accent);
+        }
+        .hero-body {
+            font-size: 18px;
+            line-height: 1.65;
+            margin: 0;
+            max-width: 48ch;
             text-wrap: pretty;
         }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
-        .about-strip p strong {
-            color: var(--light-foundation);
+        .map-card {
+            flex: 1;
+            min-width: min(340px, 100%);
+            background: var(--color-light-foundation);
+            border: 1px solid var(--color-border-hairline);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: var(--shadow-overlay);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .map-card .overline { padding-bottom: 12px; }
+        .map-row {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            padding: 14px 12px;
+            border-radius: 8px;
+            margin: 0 -12px;
+        }
+        .map-row:hover { background: var(--veil-dark); }
+        .map-index {
+            font-size: 12px;
             font-weight: 600;
+            color: var(--color-mid-neutral);
+            width: 20px;
+            flex-shrink: 0;
+        }
+        .map-name { font-weight: 600; font-size: 15px; white-space: nowrap; }
+        .map-role { font-size: 14px; color: var(--color-mid-neutral); }
+        .map-arrow { margin-left: auto; color: var(--color-pink-accent); font-weight: 600; }
+        .map-divider { border-top: 1px solid var(--color-border-hairline); }
+
+        /* ---- GetVolleyApps band ---- */
+        .family-band {
+            background: var(--color-dark-anchor);
+            color: var(--color-light-foundation);
+        }
+        .family-inner {
+            padding: 80px 32px 88px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .family-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .family-heading {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .family-heading h2 {
+            font-family: var(--font-display);
+            font-size: 40px;
+            font-weight: 500;
+            margin: 0;
+        }
+        .family-intro {
+            margin: 0;
+            font-size: 17px;
+            line-height: 1.65;
+            color: var(--color-text-on-dark-soft);
+            max-width: 54ch;
+            text-wrap: pretty;
+        }
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+        .family-cell {
+            background: var(--color-dark-card);
+            border-radius: 12px;
+            padding: 26px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: var(--color-light-foundation);
+        }
+        .family-cell:hover {
+            color: var(--color-light-foundation);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, .28);
+        }
+        .family-cell .app-name { font-size: 18px; font-weight: 600; }
+        .family-cell .app-desc {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--color-text-on-dark-soft);
+        }
+        .family-cell .app-link {
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: auto;
+            padding-top: 8px;
         }
 
-        .about-strip .attribution {
-            margin-top: 24px;
-            font-size: 0.85rem;
-            color: var(--mid-neutral);
+        /* ---- Products & Services ---- */
+        .list-section {
+            padding: 80px 32px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
         }
+        .list-section--services { padding: 40px 32px 80px; }
+        .list-section h2 {
+            font-family: var(--font-display);
+            font-size: 34px;
+            font-weight: 500;
+            margin: 8px 0 0;
+        }
+        .list-rows { display: flex; flex-direction: column; }
+        .list-row {
+            display: flex;
+            align-items: baseline;
+            gap: 24px;
+            padding: 26px 0;
+            border-top: 1px solid var(--color-border-hairline);
+            flex-wrap: wrap;
+        }
+        .list-row:last-child { border-bottom: 1px solid var(--color-border-hairline); }
+        .list-name {
+            min-width: 170px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .list-name .name { font-size: 18px; font-weight: 600; }
+        .list-name .kind { font-size: 12px; font-weight: 500; color: var(--color-mid-neutral); }
+        .list-desc {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.65;
+            color: var(--color-mid-neutral);
+            flex: 1;
+            min-width: min(280px, 100%);
+            text-wrap: pretty;
+        }
+        .list-link { font-size: 14px; font-weight: 600; }
 
-        /* ── Footer ──────────────────────────── */
-        footer {
-            border-top: 1px solid var(--border-light);
-            padding: 40px 24px;
+        /* ---- Studio CTA band ---- */
+        .studio-band { background: var(--color-surface-sunken); }
+        .studio-inner {
+            padding: 88px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
             text-align: center;
         }
-
-        .footer-inner {
-            max-width: var(--max-width);
-            margin: 0 auto;
+        .studio-monogram { height: 60px; }
+        .studio-inner h2 {
+            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 500;
+            margin: 0;
+            max-width: 22ch;
         }
-
-        .footer-logo {
+        .studio-body {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 52ch;
+            text-wrap: balance;
+        }
+        .studio-actions {
             display: flex;
-            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
             justify-content: center;
-            margin-bottom: 20px;
+            margin-top: 8px;
+        }
+        .studio-quote {
+            margin: 8px 0 0;
+            font-family: var(--font-display);
+            font-style: italic;
+            font-weight: 300;
+            font-size: 20px;
+            color: var(--color-pink-accent);
         }
 
-        .footer-logo img { height: 52px; width: auto; margin: -8px 0; }
-
-        .footer-links {
-            margin-bottom: 16px;
+        /* ---- Footer ---- */
+        .site-footer { border-top: 1px solid var(--color-border-hairline); }
+        .footer-inner {
+            padding: 56px 32px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .footer-top {
+            display: flex;
+            gap: 64px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 280px;
+        }
+        .footer-brand img { height: 40px; align-self: flex-start; }
+        .footer-brand p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--color-mid-neutral);
+        }
+        .footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 14px;
+        }
+        .footer-bottom {
+            border-top: 1px solid var(--color-border-hairline);
+            padding-top: 24px;
+            font-size: 13px;
+            color: var(--color-mid-neutral);
         }
 
-        .footer-links a {
-            color: var(--mid-neutral);
-            text-decoration: none;
-            font-size: 0.85rem;
-            margin: 0 16px;
-            transition: color 0.2s;
+        /* ---- Responsive ---- */
+        @media (max-width: 720px) {
+            .header-inner { padding: 12px 24px; }
+            .site-nav { gap: 20px; }
+            .hero { padding: 56px 24px 64px; gap: 48px; }
+            .hero h1 { font-size: 44px; }
+            .family-inner { padding: 56px 24px 64px; }
+            .family-heading h2 { font-size: 32px; }
+            .list-section { padding: 56px 24px 32px; }
+            .list-section--services { padding: 32px 24px 56px; }
+            .list-section h2 { font-size: 28px; }
+            .studio-inner { padding: 64px 24px; }
+            .studio-inner h2 { font-size: 30px; }
+            .footer-inner { padding: 48px 24px 32px; }
+            .footer-top, .footer-cols { gap: 40px; }
         }
-
-        .footer-links a:hover { color: var(--dark-anchor); }
-
-        .footer-copy {
-            font-size: 0.78rem;
-            color: var(--mid-neutral);
-        }
-
-        /* ── Responsive ──────────────────────── */
-        @media (max-width: 640px) {
-            .site-nav {
-                flex-direction: column;
-                gap: 12px;
-            }
-            .site-nav .logo img { height: 56px; margin: -10px -8px; }
-            .site-nav .nav-links {
-                gap: 8px 16px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .site-nav .nav-links a { font-size: 0.82rem; }
-            .hero { padding: 56px 20px 48px; }
-            .hero h1 { font-size: 2.4rem; }
-            .hero .tagline { font-size: 1.02rem; }
-            .apps-section .section-title { font-size: 1.6rem; }
-            .app-cards { grid-template-columns: 1fr !important; }
-            .app-cards .app-card:last-child:nth-child(odd) { max-width: 100%; }
-            .about-strip { padding: 48px 20px; }
-            .about-strip p { font-size: 0.95rem; }
+        @media (max-width: 620px) {
+            .nav-anchor { display: none; }
         }
     </style>
-    <link rel="stylesheet" href="/assets/css/harpelle-site.css">
 </head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<body class="home-page">
-
-    <!-- Nav -->
-    <nav class="site-nav">
-        <a href="/" class="logo">
-            <img src="/assets/brand/HarpElle_Primary_Transparent.svg" alt="HarpElle" height="40">
-        </a>
-        <ul class="nav-links">
-            <li><a href="/volleytally/">VolleyTally</a></li>
-            <li><a href="/volleytrack/">VolleyTrack</a></li>
-            <li><a href="https://parfectputtapp.com/" target="_blank" rel="noopener noreferrer">PARfectPutt</a></li>
-            <li><a href="https://spokentobook.com" target="_blank" rel="noopener noreferrer">SpokenToBook</a></li>
-            <li><a href="https://refinedmark.com" target="_blank" rel="noopener noreferrer">RefinedMark</a></li>
-            <li><a href="https://volunteercal.com" target="_blank" rel="noopener noreferrer">VolunteerCal</a></li>
-            <li><a href="mailto:info@harpelle.com">Support</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-inner">
-            <h1>Thoughtfully built.<br>Every time.</h1>
-            <p class="tagline">Apps and services for people who care about quality.<br>Sports tools, scheduling, publishing, and brand work.<br>Each one crafted with the same care.</p>
-            <p class="brand-promise">An independent product studio by Jason Paschall</p>
+    <header id="site-header">
+        <div class="container header-inner">
+            <a href="/" aria-label="HarpElle home">
+                <img class="header-logo" src="/assets/brand/HarpElle_Primary_Light.svg" alt="HarpElle" height="42">
+            </a>
+            <nav class="site-nav" aria-label="Primary">
+                <a class="nav-anchor" href="#volleyball">Volleyball</a>
+                <a class="nav-anchor" href="#products">Products</a>
+                <a class="nav-anchor" href="#services">Services</a>
+                <a class="nav-anchor" href="#studio">Studio</a>
+                <a class="nav-contact" href="mailto:info@harpelle.com">Contact</a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <div class="section-divider"></div>
-
-    <!-- Apps -->
-    <section class="apps-section">
-        <p class="section-label">Our Products</p>
-        <h2 class="section-title">Six products. One standard.</h2>
-
-        <div class="app-cards">
-            <!-- VolleyTally -->
-            <div class="app-card tally">
-                <div class="card-hero">
-                    <img src="/assets/VolleyTally-PSD-rounded-288.png" alt="VolleyTally icon" class="app-icon" width="72" height="72" decoding="async">
-                    <div>
-                        <h3>VolleyTally <span class="badge badge-live">Live</span></h3>
-                        <p>A clean volleyball scoreboard for every rally</p>
-                    </div>
+    <main id="main">
+        <section class="container hero" aria-label="Introduction">
+            <div class="hero-copy">
+                <h1 data-reveal>Thoughtfully built.<br><span class="accent-line">Every time.</span></h1>
+                <p class="hero-body" data-reveal data-reveal-delay="70">HarpElle is an independent product studio. Volleyball apps for gyms and coaches, volunteer scheduling, a mini golf scorecard, and hands-on brand and web work.</p>
+                <div class="hero-actions" data-reveal data-reveal-delay="140">
+                    <a class="btn btn--primary" href="#volleyball">See the work</a>
+                    <a class="btn btn--outline" href="#studio">Work with us</a>
                 </div>
-                <div class="card-body">
-                    <ul class="features-list">
-                        <li>Track points across full volleyball matches</li>
-                        <li>Undo stray taps without losing the flow</li>
-                        <li>Customize team names and colors for free</li>
-                        <li>Review match history and set-by-set results</li>
-                        <li>Free on iPhone and iPad with optional Remove Ads</li>
-                        <li>Android release has been submitted for Google Play review</li>
-                    </ul>
-                    <a href="/volleytally/" class="card-link">
-                        Learn more <span class="arrow">&rarr;</span>
+            </div>
+            <div class="map-card" data-reveal data-reveal-delay="210">
+                <div class="overline">What we build</div>
+                <a class="map-row" href="#volleyball">
+                    <span class="map-index">01</span>
+                    <span class="map-name">GetVolleyApps</span>
+                    <span class="map-role">four volleyball tools, one family</span>
+                    <span class="map-arrow" aria-hidden="true">→</span>
+                </a>
+                <div class="map-divider"></div>
+                <a class="map-row" href="#products">
+                    <span class="map-index">02</span>
+                    <span class="map-name">VolunteerCal</span>
+                    <span class="map-role">volunteer scheduling</span>
+                    <span class="map-arrow" aria-hidden="true">→</span>
+                </a>
+                <div class="map-divider"></div>
+                <a class="map-row" href="#products">
+                    <span class="map-index">03</span>
+                    <span class="map-name">PARfectPutt</span>
+                    <span class="map-role">mini golf scorecard</span>
+                    <span class="map-arrow" aria-hidden="true">→</span>
+                </a>
+                <div class="map-divider"></div>
+                <a class="map-row" href="#services">
+                    <span class="map-index">04</span>
+                    <span class="map-name">Two services</span>
+                    <span class="map-role">SpokenToBook, RefinedMark</span>
+                    <span class="map-arrow" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="volleyball" class="family-band">
+            <div class="container family-inner">
+                <div class="family-header" data-reveal>
+                    <div class="family-heading">
+                        <div class="overline overline--pink">App family</div>
+                        <h2>GetVolleyApps</h2>
+                        <p class="family-intro">Volleyball tools that work together. Score at the table, track stats from the bench, feed the livestream, or put the score on any screen in the gym.</p>
+                    </div>
+                    <a class="btn btn--light" href="https://getvolleyapps.com">Visit getvolleyapps.com</a>
+                </div>
+                <div class="family-grid">
+                    <a class="family-cell" href="https://harpelle.com/volleytally/" data-reveal>
+                        <span class="overline overline--pink">Score</span>
+                        <span class="app-name">VolleyTally</span>
+                        <span class="app-desc">Courtside scoreboard for phones and tablets. Free on iPhone, iPad, and Android.</span>
+                        <span class="app-link">Learn more →</span>
+                    </a>
+                    <a class="family-cell" href="https://harpelle.com/volleytrack/" data-reveal data-reveal-delay="80">
+                        <span class="overline overline--pink">Coach</span>
+                        <span class="app-name">VolleyTrack</span>
+                        <span class="app-desc">Match stats and analysis for coaches, with live spectator mode.</span>
+                        <span class="app-link">Learn more →</span>
+                    </a>
+                    <a class="family-cell" href="https://getvolleyapps.com" data-reveal data-reveal-delay="160">
+                        <span class="overline overline--pink">Stream</span>
+                        <span class="app-name">VolleySignal</span>
+                        <span class="app-desc">Live score overlays for volleyball streams.</span>
+                        <span class="app-link">Learn more →</span>
+                    </a>
+                    <a class="family-cell" href="https://volleyscorer.com" data-reveal data-reveal-delay="240">
+                        <span class="overline overline--pink">Display</span>
+                        <span class="app-name">VolleyScorer</span>
+                        <span class="app-desc">Free scoreboard for any browser or TV. No install.</span>
+                        <span class="app-link">volleyscorer.com →</span>
                     </a>
                 </div>
             </div>
+        </section>
 
-            <!-- VolleyTrack -->
-            <div class="app-card track">
-                <div class="card-hero">
-                    <img src="/assets/VolleyTrack-icon-288.png" alt="VolleyTrack icon" class="app-icon" width="72" height="72" decoding="async">
-                    <div>
-                        <h3>VolleyTrack <span class="badge badge-new">New</span></h3>
-                        <p>Advanced stats &amp; AI analysis</p>
+        <section id="products" class="container list-section">
+            <div data-reveal>
+                <div class="overline">Products</div>
+                <h2>Beyond the gym.</h2>
+            </div>
+            <div class="list-rows">
+                <div class="list-row" data-reveal>
+                    <div class="list-name">
+                        <div class="name">VolunteerCal</div>
+                        <div class="kind">SaaS</div>
                     </div>
+                    <p class="list-desc">Volunteer scheduling for churches and nonprofits. Fair schedules, email confirmations without logins, calendar feeds. Free tier for small teams.</p>
+                    <a class="list-link" href="https://volunteercal.com">volunteercal.com →</a>
                 </div>
-                <div class="card-body">
-                    <ul class="features-list">
-                        <li>Live scoring with rotation tracking</li>
-                        <li>Hands-free voice stat input</li>
-                        <li>AI-powered match narratives</li>
-                        <li>Live spectator mode for parents and fans</li>
-                        <li>Team and season management</li>
-                    </ul>
-                    <a href="/volleytrack/" class="card-link">
-                        Learn more <span class="arrow">&rarr;</span>
-                    </a>
+                <div class="list-row" data-reveal>
+                    <div class="list-name">
+                        <div class="name">PARfectPutt</div>
+                        <div class="kind">Free app</div>
+                    </div>
+                    <p class="list-desc">A free digital scorecard for mini golf. 2 to 6 players, live round sharing, recap cards. On the App Store.</p>
+                    <a class="list-link" href="https://parfectputtapp.com">parfectputtapp.com →</a>
                 </div>
             </div>
+        </section>
 
-            <!-- PARfectPutt -->
-            <div class="app-card parfectputt">
-                <div class="card-hero">
-                    <img src="/assets/PARfectPutt-icon-192.png" alt="PARfectPutt icon" class="app-icon" width="64" height="64" decoding="async">
-                    <div>
-                        <h3>PARfectPutt <span class="badge badge-new">App Store</span></h3>
-                        <p>Mini-golf scoring with live standings and recap cards</p>
+        <section id="services" class="container list-section list-section--services">
+            <div data-reveal>
+                <div class="overline">Services</div>
+                <h2>Work we do with you.</h2>
+            </div>
+            <div class="list-rows">
+                <div class="list-row" data-reveal>
+                    <div class="list-name">
+                        <div class="name">SpokenToBook</div>
                     </div>
+                    <p class="list-desc">Your sermons, talks, or lectures, edited into a book you approve. Your voice, your name on the cover.</p>
+                    <a class="list-link" href="https://spokentobook.com">spokentobook.com →</a>
                 </div>
-                <div class="card-body">
-                    <ul class="features-list">
-                        <li>Quick setup for 2 to 6 players</li>
-                        <li>9-hole and 18-hole scorecards</li>
-                        <li>Large scoring controls built for the course</li>
-                        <li>Read-only Live Round sharing by link, QR, or join code</li>
-                        <li>Recap cards for in-progress and finished rounds</li>
-                        <li>Available on the App Store · Google Play coming soon</li>
-                    </ul>
-                    <a href="https://parfectputtapp.com/" class="card-link">
-                        Visit app site <span class="arrow">&rarr;</span>
-                    </a>
+                <div class="list-row" data-reveal>
+                    <div class="list-name">
+                        <div class="name">RefinedMark</div>
+                    </div>
+                    <p class="list-desc">Brand identity and websites, built by hand. One point of contact from discovery to delivery.</p>
+                    <a class="list-link" href="https://refinedmark.com">refinedmark.com →</a>
                 </div>
             </div>
+        </section>
 
-            <!-- SpokenToBook -->
-            <div class="app-card spoken">
-                <div class="card-hero">
-                    <div class="service-icon" aria-hidden="true">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F7F5F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
-                            <path d="M8 7h6"/>
-                            <path d="M8 11h8"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3>SpokenToBook <span class="badge badge-service">Service</span></h3>
-                        <p>Your spoken words, your published book</p>
-                    </div>
+        <section id="studio" class="studio-band">
+            <div class="container studio-inner">
+                <img class="studio-monogram" src="/assets/brand/HarpElle_Monogram_FullColor_Dark.svg" alt="" data-reveal>
+                <h2 data-reveal data-reveal-delay="70">Need something built?</h2>
+                <p class="studio-body" data-reveal data-reveal-delay="140">We take on a small number of brand, web, and custom app projects each year. If you have something in mind, tell us what you're building. No forms, no pitch calls, just a conversation.</p>
+                <div class="studio-actions" data-reveal data-reveal-delay="210">
+                    <a class="btn btn--primary" href="mailto:info@harpelle.com">Write to the studio</a>
+                    <a class="btn btn--outline" href="https://refinedmark.com">Brand and web, via RefinedMark</a>
                 </div>
-                <div class="card-body">
-                    <ul class="features-list">
-                        <li>Turn sermons, talks, or lectures into a book</li>
-                        <li>Voice-first process that captures your style</li>
-                        <li>Professional editing and manuscript delivery</li>
-                        <li>Iterative review with full approval control</li>
-                        <li>Your voice, your name on the cover</li>
-                    </ul>
-                    <a href="https://spokentobook.com" target="_blank" rel="noopener noreferrer" class="card-link">
-                        Visit site <span class="arrow">&rarr;</span>
-                    </a>
-                </div>
+                <p class="studio-quote" data-reveal data-reveal-delay="260">A mark of care across every venture.</p>
             </div>
-            <!-- RefinedMark -->
-            <div class="app-card refined">
-                <div class="card-hero">
-                    <div class="service-icon" aria-hidden="true">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F7F5F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
-                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-                            <path d="M2 2l7.586 7.586"/>
-                            <circle cx="11" cy="11" r="2"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3>RefinedMark <span class="badge badge-service">Service</span></h3>
-                        <p>Your brand, thoughtfully built</p>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <ul class="features-list">
-                        <li>Complete brand identities from strategy to visuals</li>
-                        <li>Custom websites — no templates, no page builders</li>
-                        <li>Combined brand + web packages available</li>
-                        <li>One point of contact from discovery to delivery</li>
-                        <li>Transparent process with full approval control</li>
-                    </ul>
-                    <a href="https://refinedmark.com" target="_blank" rel="noopener noreferrer" class="card-link">
-                        Visit site <span class="arrow">&rarr;</span>
-                    </a>
-                </div>
-            </div>
+        </section>
+    </main>
 
-            <!-- VolunteerCal -->
-            <div class="app-card volunteercal">
-                <div class="card-hero">
-                    <div class="service-icon" style="background: #4F46E5;" aria-hidden="true">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F7F5F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="4" width="18" height="18" rx="2"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <circle cx="8" cy="15" r="1" fill="#F7F5F2" stroke="none"/>
-                            <circle cx="12" cy="15" r="1" fill="#F7F5F2" stroke="none"/>
-                            <circle cx="16" cy="15" r="1" fill="#F7F5F2" stroke="none"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3>VolunteerCal <span class="badge badge-saas">SaaS</span></h3>
-                        <p>Volunteer scheduling for churches &amp; nonprofits</p>
-                    </div>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/assets/brand/HarpElle_Primary_Light.svg" alt="HarpElle" height="40">
+                    <p>An independent product studio. If it ships under this name, it was worth building well.</p>
                 </div>
-                <div class="card-body">
-                    <ul class="features-list">
-                        <li>Auto-generate fair, conflict-free schedules</li>
-                        <li>Team leads review and approve per ministry</li>
-                        <li>Volunteers confirm via email — no login needed</li>
-                        <li>Calendar feeds for Google, Outlook, and Apple</li>
-                        <li>Free tier for small teams, paid plans from $19/mo</li>
-                    </ul>
-                    <a href="https://volunteercal.com" target="_blank" rel="noopener noreferrer" class="card-link">
-                        Visit site <span class="arrow">&rarr;</span>
-                    </a>
-                </div>
+                <nav class="footer-cols" aria-label="Footer">
+                    <div class="footer-col">
+                        <div class="overline">Volleyball</div>
+                        <a href="https://getvolleyapps.com">GetVolleyApps</a>
+                        <a href="https://harpelle.com/volleytally/">VolleyTally</a>
+                        <a href="https://harpelle.com/volleytrack/">VolleyTrack</a>
+                        <a href="https://getvolleyapps.com">VolleySignal</a>
+                        <a href="https://volleyscorer.com">VolleyScorer</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="overline">Products</div>
+                        <a href="https://volunteercal.com">VolunteerCal</a>
+                        <a href="https://parfectputtapp.com">PARfectPutt</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="overline">Services</div>
+                        <a href="https://spokentobook.com">SpokenToBook</a>
+                        <a href="https://refinedmark.com">RefinedMark</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="overline">Studio</div>
+                        <a href="#studio">Work with us</a>
+                        <a href="mailto:info@harpelle.com">info@harpelle.com</a>
+                    </div>
+                </nav>
             </div>
-        </div>
-    </section>
-
-    <!-- About Strip -->
-    <section class="about-strip">
-        <div class="about-strip-inner">
-            <p><strong>HarpElle</strong> is an independent product studio. Whether it's a mobile app or a full-service offering, every product under this name reflects a single commitment: if it's worth building, it's worth building well. The standard doesn't change. The craft doesn't cut corners.</p>
-            <p class="attribution">a HarpElle studio</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-logo">
-                <img src="/assets/brand/HarpElle_Primary_Transparent.svg" alt="HarpElle" height="28">
-            </div>
-            <div class="footer-links">
-                <a href="/volleytally/">VolleyTally</a>
-                <a href="/volleytrack/">VolleyTrack</a>
-                <a href="https://parfectputtapp.com/" target="_blank" rel="noopener noreferrer">PARfectPutt</a>
-                <a href="https://spokentobook.com" target="_blank" rel="noopener noreferrer">SpokenToBook</a>
-                <a href="https://refinedmark.com" target="_blank" rel="noopener noreferrer">RefinedMark</a>
-                <a href="https://volunteercal.com" target="_blank" rel="noopener noreferrer">VolunteerCal</a>
-                <a href="mailto:info@harpelle.com">Support</a>
-            </div>
-            <p class="footer-copy">&copy; 2026 HarpElle LLC. All rights reserved.</p>
+            <div class="footer-bottom">© 2026 HarpElle LLC. All rights reserved.</div>
         </div>
     </footer>
 
-</body>
+    <script>
+    (function () {
+        var header = document.getElementById('site-header');
+        var onScroll = function () {
+            header.classList.toggle('is-scrolled', window.scrollY > 8);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
 
+        // Scroll-settle reveals. The hidden state is applied from JS only so
+        // no-JS visitors, crawlers, and reduced-motion users see full content.
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (!('IntersectionObserver' in window)) return;
+        var els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+        els.forEach(function (el) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(16px)';
+        });
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                var el = entry.target;
+                var delay = Number(el.dataset.revealDelay || 0);
+                el.style.transition = 'opacity 560ms ease ' + delay + 'ms, transform 560ms cubic-bezier(.22,.61,.36,1) ' + delay + 'ms';
+                requestAnimationFrame(function () {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                });
+                io.unobserve(el);
+            });
+        }, { threshold: 0.12 });
+        els.forEach(function (el) { io.observe(el); });
+    })();
+    </script>
+</body>
 </html>
