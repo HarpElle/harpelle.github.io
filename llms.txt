@@ -4,7 +4,7 @@ HarpElle LLC is an independent product studio. Studio site: https://harpelle.com
 ## GetVolleyApps (volleyball app family) — https://getvolleyapps.com
 - VolleyTally: courtside volleyball scoreboard for phones and tablets. Free on iPhone, iPad, and Android. https://harpelle.com/volleytally/
 - VolleyTrack: match stats and analysis for volleyball coaches. https://harpelle.com/volleytrack/
-- VolleySignal: live score overlays for volleyball livestreams. https://getvolleyapps.com
+- VolleySignal: live score overlays for volleyball livestreams. https://volleysignal.com
 - VolleyScorer: free volleyball scoreboard for any browser or TV. https://volleyscorer.com
 
 ## Other products
