@@ -1,0 +1,43 @@
+{
+  "schema": "harpelle-status/1",
+  "repo": "HarpElle/harpelle.github.io",
+  "name": "harpelle.com studio home",
+  "kind": "Static site (GitHub Pages)",
+  "stage": "live",
+  "health": "attention",
+  "summary": "Studio home, app privacy/help pages, feedback Workers.",
+  "updatedAt": "2026-09-04",
+  "updatedBy": "Claude Code (Fable 5.1)",
+  "current": [
+    "Studio Home v2 live 2026-08-29 (PR #5).",
+    "Primary local checkout has 20 uncommitted modified files: all VolleyTrack help pages, privacy, terms, feedback Worker config. Origin unknown."
+  ],
+  "inFlight": [
+    {
+      "ref": "local",
+      "title": "20 uncommitted VolleyTrack help/privacy edits",
+      "state": "unexplained"
+    }
+  ],
+  "blockers": [],
+  "decisions": [
+    "Review the 20 local edits: commit as VolleyTrack help refresh, or discard."
+  ],
+  "next": [
+    "Diff and triage the local edits."
+  ],
+  "later": [
+    "Move app help pages to each app's own site over time."
+  ],
+  "intentions": "The studio's honest face; legal text says HarpElle LLC.",
+  "links": [
+    {
+      "label": "Repo",
+      "url": "https://github.com/HarpElle/harpelle.github.io"
+    },
+    {
+      "label": "Live",
+      "url": "https://harpelle.com"
+    }
+  ]
+}
