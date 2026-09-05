@@ -1,0 +1,12 @@
+# harpelle.com is built by GitHub Pages (Jekyll). Everything not listed here is
+# published. Internal files stay in the repo but must never be served.
+exclude:
+  - status/
+  - workers/
+  - scripts/
+  - AGENTS.md
+  - CLAUDE.md
+  - README.md
+  - node_modules/
+  - package.json
+  - package-lock.json
