@@ -51,4 +51,4 @@ We may update this policy from time to time. When we do, we will update the date
 
 ## Contact
 
-Questions about this policy can be sent to <jason@harpelle.com>.
+Questions about this policy can be sent to <info@harpelle.com>.

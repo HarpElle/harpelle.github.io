@@ -3,6 +3,9 @@ main = "src/index.js"
 compatibility_date = "2026-06-28"
 workers_dev = true
 
+[[send_email]]
+name = "EMAIL"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "volleytrack_feedback"
@@ -10,6 +13,6 @@ database_id = "53ab56cf-902c-4605-bea7-9c353763e9c9"
 
 [vars]
 ALLOWED_ORIGINS = "https://harpelle.com,https://www.harpelle.com,http://127.0.0.1:8088,http://localhost:8088"
-# Enable after Cloudflare Email Service destination addresses are verified.
-NOTIFY_TO = ""
-NOTIFY_FROM = ""
+# Requires Cloudflare Email Sending to be enabled for volleytrackapp.com before deploy.
+NOTIFY_TO = "info@volleytrackapp.com"
+NOTIFY_FROM = "info@volleytrackapp.com"
