@@ -1,5 +1,9 @@
 # harpelle.com studio home — status log (newest first)
 
+## 2026-09-05 — Claude Code (Fable 5.1)
+
+- Merged the contact-email migration (PR #9). Jekyll exclude list (PR #8) keeps status/ and agent guides off harpelle.com.
+
 ## 2026-09-04 (later), Claude Code (Fable 5.1 review)
 
 - Reviewed the repo end to end from a fresh clone: every page and asset,
