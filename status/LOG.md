@@ -1,5 +1,23 @@
 # harpelle.com studio home — status log (newest first)
 
+## 2026-09-04 (later), Claude Code (Fable 5.1 review)
+
+- Reviewed the repo end to end from a fresh clone: every page and asset,
+  the feedback Worker and its D1 migration, GitHub PRs #1 to #6, branches,
+  Pages config, branch protection, Dependabot (no open alerts), and a
+  read-only diff of the Primary Mac checkout. Live checks against
+  harpelle.com, the Worker endpoint, and sibling app domains.
+- Wrote `status/REVIEW_2026-09-04.md`: 0 P0, 4 P1, 8 P2, six suggestions,
+  six decisions for Jason.
+- Characterized the 18 uncommitted local files: a 2026-08-05 contact-email
+  migration (jason@harpelle.com to per-app info@ addresses) plus a Worker
+  send_email binding. Recommended committing them in two parts.
+- Found a live 404 (Swing Time proposal.html) and that internal files
+  (status/, workers/, scripts/, AGENTS.md) are published by Pages.
+- Rewrote `status/PLAN.md` Next into seven sized steps with acceptance
+  checks; kept Intentions (code agrees) and Later, adding two Later items.
+- Mirrored everything into `status/status.json`; health stays `attention`.
+
 ## 2026-09-04 — Claude Code (Fable 5.1)
 
 - Created the `status/` folder from the 2026-09-04 portfolio sweep

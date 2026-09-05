@@ -7,27 +7,42 @@
   "health": "attention",
   "summary": "Studio home, app privacy/help pages, feedback Workers.",
   "updatedAt": "2026-09-04",
-  "updatedBy": "Claude Code (Fable 5.1)",
+  "updatedBy": "Claude Code (Fable 5.1 review)",
   "current": [
-    "Studio Home v2 live 2026-08-29 (PR #5).",
-    "Primary local checkout has 20 uncommitted modified files: all VolleyTrack help pages, privacy, terms, feedback Worker config. Origin unknown."
+    "Studio Home v2 live 2026-08-29 (PR #4); VolleyTally Android fix (PR #5); status/ folder (PR #6).",
+    "Primary local checkout is two merges behind main and holds 18 uncommitted files dated 2026-08-05: jason@harpelle.com -> per-app info@ addresses on VolleyTrack/VolleyTally pages, plus a send_email binding in the feedback Worker. Reviewed 2026-09-04: coherent, worth committing once the info@ mailboxes are confirmed.",
+    "Known defects: clients/swing-time-83dc2d/index.html links to a missing proposal.html (404 live); status/, workers/, scripts/, AGENTS.md are published on harpelle.com.",
+    "No open Dependabot alerts; no repo workflows (GitHub default CodeQL only); Pages HTTPS cert valid to 2026-10-17."
   ],
   "inFlight": [
     {
       "ref": "local",
-      "title": "20 uncommitted VolleyTrack help/privacy edits",
-      "state": "unexplained"
+      "title": "Contact-email migration (17 site files + wrangler.toml) on the Primary checkout",
+      "state": "uncommitted, reviewed, awaiting mailbox confirmation"
     }
   ],
   "blockers": [],
   "decisions": [
-    "Review the 20 local edits: commit as VolleyTrack help refresh, or discard."
+    "Commit the 2026-08-05 email edits? Recommended yes, after confirming info@volleytrackapp.com, info@volleytallyapp.com, info@harpelle.com deliver.",
+    "Should jason@harpelle.com remain anywhere public? Recommended no.",
+    "Canonical VolleyTrack URL: harpelle.com/volleytrack/ or volleytrackapp.com? Recommended volleytrackapp.com for marketing, harpelle.com for legal and help until help moves.",
+    "Hide internal files via _config.yml exclude or move them? Recommended _config.yml.",
+    "Commit .codex/config.toml or gitignore it? Recommended commit if it is the standard sites-tier config.",
+    "Is VolleyTrack publicly released on both stores? If yes, refresh landing and coach-test copy."
   ],
   "next": [
-    "Diff and triage the local edits."
+    "1. Confirm the info@ mailboxes deliver (S).",
+    "2. Commit the site half of the email migration from the Primary checkout and sweep remaining jason@harpelle.com occurrences (S).",
+    "3. Fix the Swing Time proposal.html link (S).",
+    "4. Add _config.yml exclude for status, AGENTS.md, README.md, workers, scripts, .codex (S).",
+    "5. Enable Cloudflare Email Sending, commit the Worker binding, add body cap and rate limit, deploy, test the live form (M).",
+    "6. Refresh VolleyTrack launch copy, sitemap, and llms.txt once store status is confirmed (S).",
+    "7. Housekeeping: delete merged branch, expand README, decide .codex, self-host help-page fonts (S)."
   ],
   "later": [
-    "Move app help pages to each app's own site over time."
+    "Move app help pages to each app's own site over time (trigger: volleytrackapp.com gets a help section).",
+    "Self-host or pre-render the React/Babel scripts the Swing Time demo loads from unpkg.com.",
+    "Add a link-check step to the pre-push habit."
   ],
   "intentions": "The studio's honest face; legal text says HarpElle LLC.",
   "links": [
@@ -38,6 +53,10 @@
     {
       "label": "Live",
       "url": "https://harpelle.com"
+    },
+    {
+      "label": "Review 2026-09-04",
+      "url": "https://github.com/HarpElle/harpelle.github.io/blob/main/status/REVIEW_2026-09-04.md"
     }
   ]
 }
