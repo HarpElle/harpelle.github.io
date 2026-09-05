@@ -6,8 +6,8 @@
   "stage": "live",
   "health": "attention",
   "summary": "Studio home, app privacy/help pages, feedback Workers.",
-  "updatedAt": "2026-09-04",
-  "updatedBy": "Claude Code (Fable 5.1 review)",
+  "updatedAt": "2026-09-05",
+  "updatedBy": "Claude Code (Fable 5.1)",
   "current": [
     "Studio Home v2 live 2026-08-29 (PR #4); VolleyTally Android fix (PR #5); status/ folder (PR #6).",
     "Primary local checkout is two merges behind main and holds 18 uncommitted files dated 2026-08-05: jason@harpelle.com -> per-app info@ addresses on VolleyTrack/VolleyTally pages, plus a send_email binding in the feedback Worker. Reviewed 2026-09-04: coherent, worth committing once the info@ mailboxes are confirmed.",
