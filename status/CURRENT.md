@@ -16,7 +16,7 @@ Studio home, app privacy/help pages, feedback Workers.
 
 ## 2026-09-05
 
-- Contact-email migration committed and merged (PR #9): app pages now use info@volleytrackapp.com, info@volleytallyapp.com, info@harpelle.com. Jason confirmed the Google Workspace mailboxes work. The feedback Worker's send_email config is committed but the Worker is not redeployed; Email Sending must be enabled for volleytrackapp.com first. Eight tracked files still mention jason@harpelle.com (sweep is plan step 1).
+- Contact-email migration committed and merged (PR #9): app pages now use info@volleytrackapp.com, info@volleytallyapp.com, info@harpelle.com. Jason confirmed the Google Workspace mailboxes work. The feedback Worker's send_email config is committed but the Worker is not redeployed; Email Sending must be enabled for volleytrackapp.com first. Eight tracked files still mention info@harpelle.com (sweep is plan step 1).
 
 ## Blockers
 

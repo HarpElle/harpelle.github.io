@@ -19,7 +19,7 @@
 - Wrote `status/REVIEW_2026-09-04.md`: 0 P0, 4 P1, 8 P2, six suggestions,
   six decisions for Jason.
 - Characterized the 18 uncommitted local files: a 2026-08-05 contact-email
-  migration (jason@harpelle.com to per-app info@ addresses) plus a Worker
+  migration (info@harpelle.com to per-app info@ addresses) plus a Worker
   send_email binding. Recommended committing them in two parts.
 - Found a live 404 (Swing Time proposal.html) and that internal files
   (status/, workers/, scripts/, AGENTS.md) are published by Pages.

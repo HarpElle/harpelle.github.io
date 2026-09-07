@@ -18,7 +18,7 @@ brand copy says "HarpElle".
 ## Next (in order)
 
 - Accepted 2026-09-07: yes, after confirming info@volleytrackapp.com, info@volleytallyapp.com, info@harpelle.com deliver (from: Commit the 2026-08-05 email edits)
-- Accepted 2026-09-07: no (from: Should jason@harpelle.com remain anywhere public)
+- Accepted 2026-09-07: no (from: Should info@harpelle.com remain anywhere public)
 - Accepted 2026-09-07: volleytrackapp.com for marketing, harpelle.com for legal and help until help moves (from: Canonical VolleyTrack URL: harpelle.com/volleytrack/ or volleytrackapp.com)
 - Accepted 2026-09-07: _config.yml (from: Hide internal files via _config.yml exclude or move them)
 - Accepted 2026-09-07: commit if it is the standard sites-tier config (from: Commit .codex/config.toml or gitignore it)
@@ -35,10 +35,10 @@ brand copy says "HarpElle".
      modified site files (everything except `workers/volleytrack-feedback/wrangler.toml`).
    - While on the branch, sweep the remaining occurrences in
      `volleytrack/coach-test/`, `volleytrack/demos/`, `volleytrack/print/`,
-     and the help pages so `grep -rn 'jason@harpelle.com' .` returns nothing.
+     and the help pages so `grep -rn 'info@harpelle.com' .` returns nothing.
    - Push, `gh pr create`, merge.
    - Acceptance: `curl -s https://harpelle.com/volleytrack/privacy.html | grep -c jason@` prints 0 and
-     `grep -rn 'jason@harpelle.com'` on main prints nothing.
+     `grep -rn 'info@harpelle.com'` on main prints nothing.
 
 3. **Fix the Swing Time proposal link** (S)
    - `clients/swing-time-83dc2d/index.html` line 76 links to `proposal.html`.
