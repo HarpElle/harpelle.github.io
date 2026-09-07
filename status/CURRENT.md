@@ -1,6 +1,6 @@
 # harpelle.com studio home — current state
 
-Updated: 2026-09-05 by Claude Code (Fable 5.1)
+Updated: 2026-09-07 by Claude Code (Fable 5.1)
 Stage: **live** · Health: **attention**
 
 Studio home, app privacy/help pages, feedback Workers.
@@ -24,7 +24,7 @@ Studio home, app privacy/help pages, feedback Workers.
 
 ## Decisions for Jason
 
-- Review the 20 local edits: commit as VolleyTrack help refresh, or discard.
+- None waiting (queue cleared 2026-09-07; accepted items are at the top of PLAN.md Next).
 
 ## Links
 

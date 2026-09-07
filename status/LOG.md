@@ -1,5 +1,10 @@
 # harpelle.com studio home — status log (newest first)
 
+## 2026-09-07 — Claude Code (Fable 5.1)
+
+- Jason accepted every recommended default on 2026-09-07. Moved 5 recommendation(s) to the top of PLAN.md Next as accepted steps and cleared the decision queue.
+- Items without a stated recommendation were dropped from the queue and kept here for the record: Is VolleyTrack publicly released on both stores? If yes, refresh landing and coach-test copy.
+
 ## 2026-09-05 — Claude Code (Fable 5.1)
 
 - Merged the contact-email migration (PR #9). Jekyll exclude list (PR #8) keeps status/ and agent guides off harpelle.com.

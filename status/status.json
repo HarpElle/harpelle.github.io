@@ -6,7 +6,7 @@
   "stage": "live",
   "health": "attention",
   "summary": "Studio home, app privacy/help pages, feedback Workers.",
-  "updatedAt": "2026-09-05",
+  "updatedAt": "2026-09-07",
   "updatedBy": "Claude Code (Fable 5.1)",
   "current": [
     "Studio Home v2 live 2026-08-29 (PR #4); VolleyTally Android fix (PR #5); status/ folder (PR #6).",
@@ -22,15 +22,13 @@
     }
   ],
   "blockers": [],
-  "decisions": [
-    "Commit the 2026-08-05 email edits? Recommended yes, after confirming info@volleytrackapp.com, info@volleytallyapp.com, info@harpelle.com deliver.",
-    "Should jason@harpelle.com remain anywhere public? Recommended no.",
-    "Canonical VolleyTrack URL: harpelle.com/volleytrack/ or volleytrackapp.com? Recommended volleytrackapp.com for marketing, harpelle.com for legal and help until help moves.",
-    "Hide internal files via _config.yml exclude or move them? Recommended _config.yml.",
-    "Commit .codex/config.toml or gitignore it? Recommended commit if it is the standard sites-tier config.",
-    "Is VolleyTrack publicly released on both stores? If yes, refresh landing and coach-test copy."
-  ],
+  "decisions": [],
   "next": [
+    "Accepted 2026-09-07: yes, after confirming info@volleytrackapp.com, info@volleytallyapp.com, info@harpelle.com deliver (from: Commit the 2026-08-05 email edits)",
+    "Accepted 2026-09-07: no (from: Should jason@harpelle.com remain anywhere public)",
+    "Accepted 2026-09-07: volleytrackapp.com for marketing, harpelle.com for legal and help until help moves (from: Canonical VolleyTrack URL: harpelle.com/volleytrack/ or volleytrackapp.com)",
+    "Accepted 2026-09-07: _config.yml (from: Hide internal files via _config.yml exclude or move them)",
+    "Accepted 2026-09-07: commit if it is the standard sites-tier config (from: Commit .codex/config.toml or gitignore it)",
     "1. Confirm the info@ mailboxes deliver (S).",
     "2. Commit the site half of the email migration from the Primary checkout and sweep remaining jason@harpelle.com occurrences (S).",
     "3. Fix the Swing Time proposal.html link (S).",
