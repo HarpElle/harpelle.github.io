@@ -10,7 +10,7 @@
   "updatedBy": "Claude Code (Fable 5.1)",
   "current": [
     "Studio Home v2 live 2026-08-29 (PR #4); VolleyTally Android fix (PR #5); status/ folder (PR #6).",
-    "Primary local checkout is two merges behind main and holds 18 uncommitted files dated 2026-08-05: info@harpelle.com -> per-app info@ addresses on VolleyTrack/VolleyTally pages, plus a send_email binding in the feedback Worker. Reviewed 2026-09-04: coherent, worth committing once the info@ mailboxes are confirmed.",
+    "Primary local checkout is two merges behind main and holds 18 uncommitted files dated 2026-08-05: jason@harpelle.com -> per-app info@ addresses on VolleyTrack/VolleyTally pages, plus a send_email binding in the feedback Worker. Reviewed 2026-09-04: coherent, worth committing once the info@ mailboxes are confirmed.",
     "Known defects: clients/swing-time-83dc2d/index.html links to a missing proposal.html (404 live); status/, workers/, scripts/, AGENTS.md are published on harpelle.com.",
     "No open Dependabot alerts; no repo workflows (GitHub default CodeQL only); Pages HTTPS cert valid to 2026-10-17."
   ],
@@ -25,12 +25,10 @@
   "decisions": [],
   "next": [
     "Accepted 2026-09-07: yes, after confirming info@volleytrackapp.com, info@volleytallyapp.com, info@harpelle.com deliver (from: Commit the 2026-08-05 email edits)",
-    "Accepted 2026-09-07: no (from: Should info@harpelle.com remain anywhere public)",
     "Accepted 2026-09-07: volleytrackapp.com for marketing, harpelle.com for legal and help until help moves (from: Canonical VolleyTrack URL: harpelle.com/volleytrack/ or volleytrackapp.com)",
     "Accepted 2026-09-07: _config.yml (from: Hide internal files via _config.yml exclude or move them)",
     "Accepted 2026-09-07: commit if it is the standard sites-tier config (from: Commit .codex/config.toml or gitignore it)",
     "1. Confirm the info@ mailboxes deliver (S).",
-    "2. Commit the site half of the email migration from the Primary checkout and sweep remaining info@harpelle.com occurrences (S).",
     "3. Fix the Swing Time proposal.html link (S).",
     "4. Add _config.yml exclude for status, AGENTS.md, README.md, workers, scripts, .codex (S).",
     "5. Enable Cloudflare Email Sending, commit the Worker binding, add body cap and rate limit, deploy, test the live form (M).",
