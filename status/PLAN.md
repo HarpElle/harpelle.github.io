@@ -1,6 +1,6 @@
 # harpelle.com studio home: plan
 
-Updated: 2026-09-04 by Claude Code (Fable 5.1 review)
+Updated: 2026-09-07 by Claude Code (Fable 5.1)
 
 ## Intentions
 
@@ -17,6 +17,11 @@ brand copy says "HarpElle".
 
 ## Next (in order)
 
+- Accepted 2026-09-07: yes, after confirming info@volleytrackapp.com, info@volleytallyapp.com, info@harpelle.com deliver (from: Commit the 2026-08-05 email edits)
+- Accepted 2026-09-07: no (from: Should jason@harpelle.com remain anywhere public)
+- Accepted 2026-09-07: volleytrackapp.com for marketing, harpelle.com for legal and help until help moves (from: Canonical VolleyTrack URL: harpelle.com/volleytrack/ or volleytrackapp.com)
+- Accepted 2026-09-07: _config.yml (from: Hide internal files via _config.yml exclude or move them)
+- Accepted 2026-09-07: commit if it is the standard sites-tier config (from: Commit .codex/config.toml or gitignore it)
 1. **Confirm the `info@` mailboxes deliver** (S)
    - Send a test message to `info@volleytrackapp.com`,
      `info@volleytallyapp.com`, and `info@harpelle.com` from any account.
