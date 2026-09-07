@@ -2,6 +2,10 @@
 
 ## 2026-09-07 — Claude Code (Fable 5.1)
 
+- Accepted recommendation applied: every public occurrence of the personal address replaced with info@harpelle.com (client template and Swing Time pages). Status files restored to their historical wording after the sweep touched them.
+
+## 2026-09-07 — Claude Code (Fable 5.1)
+
 - Jason accepted every recommended default on 2026-09-07. Moved 5 recommendation(s) to the top of PLAN.md Next as accepted steps and cleared the decision queue.
 - Items without a stated recommendation were dropped from the queue and kept here for the record: Is VolleyTrack publicly released on both stores? If yes, refresh landing and coach-test copy.
 
@@ -19,7 +23,7 @@
 - Wrote `status/REVIEW_2026-09-04.md`: 0 P0, 4 P1, 8 P2, six suggestions,
   six decisions for Jason.
 - Characterized the 18 uncommitted local files: a 2026-08-05 contact-email
-  migration (info@harpelle.com to per-app info@ addresses) plus a Worker
+  migration (jason@harpelle.com to per-app info@ addresses) plus a Worker
   send_email binding. Recommended committing them in two parts.
 - Found a live 404 (Swing Time proposal.html) and that internal files
   (status/, workers/, scripts/, AGENTS.md) are published by Pages.
