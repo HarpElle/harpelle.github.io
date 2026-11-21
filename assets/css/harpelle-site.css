@@ -1,10 +1,17 @@
+/* Shared studio chrome (header, footer, page frame) for the product, help, and
+   client pages. Tokens mirror the studio system in /DESIGN.md -- change both
+   together; the studio home (/index.html) carries its own copy of them.
+   Known debt recorded in DESIGN.md: --he-surface is pure white and the
+   accent-as-text rules below belong to sub-brand page bodies, which keep their
+   own systems. Neither is a parent-brand pattern. */
 :root {
     --he-dark: #35312E;
     --he-light: #F7F5F2;
-    --he-surface: #FFFFFF;
-    --he-neutral: #8E8680;
-    --he-pink: #B89A8F;
-    --he-purple: #9280A0;
+    --he-surface: #FFFFFF;        /* debt: parent brand never uses pure white (sub-brand bodies only) */
+    --he-neutral: #8E8680;        /* large text, borders, decoration only (3.29:1) */
+    --he-neutral-ink: #6F6862;    /* all secondary text under 24px (5.04:1) */
+    --he-pink: #B89A8F;           /* decoration; as text only on dark surfaces */
+    --he-purple: #9280A0;         /* decoration and large text only */
     --he-border: rgba(142, 134, 128, 0.22);
     --he-border-strong: rgba(53, 49, 46, 0.18);
     --he-shadow: 0 1px 2px rgba(53, 49, 46, 0.04), 0 18px 48px rgba(53, 49, 46, 0.08);
@@ -95,12 +102,13 @@ textarea:focus-visible {
 
 .site-nav .nav-links a,
 .nav-links a {
+    align-items: center;
     border-radius: 999px;
-    color: var(--he-neutral) !important;
+    color: var(--he-neutral-ink) !important;
     display: inline-flex;
     font-size: 0.86rem !important;
     font-weight: 700 !important;
-    min-height: 36px;
+    min-height: 44px;
     padding: 8px 2px;
     text-decoration: none;
 }
@@ -115,7 +123,7 @@ textarea:focus-visible {
 
 body.home-page .site-nav,
 body.product-page .site-nav {
-    background: rgba(247, 245, 242, 0.9);
+    background: rgba(247, 245, 242, 0.96); /* keeps nav ink >=4.5:1 over dark content */
     backdrop-filter: blur(16px);
 }
 
@@ -186,6 +194,11 @@ body.product-page .hero h1 {
     text-wrap: pretty;
 }
 
+/* Accent-as-text on light: sub-brand and client page bodies only, which carry
+   their own systems. Not a parent-brand pattern -- on studio surfaces pink and
+   purple stay decorative, and pink appears as text only at display sizes in
+   Pink Accent Ink #A47E70. See DESIGN.md. The body.home-page rules are legacy:
+   the studio home no longer loads this stylesheet. */
 .brand-promise,
 .section-label,
 .eyebrow {
@@ -372,7 +385,7 @@ footer,
 .footer {
     background: var(--he-light) !important;
     border-top: 1px solid var(--he-border) !important;
-    color: var(--he-neutral) !important;
+    color: var(--he-neutral-ink) !important;
     padding: 38px 24px !important;
     text-align: center;
 }

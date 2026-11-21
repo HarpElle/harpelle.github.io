@@ -1,6 +1,6 @@
 # harpelle.com studio home — current state
 
-Updated: 2026-09-07 by Claude Code (Fable 5.1)
+Updated: 2026-11-20 by Chief (Claude Code, Opus 5)
 Stage: **live** · Health: **attention**
 
 Studio home, app privacy/help pages, feedback Workers.
@@ -12,6 +12,10 @@ Studio home, app privacy/help pages, feedback Workers.
 
 ## In flight
 
+- **branch `design-md`** — root DESIGN.md + home/chrome contrast and token
+  alignment, then a second pass confirming it against the brand guide and
+  finishing the 44px touch targets (2026-11-20, Chief). Awaiting Jason's
+  review; see LOG.
 - **local** — 20 uncommitted VolleyTrack help/privacy edits (unexplained)
 
 ## 2026-09-05
@@ -24,7 +28,10 @@ Studio home, app privacy/help pages, feedback Workers.
 
 ## Decisions for Jason
 
-- None waiting (queue cleared 2026-09-07; accepted items are at the top of PLAN.md Next).
+- None open on the inks. Jason ratified Secondary Ink #6F6862 and Pink Accent
+  Ink #A47E70 on 2026-11-21 after an independent review agreed. Follow-up:
+  adopt both into the Brand & Identity Guide and the Claude Design "HarpElle"
+  project.
 
 ## Links
 
