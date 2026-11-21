@@ -28,13 +28,10 @@ Studio home, app privacy/help pages, feedback Workers.
 
 ## Decisions for Jason
 
-- Ratify the two derived brand colors? DESIGN.md adds Secondary Ink #6F6862
-  (small secondary text) and Pink Accent Ink #A47E70 (pink as text on light,
-  display sizes only) because the published five-color palette has no
-  AA-compliant value for either, and the brand guide says to use only its
-  documented hexes. Recommended: yes — adopt both into the Brand & Identity
-  Guide and the Claude Design "HarpElle" project, with Mid Neutral and Pink
-  Accent kept for large text, borders, and decoration.
+- None open on the inks. Jason ratified Secondary Ink #6F6862 and Pink Accent
+  Ink #A47E70 on 2026-11-21 after an independent review agreed. Follow-up:
+  adopt both into the Brand & Identity Guide and the Claude Design "HarpElle"
+  project.
 
 ## Links
 

@@ -43,15 +43,15 @@ should feel they are dealing with a careful person, not a growth funnel.
 
 Warm neutrals do the work; accents are seasoning. The five brand colors are the
 published palette and do not change. The two "ink" tokens extend it: each is its
-parent darkened one lightness step in the same warm hue — Secondary Ink
+parent darkened in the same warm hue (about 10–12 HSL lightness points) — Secondary Ink
 `hsl(28, 6%, 41%)` from Mid Neutral `hsl(26, 6%, 53%)`, Pink Accent Ink
 `hsl(16, 22%, 54%)` from Pink Accent `hsl(16, 22%, 64%)`. They exist because the
 published palette had no AA-compliant value for secondary text under 24px, or
 for pink text on a light surface. The brand guide rates Mid Neutral "AA (large
 text only)" at 3.29:1 while also assigning it to captions and timestamps; the
 ink tokens settle that conflict in favor of the contrast rating. Because the
-guide also says to use only its documented hex values, **the two ink hexes are
-Jason's to ratify at brand level** (see the changelog); the parent values stay
+guide also says to use only its documented hex values, **Jason ratified the two
+ink hexes at brand level on 2026-11-21** (see the changelog); the parent values stay
 correct for large text, dark backgrounds, borders, and decoration.
 
 - **Primary — Dark Anchor (#35312E):** primary text, dark bands, primary
@@ -68,7 +68,8 @@ correct for large text, dark backgrounds, borders, and decoration.
   monogram H crossbar. As text it passes AA only on dark surfaces (4.94:1 on
   Dark Anchor, 4.53:1 on Dark Card). Never use it as text on light surfaces.
 - **Pink Accent Ink (#A47E70):** the light-background text version of the
-  pink accent, for large display moments only (3.33:1 — AA large text, e.g.
+  pink accent, on Light Foundation only (3.02:1 on Sunken and 2.99:1 on the
+  hover veil miss 3:1), for large display moments and resting UI glyphs (3.33:1 — AA large text, e.g.
   the 68px hero accent line). Not for body-size text.
 - **Purple Accent — Ellianna (#9280A0):** categories, notification dots, the
   monogram E bars. Decoration and large text only on light surfaces (3.32:1).
@@ -80,8 +81,9 @@ correct for large text, dark backgrounds, borders, and decoration.
   hover), Veil rgba(53,49,46,0.06) (hover wash on light surfaces).
 
 Color is never the sole signal — pair every tint with a label, icon, or
-position. All brand colors keep distinct lightness values so the palette
-survives grayscale.
+position. Mid Neutral, Purple Accent, and Pink Accent Ink share nearly the same
+luminance (about 3.3:1 on Light Foundation), so they tie in grayscale; never let
+hue alone separate them.
 
 ```yaml
 colors:
@@ -312,14 +314,16 @@ The studio home is a single static page; components live inline in
   Outline = 1px Dark Anchor border, hover veil wash. Light (on dark bands) =
   Light Foundation fill, Dark Anchor text, hover Light Hover. Every
   interactive element keeps a ≥44px touch target.
-- **Header:** sticky, Light Foundation at 92% with 10px blur; bottom border
+- **Header:** sticky, Light Foundation at 96% with 10px blur (96% keeps Secondary Ink nav links at
+  4.69:1 when the header passes over the dark band; 92% gave 4.37:1); bottom border
   transparent until scroll, then Hairline plus the card shadow. Nav links are
   14px/600 Secondary Ink, hover Dark Anchor, each a 44px-tall target; Contact is
   a 44px outline pill at 13px/600 — one step below the nav links so it reads as
   a control, not a nav item. The logo link is a 44px target around a 42px mark.
 - **Map card (hero):** Light Foundation, 1px Hairline, 16px radius, raised
   shadow; rows split by Hairline dividers with a veil hover and a Pink Accent
-  Ink arrow.
+  Ink arrow that turns Dark Anchor on hover (Pink Accent Ink is 2.99:1 on the
+  veil).
 - **Family band cards:** Dark Card on Dark Anchor band, 12px radius, 24px
   padding; overlines in Pink Accent (4.53:1 on Dark Card), descriptions in
   Soft-on-Dark; hover lifts 2px with the warm near-black shadow.
@@ -437,6 +441,18 @@ components:
   Ellianna. Never redraw, recolor, or re-case the marks (always "HarpElle").
 
 ## Changelog
+
+**2026-11-21 — inks ratified.** Jason approved both ink hexes on the
+condition that an independent review agreed. It did: `#6F6862` keeps Mid
+Neutral's hue and chroma at 5.04:1, and `#A47E70` keeps Pink Accent's hue at
+3.33:1. A darker pink (for example `#946E60`, 4.14:1) reads as taupe, and to a
+deuteranope it is nearly the secondary grey, so it would cost the accent its
+identity. The review found two component gaps, fixed here instead of
+bending the tokens: the sticky header went from 92% to 96% Light Foundation
+(nav links over the dark band were 4.37:1, now 4.69:1), and the map-row arrow
+turns Dark Anchor on hover (Pink Accent Ink is 2.99:1 on the veil). The
+grayscale note now admits that Mid Neutral, Purple Accent, and Pink Accent Ink
+share nearly the same luminance.
 
 **2026-11-20 — contrast, touch targets, and scale cleanup (branch `design-md`).**
 First encode of this system as a DESIGN.md, plus the alignment pass it exposed.

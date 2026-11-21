@@ -123,7 +123,7 @@ textarea:focus-visible {
 
 body.home-page .site-nav,
 body.product-page .site-nav {
-    background: rgba(247, 245, 242, 0.9);
+    background: rgba(247, 245, 242, 0.96); /* keeps nav ink >=4.5:1 over dark content */
     backdrop-filter: blur(16px);
 }
 
