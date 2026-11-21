@@ -3,6 +3,7 @@
     --he-light: #F7F5F2;
     --he-surface: #FFFFFF;
     --he-neutral: #8E8680;
+    --he-neutral-ink: #6F6862;
     --he-pink: #B89A8F;
     --he-purple: #9280A0;
     --he-border: rgba(142, 134, 128, 0.22);
@@ -95,12 +96,13 @@ textarea:focus-visible {
 
 .site-nav .nav-links a,
 .nav-links a {
+    align-items: center;
     border-radius: 999px;
-    color: var(--he-neutral) !important;
+    color: var(--he-neutral-ink) !important;
     display: inline-flex;
     font-size: 0.86rem !important;
     font-weight: 700 !important;
-    min-height: 36px;
+    min-height: 44px;
     padding: 8px 2px;
     text-decoration: none;
 }
@@ -372,7 +374,7 @@ footer,
 .footer {
     background: var(--he-light) !important;
     border-top: 1px solid var(--he-border) !important;
-    color: var(--he-neutral) !important;
+    color: var(--he-neutral-ink) !important;
     padding: 38px 24px !important;
     text-align: center;
 }

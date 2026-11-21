@@ -1,6 +1,14 @@
 # harpelle.com studio home — status log (newest first)
 
-## 2026-09-07 — Claude Code (Fable 5.1)
+## 2026-11-20 — Chief (Claude Code, Fable 5)
+
+- Branch `design-md` (not merged): added root DESIGN.md (Google DESIGN.md
+  format, lint-clean) derived from the HarpElle "Balanced Craft" system, and
+  aligned the home page + shared chrome to it. Contrast fixes: small
+  secondary text #8E8680 → derived ink #6F6862 (3.29:1 → 5.04:1), hero accent
+  line → #A47E70 (2.40:1 → 3.33:1), studio quote → Dark Anchor; warm-tinted
+  hover shadow on family cards; 44px nav touch targets; minor type/spacing
+  grid alignment. Awaiting Jason's review before any merge to main.
 
 - Accepted recommendation applied: every public occurrence of the personal address replaced with info@harpelle.com (client template and Swing Time pages). Status files restored to their historical wording after the sweep touched them.
 

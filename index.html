@@ -187,7 +187,9 @@
             --color-dark-anchor: #35312E;
             --color-light-foundation: #F7F5F2;
             --color-mid-neutral: #8E8680;
+            --color-mid-neutral-ink: #6F6862;
             --color-pink-accent: #B89A8F;
+            --color-pink-accent-ink: #A47E70;
             --color-purple-accent: #9280A0;
             --color-border-hairline: #E3DFD9;
             --color-surface-sunken: #EDEAE5;
@@ -199,7 +201,8 @@
             --font-display: 'Zilla Slab', Georgia, serif;
             --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             --shadow-card: 0 1px 3px rgba(53, 49, 46, .08);
-            --shadow-overlay: 0 12px 32px rgba(53, 49, 46, .10);
+            --shadow-raised: 0 4px 12px rgba(53, 49, 46, .12);
+            --shadow-overlay: 0 12px 32px rgba(53, 49, 46, .18);
             --max-width: 1120px;
         }
 
@@ -243,7 +246,7 @@
             font-weight: 700;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: var(--color-mid-neutral);
+            color: var(--color-mid-neutral-ink);
         }
         .overline--pink { color: var(--color-pink-accent); }
 
@@ -300,14 +303,19 @@
             font-size: 14px;
             font-weight: 600;
         }
-        .site-nav a { color: var(--color-mid-neutral); }
+        .site-nav a {
+            color: var(--color-mid-neutral-ink);
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+        }
         .site-nav a:hover { color: var(--color-dark-anchor); }
         .nav-contact {
             display: inline-flex;
             align-items: center;
             white-space: nowrap;
             flex-shrink: 0;
-            height: 36px;
+            height: 44px;
             padding: 0 16px;
             border: 1px solid var(--color-dark-anchor);
             border-radius: 8px;
@@ -344,7 +352,7 @@
         .hero h1 .accent-line {
             font-weight: 300;
             font-style: italic;
-            color: var(--color-pink-accent);
+            color: var(--color-pink-accent-ink);
         }
         .hero-body {
             font-size: 18px;
@@ -362,7 +370,7 @@
             border: 1px solid var(--color-border-hairline);
             border-radius: 16px;
             padding: 28px;
-            box-shadow: var(--shadow-overlay);
+            box-shadow: var(--shadow-raised);
             display: flex;
             flex-direction: column;
             gap: 4px;
@@ -380,13 +388,13 @@
         .map-index {
             font-size: 12px;
             font-weight: 600;
-            color: var(--color-mid-neutral);
+            color: var(--color-mid-neutral-ink);
             width: 20px;
             flex-shrink: 0;
         }
         .map-name { font-weight: 600; font-size: 15px; white-space: nowrap; }
-        .map-role { font-size: 14px; color: var(--color-mid-neutral); }
-        .map-arrow { margin-left: auto; color: var(--color-pink-accent); font-weight: 600; }
+        .map-role { font-size: 14px; color: var(--color-mid-neutral-ink); }
+        .map-arrow { margin-left: auto; color: var(--color-pink-accent-ink); font-weight: 600; }
         .map-divider { border-top: 1px solid var(--color-border-hairline); }
 
         /* ---- GetVolleyApps band ---- */
@@ -420,7 +428,7 @@
         }
         .family-intro {
             margin: 0;
-            font-size: 17px;
+            font-size: 18px;
             line-height: 1.65;
             color: var(--color-text-on-dark-soft);
             max-width: 54ch;
@@ -434,7 +442,7 @@
         .family-cell {
             background: var(--color-dark-card);
             border-radius: 12px;
-            padding: 26px 24px;
+            padding: 24px;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -443,7 +451,7 @@
         .family-cell:hover {
             color: var(--color-light-foundation);
             transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, .28);
+            box-shadow: 0 12px 32px rgba(21, 17, 14, .35);
         }
         .family-cell .app-name { font-size: 18px; font-weight: 600; }
         .family-cell .app-desc {
@@ -468,7 +476,7 @@
         .list-section--services { padding: 40px 32px 80px; }
         .list-section h2 {
             font-family: var(--font-display);
-            font-size: 34px;
+            font-size: 36px;
             font-weight: 500;
             margin: 8px 0 0;
         }
@@ -477,7 +485,7 @@
             display: flex;
             align-items: baseline;
             gap: 24px;
-            padding: 26px 0;
+            padding: 24px 0;
             border-top: 1px solid var(--color-border-hairline);
             flex-wrap: wrap;
         }
@@ -489,17 +497,17 @@
             gap: 4px;
         }
         .list-name .name { font-size: 18px; font-weight: 600; }
-        .list-name .kind { font-size: 12px; font-weight: 500; color: var(--color-mid-neutral); }
+        .list-name .kind { font-size: 12px; font-weight: 500; color: var(--color-mid-neutral-ink); }
         .list-desc {
             margin: 0;
             font-size: 15px;
             line-height: 1.65;
-            color: var(--color-mid-neutral);
+            color: var(--color-mid-neutral-ink);
             flex: 1;
             min-width: min(280px, 100%);
             text-wrap: pretty;
         }
-        .list-link { font-size: 14px; font-weight: 600; }
+        .list-link { font-size: 14px; font-weight: 600; padding: 12px 0; }
 
         /* ---- Studio CTA band ---- */
         .studio-band { background: var(--color-surface-sunken); }
@@ -538,8 +546,8 @@
             font-family: var(--font-display);
             font-style: italic;
             font-weight: 300;
-            font-size: 20px;
-            color: var(--color-pink-accent);
+            font-size: 22px;
+            color: var(--color-dark-anchor);
         }
 
         /* ---- Footer ---- */
@@ -567,7 +575,7 @@
             margin: 0;
             font-size: 14px;
             line-height: 1.6;
-            color: var(--color-mid-neutral);
+            color: var(--color-mid-neutral-ink);
         }
         .footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
         .footer-col {
@@ -576,11 +584,12 @@
             gap: 10px;
             font-size: 14px;
         }
+        .footer-col a { padding: 5px 0; }
         .footer-bottom {
             border-top: 1px solid var(--color-border-hairline);
             padding-top: 24px;
             font-size: 13px;
-            color: var(--color-mid-neutral);
+            color: var(--color-mid-neutral-ink);
         }
 
         /* ---- Responsive ---- */
@@ -593,14 +602,14 @@
             .family-heading h2 { font-size: 32px; }
             .list-section { padding: 56px 24px 32px; }
             .list-section--services { padding: 32px 24px 56px; }
-            .list-section h2 { font-size: 28px; }
+            .list-section h2 { font-size: 30px; }
             .studio-inner { padding: 64px 24px; }
             .studio-inner h2 { font-size: 30px; }
             .footer-inner { padding: 48px 24px 32px; }
             .footer-top, .footer-cols { gap: 40px; }
         }
         @media (max-width: 620px) {
-            .nav-anchor { display: none; }
+            .site-nav a.nav-anchor { display: none; }
         }
     </style>
 </head>

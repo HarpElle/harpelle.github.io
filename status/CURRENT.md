@@ -12,6 +12,8 @@ Studio home, app privacy/help pages, feedback Workers.
 
 ## In flight
 
+- **branch `design-md`** — root DESIGN.md + home/chrome contrast and token
+  alignment (2026-11-20, Chief). Awaiting Jason's review; see LOG.
 - **local** — 20 uncommitted VolleyTrack help/privacy edits (unexplained)
 
 ## 2026-09-05
