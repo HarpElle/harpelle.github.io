@@ -9,11 +9,20 @@ description: >-
 
 # HarpElle — studio home design system
 
-This file governs the harpelle.com studio home (`@index.html`) and the shared
-studio chrome in `@assets/css/harpelle-site.css` (the header and footer that
-product and help pages reuse). Sub-brand surfaces — `volleytally/`,
+This file is the single source of truth for the harpelle.com studio home
+(`@index.html`) and the shared studio chrome in `@assets/css/harpelle-site.css`
+(the header, footer, and page frame that the product, help, and client pages
+reuse). The two files hold separate copies of the same tokens — the home page is
+self-contained and never loads the shared stylesheet — so a token change lands
+in all three places in the same commit. Sub-brand surfaces — `volleytally/`,
 `volleytrack/`, and `clients/` page bodies — intentionally carry their own
-systems and are out of scope here; they inherit only the studio chrome rules.
+systems and are out of scope here; they inherit only the chrome rules.
+
+Upstream: the HarpElle Brand & Identity Guide v1.0 and the published "Balanced
+Craft" token set (Claude Design project `harpelle`, id 58b88756-e515), plus the
+approved studio-home handoff (`design_handoff_studio_home`). Where this file
+departs from those, the departure is named here and in the changelog — nowhere
+else.
 
 ## Overview
 
@@ -32,10 +41,18 @@ should feel they are dealing with a careful person, not a growth funnel.
 
 ## Colors
 
-Warm neutrals do the work; accents are seasoning. The two "ink" tokens are
-derived one lightness step down from their parents (same hue and saturation)
-so that small text and light-background accents meet WCAG AA; the parent
-values remain correct for large text, dark backgrounds, and decoration.
+Warm neutrals do the work; accents are seasoning. The five brand colors are the
+published palette and do not change. The two "ink" tokens extend it: each is its
+parent darkened one lightness step in the same warm hue — Secondary Ink
+`hsl(28, 6%, 41%)` from Mid Neutral `hsl(26, 6%, 53%)`, Pink Accent Ink
+`hsl(16, 22%, 54%)` from Pink Accent `hsl(16, 22%, 64%)`. They exist because the
+published palette had no AA-compliant value for secondary text under 24px, or
+for pink text on a light surface. The brand guide rates Mid Neutral "AA (large
+text only)" at 3.29:1 while also assigning it to captions and timestamps; the
+ink tokens settle that conflict in favor of the contrast rating. Because the
+guide also says to use only its documented hex values, **the two ink hexes are
+Jason's to ratify at brand level** (see the changelog); the parent values stay
+correct for large text, dark backgrounds, borders, and decoration.
 
 - **Primary — Dark Anchor (#35312E):** primary text, dark bands, primary
   buttons. On Light Foundation it measures 11.84:1 (AAA, all sizes).
@@ -99,8 +116,11 @@ the one place the display face goes light and italic. The pull quote
 (`quote`) is Zilla Slab 300 italic in Dark Anchor — not pink, which cannot
 reach AA at quote size on light surfaces. Overlines are uppercase with 0.12em
 tracking; everything else is sentence case. Body copy keeps a max measure of
-75ch (48–54ch for leads); body text never drops below 14px, and 14px and
-smaller is reserved for secondary roles in Secondary Ink or stronger.
+75ch (48–54ch for leads) and never drops below the brand guide's 16px minimum at
+line height 1.5 or looser. Sizes of 15px and under are for secondary and
+supporting roles only — captions, row kinds, directory descriptions, footer text
+— set in Secondary Ink or stronger on light surfaces, Soft-on-Dark inside dark
+bands.
 
 ```yaml
 typography:
@@ -179,8 +199,14 @@ typography:
     lineHeight: 1.2
 ```
 
-The `-sm` variants are the mobile (≤720px) sizes of their desktop
-counterparts.
+The `-sm` variants are the mobile (≤720px) sizes of their desktop counterparts.
+
+The brand guide's base hierarchy (H1 42/600, H2 32/500) governs product, help,
+and content pages. The studio home is the brand's one marketing surface and runs
+the handoff's extended display scale above — `display` 68, `headline-lg` 40,
+`headline-md` 36. Those two scales are the whole vocabulary: the handoff's
+one-off 34px section heading and 17px band intro were folded onto `headline-md`
+and `body-lg` rather than kept as extra steps.
 
 ## Layout
 
@@ -218,6 +244,11 @@ bevels, or hard drop shadows.
 - Overlay: `0 12px 32px rgba(53,49,46,0.18)` — dialogs and true overlays.
 - Hover lift on dark bands: `0 12px 32px rgba(21,17,14,0.35)` (a warm
   near-black; depth on Dark Anchor needs a darker tint to read at all).
+
+These four are the only shadows allowed on a parent-brand surface, and a value
+between levels is a drift signal. The handoff drew the hero map card with
+`0 12px 32px rgba(53,49,46,.10)` — overlay geometry at a resting card's weight —
+and it now uses Raised, the level whose documented role is feature cards.
 
 ## Shapes
 
@@ -283,7 +314,9 @@ The studio home is a single static page; components live inline in
   interactive element keeps a ≥44px touch target.
 - **Header:** sticky, Light Foundation at 92% with 10px blur; bottom border
   transparent until scroll, then Hairline plus the card shadow. Nav links are
-  14px/600 Secondary Ink, hover Dark Anchor; Contact is a 44px outline pill.
+  14px/600 Secondary Ink, hover Dark Anchor, each a 44px-tall target; Contact is
+  a 44px outline pill at 13px/600 — one step below the nav links so it reads as
+  a control, not a nav item. The logo link is a 44px target around a 42px mark.
 - **Map card (hero):** Light Foundation, 1px Hairline, 16px radius, raised
   shadow; rows split by Hairline dividers with a veil hover and a Pink Accent
   Ink arrow.
@@ -292,9 +325,12 @@ The studio home is a single static page; components live inline in
   Soft-on-Dark; hover lifts 2px with the warm near-black shadow.
 - **List rows (products/services):** hairline-divided rows, 24px vertical
   padding; name 18px/600 Dark Anchor, kind caption and description in
-  Secondary Ink.
+  Secondary Ink. The trailing link carries 12px vertical padding so the target
+  clears 44px without moving the row.
 - **Footer:** hairline top border, overline column heads in Secondary Ink,
-  links in Dark Anchor weight 400–600.
+  links in Dark Anchor weight 400–600. Each link is a 44px-tall row and the
+  column gap is 0 — the target height *is* the vertical rhythm, so link lists
+  are never packed tighter than a thumb.
 
 ```yaml
 components:
@@ -357,8 +393,17 @@ components:
   nav-link:
     textColor: "{colors.secondary-ink}"
     typography: "{typography.button}"
+    height: 44px
   nav-link-hover:
     textColor: "{colors.primary}"
+  nav-contact:
+    textColor: "{colors.primary}"
+    rounded: "{rounded.sm}"
+    height: 44px
+  footer-link:
+    textColor: "{colors.primary}"
+    typography: "{typography.body-sm}"
+    height: 44px
   overline:
     textColor: "{colors.secondary-ink}"
     typography: "{typography.overline}"
@@ -368,9 +413,11 @@ components:
 
 - Do keep warm neutrals on ~90% of every surface; accents stay under 10%.
 - Don't use pure #FFFFFF for parent-brand surfaces — warmth comes from Light
-  Foundation. (Known debt: `@assets/css/harpelle-site.css` still uses white
-  card surfaces on product/help pages; align when those pages are next
-  touched.)
+  Foundation. (Known debt: `@assets/css/harpelle-site.css` sets `--he-surface`
+  to white and paints white card surfaces and white-to-warm gradients on the
+  product, help, and client pages. Those are sub-brand page bodies with their
+  own systems, so the rules stay until those pages are next touched; the file
+  marks them as debt in place.)
 - Do set small secondary text (under 24px) in Secondary Ink #6F6862; Mid
   Neutral #8E8680 is for large text, borders, and decoration only.
 - Don't set Pink or Purple Accent as text on light surfaces; on light, pink
@@ -388,3 +435,27 @@ components:
   must survive grayscale.
 - Don't swap the monogram's meaning: pink crossbar = Harper, purple bars =
   Ellianna. Never redraw, recolor, or re-case the marks (always "HarpElle").
+
+## Changelog
+
+**2026-11-20 — contrast, touch targets, and scale cleanup (branch `design-md`).**
+First encode of this system as a DESIGN.md, plus the alignment pass it exposed.
+What changed from the published tokens and the studio-home handoff, and why:
+
+- Added `secondary-ink #6F6862` and `accent-pink-ink #A47E70`. Small secondary
+  text moved off Mid Neutral `#8E8680` (3.29:1 at 11–15px) and the hero accent
+  line moved off Pink Accent `#B89A8F` (2.40:1 on Light Foundation). Both new
+  hexes extend the published five-color palette and need Jason's brand-level
+  sign-off; nothing else in the palette moved.
+- The studio pull quote was 20px Pink Accent on Sunken Surface (2.17:1). It is
+  now `quote` (22px) in Dark Anchor at 10.74:1 — at 22px, WCAG wants 4.5:1, and
+  no pink value on a light surface reaches it.
+- Nav links, the Contact pill, the logo link, the list-row links, and the footer
+  links were 36px or shorter. All now clear the system's 44px minimum.
+- Section headings were 34px (28px mobile) and the family-band intro 17px; both
+  were off-scale and became `headline-md` 36 (30 mobile) and `body-lg` 18. Card
+  and row paddings of 26px became 24px, back on the 8px grid.
+- The family-card hover shadow was neutral black `rgba(0,0,0,.28)`; it is now
+  warm `rgba(21,17,14,.35)`. The hero map card moved from the handoff's
+  off-token `0 12px 32px rgba(53,49,46,.10)` to Raised, and the overlay token
+  was restored to its published `.18` alpha.

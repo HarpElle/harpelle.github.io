@@ -1,5 +1,30 @@
 # harpelle.com studio home — status log (newest first)
 
+## 2026-11-20 — Chief (Claude Code, Opus 5) — design-system agreement pass
+
+- Reviewed every change on branch `design-md` against the HarpElle Brand &
+  Identity Guide v1.0, the published "Balanced Craft" tokens, and the approved
+  studio-home handoff. All of it agrees with the system; nothing was reverted.
+  The guide itself rates Mid Neutral #8E8680 "AA (large text only)" while also
+  assigning it to captions, so the derived ink #6F6862 settles that conflict.
+- Finished the one half-done item: footer links and the header logo link now
+  clear the system's 44px touch target (the footer link column grows about
+  50px as a result). DESIGN.md's "every interactive element ≥44px" is now true
+  of the page.
+- DESIGN.md gained the upstream/provenance note, the exact ink derivations,
+  the brand guide's 16px body minimum, the base-vs-marketing type scale rule,
+  the shadow-level rule, 44px component specs, and a changelog naming the old
+  values. `npx @google/design.md lint DESIGN.md`: 0 errors, 0 warnings.
+- `assets/css/harpelle-site.css` now documents the token rules in place
+  (small-text ink, accent-as-text is sub-brand only, white surfaces are debt).
+  Comments only; no rendering change on the product, help, or client pages.
+- DesignSync `list_projects` still shows only "pixpl.us Design System"; no
+  HarpElle project is visible to this session, so nothing was pushed there.
+- Not touched, listed for a later pass: volleytally/, volleytrack/, and
+  clients/ page bodies still set 11–16px text in #8E8680 and use pink/purple
+  as text on light. The client hub and `clients/_template/*` pages are
+  parent-brand surfaces and are the closest to needing the same fix.
+
 ## 2026-11-20 — Chief (Claude Code, Fable 5)
 
 - Branch `design-md` (not merged): added root DESIGN.md (Google DESIGN.md

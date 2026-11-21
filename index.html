@@ -186,11 +186,11 @@
         :root {
             --color-dark-anchor: #35312E;
             --color-light-foundation: #F7F5F2;
-            --color-mid-neutral: #8E8680;
-            --color-mid-neutral-ink: #6F6862;
-            --color-pink-accent: #B89A8F;
-            --color-pink-accent-ink: #A47E70;
-            --color-purple-accent: #9280A0;
+            --color-mid-neutral: #8E8680;      /* large text, borders, decoration only (3.29:1) */
+            --color-mid-neutral-ink: #6F6862;  /* all secondary text under 24px (5.04:1) */
+            --color-pink-accent: #B89A8F;      /* decoration; as text only on dark surfaces */
+            --color-pink-accent-ink: #A47E70;  /* pink as text on light, display sizes only (3.33:1) */
+            --color-purple-accent: #9280A0;    /* decoration and large text only */
             --color-border-hairline: #E3DFD9;
             --color-surface-sunken: #EDEAE5;
             --color-text-on-dark-soft: #E8E4DF;
@@ -294,6 +294,11 @@
             align-items: center;
             justify-content: space-between;
             padding: 16px 32px;
+        }
+        .header-brand {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
         }
         .header-logo { height: 42px; }
         .site-nav {
@@ -581,10 +586,16 @@
         .footer-col {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 0;
             font-size: 14px;
         }
-        .footer-col a { padding: 5px 0; }
+        .footer-col .overline { padding-bottom: 10px; }
+        .footer-col a {
+            display: inline-flex;
+            align-items: center;
+            align-self: flex-start;
+            min-height: 44px;
+        }
         .footer-bottom {
             border-top: 1px solid var(--color-border-hairline);
             padding-top: 24px;
@@ -618,7 +629,7 @@
 
     <header id="site-header">
         <div class="container header-inner">
-            <a href="/" aria-label="HarpElle home">
+            <a class="header-brand" href="/" aria-label="HarpElle home">
                 <img class="header-logo" src="/assets/brand/HarpElle_Primary_Light.svg" alt="HarpElle" height="42">
             </a>
             <nav class="site-nav" aria-label="Primary">
