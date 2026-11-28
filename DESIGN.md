@@ -296,8 +296,10 @@ scrolling.
   UPPERCASE only in overlines (11px, 0.12em tracking). The brand name is
   always **HarpElle** — never HARPELLE, harpelle, or Harpelle.
 - **Terminology:** "GetVolleyApps" is the volleyball app family (VolleyTally,
-  VolleyTrack, VolleySignal, VolleyScorer); VolleyScorer lives inside the
-  family, never as a separate studio product. "Studio", not "agency".
+  VolleySignal, VolleyScorer). VolleyScorer lives inside the family, never as
+  a separate studio product. Public studio-home copy does not use the name
+  VolleyTrack and does not mention analytics or stats analysis. "Studio",
+  not "agency".
 - **Button and action labels:** short verb phrases naming the outcome
   ("See the work", "Write to the studio"), never "Submit" or "Click here".
 - **Numbers and claims:** no pricing on the studio home; every availability

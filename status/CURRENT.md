@@ -9,11 +9,12 @@ Studio home, app privacy/help pages, feedback Workers.
 
 - Studio Home v2 live 2026-08-29 (PR #5).
 - DESIGN.md and studio-home contrast/token work landed on main in PR #16 (merged 2026-11-21).
+- Product list update landed on main in PR #17 (squash 5aff463, merged 2026-11-27): pixpl.us, MiniTally, SundaySent interest signup, PARfectPutt up to 8 players.
 - Primary local checkout has 20 uncommitted modified files: all VolleyTrack help pages, privacy, terms, feedback Worker config. Origin unknown.
 
 ## In flight
 
-- **[PR #17](https://github.com/HarpElle/harpelle.github.io/pull/17)** (`update/studio-product-list`) — add pixpl.us and MiniTally, correct PARfectPutt to up to 8 players, and list SundaySent as an interest signup only (2026-11-27, Grok Bot). Awaiting review; do not merge without Jason's yes.
+- **branch `copy/getvolleyapps-public-offering`** — remove the VolleyTrack name and stats/analysis claims from public studio-home copy (2026-11-27, Grok Bot). Low-risk copy.
 - **local** — 20 uncommitted VolleyTrack help/privacy edits (unexplained)
 
 ## 2026-09-05

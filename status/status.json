@@ -9,16 +9,16 @@
   "updatedAt": "2026-11-27",
   "updatedBy": "Grok Bot",
   "current": [
-    "Studio Home v2 live 2026-08-29 (PR #5). DESIGN.md and studio-home contrast/token work landed on main in PR #16 (merged 2026-11-21).",
-    "PR #17 (update/studio-product-list, unmerged, 2026-11-27): add pixpl.us and MiniTally, correct PARfectPutt to up to 8 players, list SundaySent as interest signup only. Awaiting review; do not merge without Jason's yes.",
+    "Studio Home v2 live 2026-08-29 (PR #5). DESIGN.md landed in PR #16 (merged 2026-11-21). Product list update landed in PR #17 (squash 5aff463, merged 2026-11-27).",
+    "Branch copy/getvolleyapps-public-offering: remove VolleyTrack name and stats/analysis claims from public studio-home copy. Low-risk copy.",
     "Primary local checkout has 20 uncommitted VolleyTrack help/privacy/Worker files; origin unknown.",
     "Known defects previously recorded: clients/swing-time-83dc2d/index.html may still link to a missing proposal.html; confirm before treating as current."
   ],
   "inFlight": [
     {
-      "ref": "PR #17",
-      "title": "Add pixpl.us and MiniTally, correct PARfectPutt player count, list SundaySent as interest signup only",
-      "state": "open, awaiting review, do not merge without Jason's yes"
+      "ref": "branch copy/getvolleyapps-public-offering",
+      "title": "Remove VolleyTrack name and stats/analysis claims from public studio-home copy",
+      "state": "in progress, low-risk copy"
     },
     {
       "ref": "local",
