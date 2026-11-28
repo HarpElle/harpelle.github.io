@@ -1,5 +1,33 @@
 # harpelle.com studio home — status log (newest first)
 
+## 2026-11-27 — Grok Bot — SundaySent spelling
+
+- Jason asked that the brand be written SundaySent (one camel-case word),
+  never as two words. Updated the product card, footer, llms.txt, and
+  status files on PR #17 to match. Meta and title did not use the name.
+  Do not merge without Jason's yes.
+
+## 2026-11-27 — Grok Bot — studio product list
+
+- Added pixpl.us and MiniTally to the studio-home product list, footer,
+  llms.txt, and structured data. pixpl.us copy has no prices (DESIGN.md) and
+  does not call the retouching AI.
+- Corrected PARfectPutt from "2 to 6 players" to "up to 8 players", matching
+  the App Store listing (id 6782712093: "Score up to 8 players", "Quick setup
+  for 2 to 8 players") and parfectputt.com help.
+- Listed SundaySent as an interest signup only, using wording from the
+  live waitlist at sundaysent.com ("Your sermon, edited and ready to post",
+  "A person at your church approves before anything is posted",
+  "Join the founding churches"). Link goes to https://sundaysent.com/#join.
+  Not added as a SoftwareApplication in JSON-LD, because it is not generally
+  available.
+- This repo has no SITE.md; followed DESIGN.md and AGENTS.md. No prices on
+  the studio home (pixpl.us).
+- Left the hero "What we build" map and hero body as a flagship summary
+  (four rows). Putting every new product in the hero intro wrapped poorly
+  at 360–768. The complete list is in #products and the footer.
+- Opened [PR #17](https://github.com/HarpElle/harpelle.github.io/pull/17) from `update/studio-product-list`. Do not merge without Jason's yes.
+
 ## 2026-11-20 — Chief (Claude Code, Opus 5) — design-system agreement pass
 
 - Reviewed every change on branch `design-md` against the HarpElle Brand &

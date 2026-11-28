@@ -1,6 +1,6 @@
 # harpelle.com studio home — current state
 
-Updated: 2026-11-20 by Chief (Claude Code, Opus 5)
+Updated: 2026-11-27 by Grok Bot
 Stage: **live** · Health: **attention**
 
 Studio home, app privacy/help pages, feedback Workers.
@@ -8,14 +8,12 @@ Studio home, app privacy/help pages, feedback Workers.
 ## What is live / where main stands
 
 - Studio Home v2 live 2026-08-29 (PR #5).
+- DESIGN.md and studio-home contrast/token work landed on main in PR #16 (merged 2026-11-21).
 - Primary local checkout has 20 uncommitted modified files: all VolleyTrack help pages, privacy, terms, feedback Worker config. Origin unknown.
 
 ## In flight
 
-- **branch `design-md`** — root DESIGN.md + home/chrome contrast and token
-  alignment, then a second pass confirming it against the brand guide and
-  finishing the 44px touch targets (2026-11-20, Chief). Awaiting Jason's
-  review; see LOG.
+- **[PR #17](https://github.com/HarpElle/harpelle.github.io/pull/17)** (`update/studio-product-list`) — add pixpl.us and MiniTally, correct PARfectPutt to up to 8 players, and list SundaySent as an interest signup only (2026-11-27, Grok Bot). Awaiting review; do not merge without Jason's yes.
 - **local** — 20 uncommitted VolleyTrack help/privacy edits (unexplained)
 
 ## 2026-09-05
