@@ -13,7 +13,7 @@ Studio home, app privacy/help pages, feedback Workers.
 
 ## In flight
 
-- **[PR #17](https://github.com/HarpElle/harpelle.github.io/pull/17)** (`update/studio-product-list`) — add pixpl.us and MiniTally, correct PARfectPutt to up to 8 players, and list Sunday Sent as an interest signup only (2026-11-27, Grok Bot). Awaiting review; do not merge without Jason's yes.
+- **[PR #17](https://github.com/HarpElle/harpelle.github.io/pull/17)** (`update/studio-product-list`) — add pixpl.us and MiniTally, correct PARfectPutt to up to 8 players, and list SundaySent as an interest signup only (2026-11-27, Grok Bot). Awaiting review; do not merge without Jason's yes.
 - **local** — 20 uncommitted VolleyTrack help/privacy edits (unexplained)
 
 ## 2026-09-05

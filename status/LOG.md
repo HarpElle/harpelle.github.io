@@ -1,5 +1,12 @@
 # harpelle.com studio home — status log (newest first)
 
+## 2026-11-27 — Grok Bot — SundaySent spelling
+
+- Jason asked that the brand be written SundaySent (one camel-case word),
+  never as two words. Updated the product card, footer, llms.txt, and
+  status files on PR #17 to match. Meta and title did not use the name.
+  Do not merge without Jason's yes.
+
 ## 2026-11-27 — Grok Bot — studio product list
 
 - Added pixpl.us and MiniTally to the studio-home product list, footer,
@@ -8,7 +15,7 @@
 - Corrected PARfectPutt from "2 to 6 players" to "up to 8 players", matching
   the App Store listing (id 6782712093: "Score up to 8 players", "Quick setup
   for 2 to 8 players") and parfectputt.com help.
-- Listed Sunday Sent as an interest signup only, using wording from the
+- Listed SundaySent as an interest signup only, using wording from the
   live waitlist at sundaysent.com ("Your sermon, edited and ready to post",
   "A person at your church approves before anything is posted",
   "Join the founding churches"). Link goes to https://sundaysent.com/#join.
