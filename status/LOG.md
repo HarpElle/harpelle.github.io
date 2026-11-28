@@ -1,5 +1,19 @@
 # harpelle.com studio home — status log (newest first)
 
+## 2026-11-27 — Grok Bot — GetVolleyApps public copy
+
+- Social flagged that the GetVolleyApps section named VolleyTrack and claimed
+  "match stats and analysis." Comms rule: do not use that name in public copy
+  and do not mention analytics or stats analysis. A Comms folder was not
+  quickly findable in Drive; followed that rule, DESIGN.md voice, and what
+  is actually offered (VolleyTally, VolleySignal, and VolleyScorer).
+- Removed the Coach card, the footer link, the JSON-LD SoftwareApplication,
+  and the llms.txt line. Rewrote the family intro and the hero map from
+  "four" tools to "three," and dropped "track stats from the bench."
+- Noted, not changed in this pass: the /volleytrack/ help and legal pages,
+  and a VolleyTrack CTA on /volleytally/. Those still use the name.
+- Branch `copy/getvolleyapps-public-offering`. Low-risk copy.
+
 ## 2026-11-27 — Grok Bot — SundaySent spelling
 
 - Jason asked that the brand be written SundaySent (one camel-case word),
