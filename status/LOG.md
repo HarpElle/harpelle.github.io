@@ -19,7 +19,7 @@
 - Left the hero "What we build" map and hero body as a flagship summary
   (four rows). Putting every new product in the hero intro wrapped poorly
   at 360–768. The complete list is in #products and the footer.
-- Branch `update/studio-product-list`. Do not merge without Jason's yes.
+- Opened [PR #17](https://github.com/HarpElle/harpelle.github.io/pull/17) from `update/studio-product-list`. Do not merge without Jason's yes.
 
 ## 2026-11-20 — Chief (Claude Code, Opus 5) — design-system agreement pass
 
