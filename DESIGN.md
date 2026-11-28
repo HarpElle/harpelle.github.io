@@ -14,8 +14,8 @@ This file is the single source of truth for the harpelle.com studio home
 (the header, footer, and page frame that the product, help, and client pages
 reuse). The two files hold separate copies of the same tokens — the home page is
 self-contained and never loads the shared stylesheet — so a token change lands
-in all three places in the same commit. Sub-brand surfaces — `volleytally/`,
-`volleytrack/`, and `clients/` page bodies — intentionally carry their own
+in all three places in the same commit. Sub-brand surfaces — `volleytally/` and
+`volleytrack/` page bodies — intentionally carry their own
 systems and are out of scope here; they inherit only the chrome rules.
 
 Upstream: the HarpElle Brand & Identity Guide v1.0 and the published "Balanced

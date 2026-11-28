@@ -39,12 +39,7 @@ brand copy says "HarpElle".
    - Acceptance: `curl -s https://harpelle.com/volleytrack/privacy.html | grep -c jason@` prints 0 and
      `grep -rn 'jason@harpelle.com'` on main prints nothing.
 
-3. **Fix the Swing Time proposal link** (S)
-   - `clients/swing-time-83dc2d/index.html` line 76 links to `proposal.html`.
-     Either copy `clients/_template/proposal.html` into the folder and fill
-     the `{{CLIENT_NAME}}` and `{{VALID_THROUGH}}` tokens, or remove the band.
-   - Acceptance: `curl -o /dev/null -w '%{http_code}' https://harpelle.com/clients/swing-time-83dc2d/proposal.html`
-     prints 200, or the link is gone and the page still renders.
+3. ~~**Fix the Swing Time proposal link**~~ — moot. `clients/` was removed from this public repo on 2026-11-27 (archived in the private HarpElle/harpelle-pitches repo).
 
 4. **Stop publishing internal files** (S)
    - Add `_config.yml` at the repo root:
@@ -53,8 +48,7 @@ brand copy says "HarpElle".
      `clients/_template`.
    - Acceptance: after the Pages build, `https://harpelle.com/status/CURRENT.md`
      and `https://harpelle.com/workers/volleytrack-feedback/wrangler.toml`
-     return 404 while `https://harpelle.com/volleytrack/help/` and
-     `https://harpelle.com/clients/swing-time-83dc2d/` still return 200.
+     return 404 while `https://harpelle.com/volleytrack/help/` still returns 200.
 
 5. **Wire feedback notifications and deploy the Worker** (M)
    - In Cloudflare, enable Email Sending for `volleytrackapp.com` and verify
