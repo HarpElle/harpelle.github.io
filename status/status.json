@@ -12,7 +12,7 @@
     "Studio Home v2 live 2026-08-29 (PR #5). DESIGN.md landed in PR #16 (merged 2026-11-21). Product list update landed in PR #17 (squash 5aff463, merged 2026-11-27).",
     "Branch copy/getvolleyapps-public-offering: remove VolleyTrack name and stats/analysis claims from public studio-home copy. Low-risk copy.",
     "Primary local checkout has 20 uncommitted VolleyTrack help/privacy/Worker files; origin unknown.",
-    "Known defects previously recorded: clients/swing-time-83dc2d/index.html may still link to a missing proposal.html; confirm before treating as current."
+    "clients/ removed from the public repo 2026-11-27; archived privately in HarpElle/harpelle-pitches. Old copies remain in git history."
   ],
   "inFlight": [
     {

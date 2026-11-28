@@ -1,5 +1,13 @@
 # harpelle.com studio home — status log (newest first)
 
+## 2026-11-27 — Grok Bot — removed clients/ from the public repo
+
+- Jason: none of the pitch pages are active; take them down. Deleted `clients/`
+  (Swing Time, Ergun Kodesh demos, `_template`) and dropped the now-pointless
+  `Disallow: /clients/` from robots.txt so crawlers can see the 404s.
+- Archived a copy in the private repo HarpElle/harpelle-pitches (never served).
+- Old copies remain in this repo's git history. Rewriting history is Jason's call.
+
 ## 2026-11-27 — Grok Bot — GetVolleyApps public copy
 
 - Social flagged that the GetVolleyApps section named VolleyTrack and claimed
