@@ -9,7 +9,10 @@ HarpElle LLC is an independent product studio. Studio site: https://harpelle.com
 
 ## Other products
 - VolunteerCal: volunteer scheduling for churches and nonprofits. https://volunteercal.com
-- PARfectPutt: free mini golf digital scorecard. https://parfectputtapp.com
+- PARfectPutt: free mini golf digital scorecard, up to 8 players. https://parfectputtapp.com
+- pixpl.us: photo edits in about a minute, or by hand. https://pixpl.us
+- MiniTally: general-purpose live shared counts. https://minitally.com
+- Sunday Sent: interest signup — your sermon, edited and ready to post. Join the founding churches. https://sundaysent.com/
 
 ## Services
 - SpokenToBook: talks and sermons edited into books. https://spokentobook.com

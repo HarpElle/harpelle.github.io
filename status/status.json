@@ -6,31 +6,28 @@
   "stage": "live",
   "health": "attention",
   "summary": "Studio home, app privacy/help pages, feedback Workers.",
-  "updatedAt": "2026-11-20",
-  "updatedBy": "Chief (Claude Code, Opus 5)",
+  "updatedAt": "2026-11-27",
+  "updatedBy": "Grok Bot",
   "current": [
-    "Studio Home v2 live 2026-08-29 (PR #4); VolleyTally Android fix (PR #5); status/ folder (PR #6).",
-    "Branch design-md (unmerged, 2026-11-20): root DESIGN.md + home/chrome contrast and token alignment, confirmed against the brand guide and lint-clean, awaiting review.",
-    "Primary local checkout is two merges behind main and holds 18 uncommitted files dated 2026-08-05: jason@harpelle.com -> per-app info@ addresses on VolleyTrack/VolleyTally pages, plus a send_email binding in the feedback Worker. Reviewed 2026-09-04: coherent, worth committing once the info@ mailboxes are confirmed.",
-    "Known defects: clients/swing-time-83dc2d/index.html links to a missing proposal.html (404 live); status/, workers/, scripts/, AGENTS.md are published on harpelle.com.",
-    "No open Dependabot alerts; no repo workflows (GitHub default CodeQL only); Pages HTTPS cert valid to 2026-10-17."
+    "Studio Home v2 live 2026-08-29 (PR #5). DESIGN.md and studio-home contrast/token work landed on main in PR #16 (merged 2026-11-21).",
+    "Branch update/studio-product-list (unmerged, 2026-11-27): add pixpl.us and MiniTally, correct PARfectPutt to up to 8 players, list Sunday Sent as interest signup only. Awaiting review; do not merge without Jason's yes.",
+    "Primary local checkout has 20 uncommitted VolleyTrack help/privacy/Worker files; origin unknown.",
+    "Known defects previously recorded: clients/swing-time-83dc2d/index.html may still link to a missing proposal.html; confirm before treating as current."
   ],
   "inFlight": [
     {
-      "ref": "branch design-md",
-      "title": "Root DESIGN.md plus home-page and shared-chrome alignment to it (contrast, touch targets, type/spacing grid)",
-      "state": "pushed, unmerged, awaiting Jason's review"
+      "ref": "branch update/studio-product-list",
+      "title": "Add pixpl.us and MiniTally, correct PARfectPutt player count, list Sunday Sent as interest signup only",
+      "state": "in progress, awaiting review, do not merge without Jason's yes"
     },
     {
       "ref": "local",
-      "title": "Contact-email migration (17 site files + wrangler.toml) on the Primary checkout",
-      "state": "uncommitted, reviewed, awaiting mailbox confirmation"
+      "title": "Uncommitted VolleyTrack help/privacy edits on a Primary checkout",
+      "state": "uncommitted, origin unknown"
     }
   ],
   "blockers": [],
-  "decisions": [
-    "Ratify the two derived brand colors Secondary Ink #6F6862 and Pink Accent Ink #A47E70 into the Brand & Identity Guide and the Claude Design HarpElle project? Recommended: yes; the published palette has no AA-compliant value for small secondary text or pink text on light."
-  ],
+  "decisions": [],
   "next": [
     "Accepted 2026-09-07: yes, after confirming info@volleytrackapp.com, info@volleytallyapp.com, info@harpelle.com deliver (from: Commit the 2026-08-05 email edits)",
     "Accepted 2026-09-07: volleytrackapp.com for marketing, harpelle.com for legal and help until help moves (from: Canonical VolleyTrack URL: harpelle.com/volleytrack/ or volleytrackapp.com)",
